@@ -1,0 +1,54 @@
+@font-face {
+  font-family: wearepotatoes;
+  src: url("wearepotatoes.ttf") format("truetype");
+}
+
+body {
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-family: wearepotatoes;
+  font-size: 2em;
+  overflow-x: hidden;
+  /*nice and crunchy*/
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+img {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+a {
+  color: yellow;
+}
+
+.shack {
+  width: 100%;
+  height: 256px;
+  position: relative;
+}
+
+.static {
+  pointer-events: none;
+}
+
+/*thank you so much ribose for this setup*/
+.rotate:hover img, .rotate:focus img {
+  transform: translate(-50%, 0%) rotate(5deg);
+}
+.rotate:hover .text, a:focus .text {
+  opacity: 1;
+}
+.text {
+  opacity: 0;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: calc(1em + 1vw);
+  color: white;
+  z-index: 99;
+}
