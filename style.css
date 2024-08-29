@@ -6,7 +6,7 @@
 body {
   background-color: black;
   font-family: wearepotatoes;
-  font-size: 2em;
+  font-size: 5vw;
   color: white;
   text-align: center;
   /*nice and crunchy*/
@@ -32,8 +32,13 @@ a:hover, a:focus {
 
 .shack {
   width: 100%;
-  height: 256px;
-  position: relative;
+  transform: scale(0.70);
+}
+
+@media screen and (max-width: 1280px) {
+  .shack {
+    transform: scale(0.95);
+  }
 }
 
 .static {
@@ -59,7 +64,6 @@ a:hover, a:focus {
   opacity: 0;
   position: absolute;
   transform: translate(-50%, -50%);
-  font-size: calc(1em + 1vw);
   color: white;
   pointer-events: none;
   z-index: 99;
