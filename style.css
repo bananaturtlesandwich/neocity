@@ -36,6 +36,8 @@ a:hover, a:focus {
   height: 70vw;
   border: white 4px groove;
   transform: scale(0.70);
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 @media screen and (max-width: 1280px) {
