@@ -3,6 +3,11 @@
   src: url("wearepotatoes.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: grape soda;
+  src: url("grape soda.ttf") format("truetype");
+}
+
 * { 
 	box-sizing: border-box;
 	margin: 0;
@@ -80,6 +85,7 @@ a:hover, a:focus {
 }
 
 .file {
+  font-family: grape soda;
   position: absolute;
   color: white;
 }
