@@ -78,3 +78,8 @@ a:hover, a:focus {
   pointer-events: none;
   z-index: 99;
 }
+
+.file {
+  position: absolute;
+  color: white;
+}
