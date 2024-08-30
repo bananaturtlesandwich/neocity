@@ -3,6 +3,12 @@
   src: url("wearepotatoes.ttf") format("truetype");
 }
 
+* { 
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
 body {
   background-image: url("galaxy.png");
   background-size: 50vw;
@@ -35,7 +41,7 @@ a:hover, a:focus {
   width: 100%;
   height: 70vw;
   border: white 4px groove;
-  transform: scale(0.70);
+  transform: scale(0.70) translateY(-20%);
   overflow-x: hidden;
   overflow-y: hidden;
 }
