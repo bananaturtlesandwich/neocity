@@ -6,7 +6,6 @@
 body {
   background-image: url("galaxy.png");
   background-size: 50vw;
-  background-color: black;
   font-family: wearepotatoes;
   font-size: 5vw;
   color: white;
@@ -32,16 +31,15 @@ a:hover, a:focus {
 }
 */
 
-.shack {
+.scene {
   width: 100%;
+  height: 70vw;
+  border: white 4px groove;
   transform: scale(0.70);
 }
 
 @media screen and (max-width: 1280px) {
-  body {
-    background-size: 100vw;
-  }
-  .shack {
+  .scene {
     transform: scale(0.95);
   }
 }
@@ -68,6 +66,7 @@ a:hover, a:focus {
 .text {
   opacity: 0;
   position: absolute;
+  top: 6vw;
   transform: translate(-50%, -50%);
   color: white;
   pointer-events: none;
