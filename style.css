@@ -8,12 +8,6 @@
   src: url("grape soda.ttf") format("truetype");
 }
 
-* { 
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
 body {
   background-image: url("galaxy.png");
   background-size: 50vw;
@@ -29,18 +23,20 @@ body {
   image-rendering: crisp-edges;
 }
 
-img {
-  position: absolute;
+/*we don't care if they've visited the link*/
+a:link, a:visited {
+  color: lightgreen;
 }
-
-/*
-a {
+a:hover {
   color: yellow;
 }
-a:hover, a:focus {
-	color: teal;
+a:active {
+  color: hotpink;
 }
-*/
+
+.file, .label, img {
+  position: absolute;
+}
 
 .scene {
   width: 100%;
@@ -59,6 +55,19 @@ a:hover, a:focus {
 
 .static {
   pointer-events: none;
+}
+
+.file {
+  font-family: grape soda;
+  /*because it's used with a link*/
+  color: white;
+}
+
+.label {
+  font-size: 3vw;
+  font-family: grape soda;
+  border: white 4px dashed;
+  width: 19vw;
 }
 
 /*thank you so much ribose for this setup*/
@@ -82,10 +91,4 @@ a:hover, a:focus {
   color: white;
   pointer-events: none;
   z-index: 99;
-}
-
-.file {
-  font-family: grape soda;
-  position: absolute;
-  color: white;
 }
