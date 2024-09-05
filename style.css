@@ -38,6 +38,10 @@ a:active {
   position: absolute;
 }
 
+.blinkie {
+  position: static;
+}
+
 .scene {
   width: 100%;
   height: 70vw;
