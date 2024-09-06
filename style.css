@@ -8,11 +8,15 @@
   src: url("grape soda.ttf") format("truetype");
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-image: url("galaxy.png");
   background-size: 50vw;
   font-family: wearepotatoes;
-  font-size: 5vw;
+  font-size: 3vw;
   color: white;
   text-align: center;
   /*nice and crunchy*/
@@ -34,7 +38,7 @@ a:active {
   color: hotpink;
 }
 
-.file, .label, img {
+.file, img {
   position: absolute;
 }
 
@@ -45,10 +49,7 @@ a:active {
 .scene {
   width: 100%;
   height: 70vw;
-  border: white 4px groove;
-  transform: scale(0.70) translateY(-20%);
-  overflow-x: hidden;
-  overflow-y: hidden;
+  transform: scale(0.75) translateY(-20%);
 }
 
 @media screen and (max-width: 1280px) {
@@ -70,8 +71,6 @@ a:active {
 .label {
   font-size: 3vw;
   font-family: grape soda;
-  border: white 4px dashed;
-  width: 19vw;
 }
 
 /*thank you so much ribose for this setup*/
@@ -90,6 +89,7 @@ a:active {
 }
 
 .text {
+  font-size: 5vw;
   opacity: 0;
   position: absolute;
   color: white;
