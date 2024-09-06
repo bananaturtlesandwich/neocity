@@ -13,7 +13,7 @@
 }
 
 body {
-  background-image: url("galaxy.png");
+  background: url("galaxy.png");
   background-size: 50vw;
   font-family: wearepotatoes;
   font-size: 3vw;
@@ -64,6 +64,7 @@ a:active {
 
 .file {
   font-family: grape soda;
+  font-size: 5vw;
   /*because it's used with a link*/
   color: white;
 }
