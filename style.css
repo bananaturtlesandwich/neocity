@@ -8,6 +8,12 @@
   src: url("grape soda.ttf") format("truetype");
 }
 
+/*for when i use mandarin*/
+@font-face {
+  font-family: zpix;
+  src: url("zpix.ttf") format("truetype");
+}
+
 * {
   box-sizing: border-box;
 }
@@ -17,8 +23,8 @@ body {
   background-size: 50vw;
   font-family: wearepotatoes;
   font-size: 3vw;
-  color: white;
   text-align: center;
+  color: white;
   /*nice and crunchy*/
   font-smooth: never;
   -webkit-font-smoothing: none;
@@ -38,7 +44,7 @@ a:active {
   color: hotpink;
 }
 
-.file, img {
+img {
   position: absolute;
 }
 
@@ -60,18 +66,6 @@ a:active {
 
 .static {
   pointer-events: none;
-}
-
-.file {
-  font-family: grape soda;
-  font-size: 5vw;
-  /*because it's used with a link*/
-  color: white;
-}
-
-.label {
-  font-size: 3vw;
-  font-family: grape soda;
 }
 
 /*thank you so much ribose for this setup*/
