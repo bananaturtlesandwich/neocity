@@ -7,38 +7,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-      details {
+      a, details {
         margin-left: 5vw;
       }
-    </style
+      summary > a {
+        margin-left: 0vw;
+      }
+    </style>
   </head>
   <body>
     <h1>guide to the void<h1>
     <div style="text-align: left">
-      <details>
-        <summary><a href="me.html">me</a></summary>
-      </details>
+      <a href="index.html" style="margin-left: 5vw">index</a>
+      <br>
+      <a href="me.html">me</a>
       <details>
         <summary><a href="desk.html">projects</a></summary>
-        <details>
-          <summary><a href="coding.html">coding</a></summary>
-        </details>
+        <a href="coding.html">coding</a>
       </details>
       <details>
         <summary><a href="shrines.html">shrines</a></summary>
       </details>
       <details>
         <summary><a href="blog.html">blog</a></summary>
+        <a href="blog/my-first-website.html">my first website</a>
       </details>
-      <details>
-        <summary><a href="cities.html">cities</a></summary>
-      </details>
+      <a href="cities.html">cities</a>
+      <br>
+      <a href="updates.html">updates</a>
     </div>
     
-    <div onclick="history.back()" class="rotate">
+    <a href="index.html" class="rotate">
     	<img src="back.png" alt="back" class="object" style="top: 1vw; left: 1vw; width: 15vw">
       <span class="text" style="top: 1vw; left: 16vw">back</span>
-    </div>
+    </a>
   </body>
 </html>
 

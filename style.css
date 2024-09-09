@@ -1,12 +1,17 @@
 @font-face {
-  font-family: grape soda;
-  src: url("grape soda.ttf") format("truetype");
+  font-family: grapesoda;
+  src: url("grapesoda.ttf") format("truetype");
 }
 
 /*for when i use mandarin*/
 @font-face {
   font-family: zpix;
   src: url("zpix.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: tamzen;
+  src: url("tamzen.ttf") format("truetype");
 }
 
 * {
@@ -16,7 +21,7 @@
 body {
   background: url("galaxy.png");
   background-size: 50vw;
-  font-family: grape soda, zpix;
+  font-family: grapesoda, zpix;
   font-size: 3vw;
   text-align: center;
   color: white;
