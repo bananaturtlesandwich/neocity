@@ -1,9 +1,4 @@
 @font-face {
-  font-family: wearepotatoes;
-  src: url("wearepotatoes.ttf") format("truetype");
-}
-
-@font-face {
   font-family: grape soda;
   src: url("grape soda.ttf") format("truetype");
 }
@@ -21,7 +16,7 @@
 body {
   background: url("galaxy.png");
   background-size: 50vw;
-  font-family: wearepotatoes;
+  font-family: grape soda, zpix;
   font-size: 3vw;
   text-align: center;
   color: white;
@@ -55,13 +50,7 @@ img {
 .scene {
   width: 100%;
   height: 70vw;
-  transform: scale(0.75) translateY(-20%);
-}
-
-@media screen and (max-width: 1280px) {
-  .scene {
-    transform: scale(0.95);
-  }
+  transform: scale(0.75) translateY(-10vw);
 }
 
 .static {
