@@ -14,10 +14,6 @@
   src: url("tamzen.ttf") format("truetype");
 }
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   background: url("galaxy.png");
   background-size: 50vw;
