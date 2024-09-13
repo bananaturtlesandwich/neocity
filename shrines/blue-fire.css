@@ -1,0 +1,72 @@
+@font-face {
+  font-family: cinzel;
+  src: url("blue-fire/cinzel.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: onop;
+  src: url("blue-fire/onop.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: crimsontext;
+  src: url("blue-fire/crimsontext.ttf") format("truetype");
+}
+
+body {
+  background: url(blue-fire/castle.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: crimsontext;
+  font-size: 2vw;
+  text-align: center;
+  color: white;
+  /*nice and crunchy*/
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+  -moz-font-smoothing: greyscale;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+summary {
+  font-family: onop;
+  font-size: 4vw;
+}
+summary:hover {
+  font-family: cinzel;
+  font-size: 3.22vw;
+}
+
+/*we don't care if they've visited the link*/
+a:link, a:visited {
+  color: lightgreen;
+}
+a:hover {
+  color: yellow;
+}
+a:active {
+  color: hotpink;
+}
+
+.object {
+  position: absolute;
+}
+
+/*thank you so much ribose for this setup*/
+.rotate:hover img, .rotate:focus img {
+  transform: rotate(5deg);
+}
+.rotate:hover .text, a:focus .text {
+  opacity: 1;
+}
+
+.text {
+  font-size: 5vw;
+  opacity: 0;
+  position: absolute;
+  color: white;
+  pointer-events: none;
+  z-index: 99;
+}
