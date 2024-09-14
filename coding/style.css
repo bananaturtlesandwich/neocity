@@ -1,0 +1,90 @@
+@font-face {
+  font-family: tamzen;
+  src: url("../tamzen.ttf") format("truetype");
+}
+
+/*for when i use mandarin*/
+@font-face {
+  font-family: zpix;
+  src: url("../zpix.ttf") format("truetype");
+}
+
+body {
+  background: #7bb24e;
+  font-family: tamzen, zpix;
+  font-size: 3vw;
+  text-align: center;
+  color: white;
+  /*nice and crunchy*/
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+  -moz-font-smoothing: greyscale;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/*we don't care if they've visited the link*/
+a:link, a:visited {
+  color: lightgreen;
+}
+a:hover {
+  color: yellow;
+}
+a:active {
+  color: hotpink;
+}
+
+.scene {
+  width: 100%;
+  transform: scale(0.75);
+}
+
+ul, p {
+  text-align: left;
+}
+
+hr {
+  height: 3px;
+  border-width: 0;
+  background-color: white;
+}
+
+img, .file {
+  position: absolute;
+}
+
+.sidebar {
+  height: 100%;
+  width: 20vw;
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
+  border-left: 3px solid white;
+}
+main {
+  margin-right: 20vw;
+}
+
+.file {
+  font-size: 4vw;
+  /*because it's used with a link*/
+  color: white;
+}
+
+/*thank you so much ribose for this setup*/
+.rotate:hover img, .rotate:focus img {
+  transform: rotate(5deg);
+}
+.rotate:hover .text, a:focus .text {
+  opacity: 1;
+}
+
+.text {
+  font-size: 5vw;
+  opacity: 0;
+  position: absolute;
+  color: white;
+  pointer-events: none;
+  z-index: 99;
+}

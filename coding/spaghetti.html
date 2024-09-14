@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>spaghetti</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="hey i'm kinda good at this">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      function display(id) {
+        document.getElementById('display').innerHTML = document.getElementById(id).innerHTML;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="sidebar">
+      files
+      <hr>
+      <a onclick="display('about')">about.txt</a>
+      <a onclick="display('devlog')">devlog.txt</a>
+    </div>
+    
+    <main id="display">
+      <h2>no file selected</h2>
+    </main>
+    
+    <div id="about" hidden>
+      <h1>about</h1>
+      <p>
+      <a href="https://github.com/bananaturtlesandwich/spaghetti" target="_blank" rel="noopener noreferrer">spaghetti</a>
+      is a function hooker for cooked unreal engine blueprints
+      </p>
+      <h1>concept</h1>
+      <p>
+        the idea for spaghetti was born when i modded my first unity game and realised how powerful a hooking system like
+        <a href="https://github.com/MonoMod/MonoMod/blob/reorganize/docs/RuntimeDetour.HookGen/Usage.md" target="_blank" rel="noopener noreferrer">Monomod HookGen</a>
+        is
+      </p>
+      <p>
+        on the same day i discovered
+        <a href="https://github.com/trumank/kismet-analyzer" target="_blank" rel="noopener noreferrer">kismet-analyzer</a>
+        which has a merge-functions command which merges function kismet bytecode.
+      </p>
+      <p>
+        since i had decent experience dealing with assets having made stove,
+        i thought i could make something like hookgen where you can hook a function in blueprint
+      </p>
+    </div>
+    
+    <div id="devlog" hidden>
+      <h1>devlog</h1>
+      14/9/24
+      <p>
+        i'm currently rewriting the entire program to avoid directly patching the blueprint
+        by generating kismet bytecode which will run hooks from interfaces in specific folders
+      </p>
+      <b>i forgot to use my notebook at first so here's a summary of how the project worked at this point</b>
+      <p>
+        hooks are transplanted using modified code from stove,
+        the funcmap is then redirected to the hook
+        and the original's name is changed to orig_<i>name</i>
+      </p>
+      <p>
+        the limitations of this approach are the same as normal asset patching -
+        only one modded asset can be loaded at a time
+      </p>
+    </div>
+    
+    <a href="../coding.html" class="rotate">
+    	<img src="../back.png" alt="back" class="object" style="top: 1vw; left: 1vw; width: 15vw">
+      <span class="text" style="top: 1vw; left: 16vw">back</span>
+    </a>
+  </body>
+</html>

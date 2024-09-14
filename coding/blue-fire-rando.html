@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>blue fire rando</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="hey i'm kinda good at this">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      function display(id) {
+        document.getElementById('display').innerHTML = document.getElementById(id).innerHTML;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="sidebar">
+      files
+      <hr>
+      <a onclick="display('about')">about.txt</a>
+      <a onclick="display('devlog')">devlog.txt</a>
+    </div>
+    
+    <main id="display">
+      <h2>no file selected</h2>
+    </main>
+    
+    <div id="about" hidden>
+      <h1>about</h1>
+      <p>
+        the <a href="https://github.com/bananaturtlesandwich/blue-fire-rando" target="_blank" rel="noopener noreferrer">blue fire rando</a>
+        is a game mode for blue fire that enhances replayability by shuffling pickups randomly
+        while ensuring the game is still beatable without glitches
+      </p>
+      <h1>concept</h1>
+      <p>
+        the idea for the blue fire rando came from the hollow knight randomiser which i thought was really cool
+        so i thought even though blue fire is not a fully fledged metroidvania it would add more replayability for one of my favourite games
+      </p>
+    </div>
+    
+    <div id="devlog" hidden>
+      <h1>devlog</h1>
+      <b>here are transcriptions from my notebook</b>
+      <h1>TODO: finish transcribing from notebook</h1>
+    </div>
+    
+    <a href="../coding.html" class="rotate">
+    	<img src="../back.png" alt="back" class="object" style="top: 1vw; left: 1vw; width: 15vw">
+      <span class="text" style="top: 1vw; left: 16vw">back</span>
+    </a>
+  </body>
+</html>

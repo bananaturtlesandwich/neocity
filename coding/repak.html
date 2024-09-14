@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>repak</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="hey i'm kinda good at this">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      function display(id) {
+        document.getElementById('display').innerHTML = document.getElementById(id).innerHTML;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="sidebar">
+      files
+      <hr>
+      <a onclick="display('about')">about.txt</a>
+      <a onclick="display('devlog')">devlog.txt</a>
+    </div>
+    
+    <main id="display">
+      <h2>no file selected</h2>
+    </main>
+    
+    <div id="about" hidden>
+      <h1>about</h1>
+      <p>
+        <a href="https://github.com/trumank/repak" target="_blank" rel="noopener noreferrer">repak</a>
+        is unreal pak reading and writing library
+      </p>
+      <h1>concept</h1>
+      <p>
+        the idea for repak was when i was working on stove and needed mesh and texture data to properly display actors
+        however looking at the libraries for pak reading, they were never quite right for what i wanted to do:
+        <ul>
+          <li>rust-u4pak - excellent support but unfriendly api</li>
+          <li>ue4pak - excellent api but no support for extraction</li>
+          <li>unrealpak - excellent api but only supports version 8</li>
+          <li>rust-unreal-unpak - is async + only supports version 10</li>
+        </ul>
+        so i just though fuck it i'll do it myself and did it myself
+      </p>
+    </div>
+    
+    <div id="devlog" hidden>
+      <h1>devlog</h1>
+      <b>here are transcriptions from my notebook</b>
+      <h1>TODO: finish transcribing from notebook</h1>
+    </div>
+    
+    <a href="../coding.html" class="rotate">
+    	<img src="../back.png" alt="back" class="object" style="top: 1vw; left: 1vw; width: 15vw">
+      <span class="text" style="top: 1vw; left: 16vw">back</span>
+    </a>
+  </body>
+</html>

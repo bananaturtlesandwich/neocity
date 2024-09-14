@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>stove</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="hey i'm kinda good at this">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      function display(id) {
+        document.getElementById('display').innerHTML = document.getElementById(id).innerHTML;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="sidebar">
+      files
+      <hr>
+      <a onclick="display('about')">about.txt</a>
+      <a onclick="display('devlog')">devlog.txt</a>
+    </div>
+    
+    <main id="display">
+      <h2>no file selected</h2>
+    </main>
+    
+    <div id="about" hidden>
+      <h1>about</h1>
+      <p>
+        <a href="https://github.com/bananaturtlesandwich/stove" target="_blank" rel="noopener noreferrer">stove</a>
+        is an editor for cooked unreal engine maps
+      </p>
+      <h1>concept</h1>
+      <p>
+        the idea for stove originally came when i was researching how unreal's map format worked for the blue fire rando
+        so that i could delete, duplicate, transplant or edit actors
+        which would allow me place any drops according to the seed
+      </p>
+      <p>
+        to easier debug this research, clearly a graphical editor was the most logical method to visualise it
+        (definitely not the words of a lunatic who didn't know anything about graphics).
+        i was also inspired by the work of Jupahe64 on spotlight (the super mario 3D world editor)
+      </p>
+    </div>
+    
+    <div id="devlog" hidden>
+      <h1>devlog</h1>
+      <b>here are transcriptions from my notebook</b>
+      <h1>TODO: finish transcribing from notebook</h1>
+    </div>
+    
+    <a href="../coding.html" class="rotate">
+    	<img src="../back.png" alt="back" class="object" style="top: 1vw; left: 1vw; width: 15vw">
+      <span class="text" style="top: 1vw; left: 16vw">back</span>
+    </a>
+  </body>
+</html>
