@@ -8,11 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="display.js"></script>
   </head>
-  <body>
+  <body onload="display('about')">
     <div class="sidebar">
       files
       <hr>
       <a onclick="display('about')">about.txt</a>
+      <a onclick="display('concept')">concept.txt</a>
       <a onclick="display('devlog')">devlog.txt</a>
     </div>
     
@@ -27,6 +28,10 @@
         is a game mode for blue fire that enhances replayability by shuffling pickups randomly
         while ensuring the game is still beatable without glitches
       </p>
+      <img src="blue-fire-rando-about.png" alt="blue fire rando" style="width: 100%">
+    </div>
+    
+    <div id="concept" hidden>
       <h1>concept</h1>
       <p>
         the idea for the blue fire rando came from the hollow knight randomiser which i thought was really cool
@@ -38,10 +43,42 @@
       <h1>devlog</h1>
       <b>here are transcriptions from my notebook</b>
       <h1>TODO: finish transcribing from notebook</h1>
+      26/7/22
+      <br>
+      <b>this is from when i got my notebook and summarised what had happened so far</b>
+      <p>
+        oh boy...where do i start? this program's brought me a lot of joy and a lot of anguish.
+      </p>
+      <p>
+        anyway it all started with a single conversation with my chill yet sometimes aggravating fried Luukie13.
+        the idea was simple to understand but difficult to implement.
+        a program that shuffles the locations of items, spirits, emotes, weapons and tunics.
+        of course if this was unity this would be simple however blue fire was made in unreal.
+        at first i approached the idea of changing enums and datatables -
+        that didn't get me anywhere as it could only mix within types.
+        i encountered the same problem plus default values not appearing
+        when experimenting with references in maps and pretty much gave up
+      </p>
+      <p>
+        however then i start working on the unreal map editor and discovered a phenomenom that delighted me -
+        i could change default property values by just adding them to the actor.
+        this meant so much as it knocked out 2 birds with one stone - it meant that chests could mix
+        and that chests with sapphire ore could be changed.
+      </p>
+      <p>
+        although this presented another issue - a fourth rewrite.
+        however this time i wanted to do it right.
+        i wanted a proper logic system - something that had been a major pain point so far.
+        a few months and no progress has been made -
+        i want to change that so i got this notebook to plan it out
+      </p>
+      <p>
+        spuds out (dunno why i wrote that but that's the only time i'll do that)
+      </p>
     </div>
     
     <a href="../coding.html" class="rotate">
-    	<img src="../back.png" alt="back" class="object" style="top: 1vw; left: 1vw; width: 15vw">
+    	<img src="../back.png" alt="back" style="position: absolute; top: 1vw; left: 1vw; width: 15vw">
       <span class="text" style="top: 1vw; left: 16vw">back</span>
     </a>
   </body>

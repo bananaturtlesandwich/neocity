@@ -8,11 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="display.js"></script>
   </head>
-  <body>
+  <body onload="display('about')">
     <div class="sidebar">
       files
       <hr>
       <a onclick="display('about')">about.txt</a>
+      <a onclick="display('concept')">concept.txt</a>
       <a onclick="display('devlog')">devlog.txt</a>
     </div>
     
@@ -26,6 +27,10 @@
       <a href="https://github.com/bananaturtlesandwich/spaghetti" target="_blank" rel="noopener noreferrer">spaghetti</a>
       is a function hooker for cooked unreal engine blueprints
       </p>
+      <img src="spaghetti-about.png" alt="spaghetti" style="width: 100%">
+    </div>
+    
+    <div id="concept" hidden>
       <h1>concept</h1>
       <p>
         the idea for spaghetti was born when i modded my first unity game and realised how powerful a hooking system like
@@ -63,7 +68,7 @@
     </div>
     
     <a href="../coding.html" class="rotate">
-    	<img src="../back.png" alt="back" class="object" style="top: 1vw; left: 1vw; width: 15vw">
+    	<img src="../back.png" alt="back" style="position: absolute; top: 1vw; left: 1vw; width: 15vw">
       <span class="text" style="top: 1vw; left: 16vw">back</span>
     </a>
   </body>

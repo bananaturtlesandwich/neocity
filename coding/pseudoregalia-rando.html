@@ -8,11 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="display.js"></script>
   </head>
-  <body>
+  <body onload="display('about')">
     <div class="sidebar">
       files
       <hr>
       <a onclick="display('about')">about.txt</a>
+      <a onclick="display('concept')">concept.txt</a>
       <a onclick="display('devlog')">devlog.txt</a>
     </div>
     
@@ -27,6 +28,10 @@
         is a game mode for pseudoregalia that enhances replayability by shuffling pickups randomly
         while ensuring the game is still beatable without glitches
       </p>
+      <img src="pseudoregalia-rando-about.png" alt="pseudoregalia rando" style="width: 100%">
+    </div>
+    
+    <div id="concept" hidden>
       <h1>concept</h1>
       <p>
         the idea for the pseudoregalia rando came because pseudoregalia is a freaking amazing game
@@ -41,7 +46,7 @@
     </div>
     
     <a href="../coding.html" class="rotate">
-    	<img src="../back.png" alt="back" class="object" style="top: 1vw; left: 1vw; width: 15vw">
+    	<img src="../back.png" alt="back" style="position: absolute; top: 1vw; left: 1vw; width: 15vw">
       <span class="text" style="top: 1vw; left: 16vw">back</span>
     </a>
   </body>

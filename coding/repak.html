@@ -8,11 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="display.js"></script>
   </head>
-  <body>
+  <body onload="display('about')">
     <div class="sidebar">
       files
       <hr>
       <a onclick="display('about')">about.txt</a>
+      <a onclick="display('concept')">concept.txt</a>
       <a onclick="display('devlog')">devlog.txt</a>
     </div>
     
@@ -24,8 +25,12 @@
       <h1>about</h1>
       <p>
         <a href="https://github.com/trumank/repak" target="_blank" rel="noopener noreferrer">repak</a>
-        is unreal pak reading and writing library
+        is an unreal pak reading and writing library
       </p>
+      <img src="repak-about.png" alt="repak" style="width: 100%">
+    </div>
+
+    <div id="concept" hidden>
       <h1>concept</h1>
       <p>
         the idea for repak was when i was working on stove and needed mesh and texture data to properly display actors
@@ -47,7 +52,7 @@
     </div>
     
     <a href="../coding.html" class="rotate">
-    	<img src="../back.png" alt="back" class="object" style="top: 1vw; left: 1vw; width: 15vw">
+    	<img src="../back.png" alt="back" style="position: absolute; top: 1vw; left: 1vw; width: 15vw">
       <span class="text" style="top: 1vw; left: 16vw">back</span>
     </a>
   </body>

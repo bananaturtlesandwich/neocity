@@ -34,11 +34,6 @@ a:active {
   color: hotpink;
 }
 
-.scene {
-  width: 100%;
-  transform: scale(0.75);
-}
-
 ul, p {
   text-align: left;
 }
@@ -47,10 +42,6 @@ hr {
   height: 3px;
   border-width: 0;
   background-color: white;
-}
-
-img, .file {
-  position: absolute;
 }
 
 .sidebar {
@@ -64,12 +55,6 @@ img, .file {
 }
 main {
   margin-right: 20vw;
-}
-
-.file {
-  font-size: 4vw;
-  /*because it's used with a link*/
-  color: white;
 }
 
 /*thank you so much ribose for this setup*/
