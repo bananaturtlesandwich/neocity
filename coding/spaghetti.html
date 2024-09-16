@@ -55,11 +55,11 @@
         i'm currently rewriting the entire program to avoid directly patching the blueprint
         by generating kismet bytecode which will run hooks from interfaces in specific folders
       </p>
-      <b>i forgot to use my notebook at first so here's a summary of how the project worked at this point</b>
+      <b>previous logs are in a physical notebook so here's a summary of those</b>
       <p>
-        hooks are transplanted using modified code from stove,
-        the funcmap is then redirected to the hook
-        and the original's name is changed to orig_<i>name</i>
+        transplanting hooks using modified code from stove works!
+        then the funcmap just needs to be redirected to the hook
+        and the original function's name changed to orig_<i>name</i>
       </p>
       <p>
         the limitations of this approach are the same as normal asset patching -

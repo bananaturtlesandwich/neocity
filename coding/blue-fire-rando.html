@@ -41,39 +41,58 @@
     
     <div id="devlog" hidden>
       <h1>devlog</h1>
-      <b>here are transcriptions from my notebook</b>
-      <h1>TODO: finish transcribing from notebook</h1>
-      26/7/22
-      <br>
-      <b>this is from when i got my notebook and summarised what had happened so far</b>
+      <b>previous logs are in a physical notebook so here's a summary of those</b>
       <p>
-        oh boy...where do i start? this program's brought me a lot of joy and a lot of anguish.
-      </p>
-      <p>
-        anyway it all started with a single conversation with my chill yet sometimes aggravating fried Luukie13.
+        it all started with a single conversation with my chill yet sometimes aggravating fried Luukie13.
         the idea was simple to understand but difficult to implement.
         a program that shuffles the locations of items, spirits, emotes, weapons and tunics.
         of course if this was unity this would be simple however blue fire was made in unreal.
+      </p>
+      <p>
+        i remember delaying the inevitable implementation for so long by just messing around in winforms
+        but eventually i psyched myself up enough to start trying
+      </p>
+      <p>
         at first i approached the idea of changing enums and datatables -
         that didn't get me anywhere as it could only mix within types.
         i encountered the same problem plus default values not appearing
         when experimenting with references in maps and pretty much gave up
       </p>
       <p>
-        however then i start working on the unreal map editor and discovered a phenomenom that delighted me -
+        however then i start working on stove and discovered something that delighted me -
         i could change default property values by just adding them to the actor.
-        this meant so much as it knocked out 2 birds with one stone - it meant that chests could mix
+        this meant so much as it knocked out two birds with one stone - it meant that chests could mix
         and that chests with sapphire ore could be changed.
+        but this didn't affect cutscenes and npcs which really sucked.
+        i did manage to change shops which were located in the savegame blueprint so i could edit them there (actually nilo still doesn't work :p).
+        however the npcs and cutscenes were still yet to be figured out.
       </p>
       <p>
-        although this presented another issue - a fourth rewrite.
-        however this time i wanted to do it right.
-        i wanted a proper logic system - something that had been a major pain point so far.
-        a few months and no progress has been made -
-        i want to change that so i got this notebook to plan it out
+        i was quite concerned about making the logic for the randomiser
+        and turned to the hollow knight implementation, randocore.
+        i had a nice chat with homothetyhk who created the library
+        and eventually came to the conclusion i should just implement it myself.
       </p>
       <p>
-        spuds out (dunno why i wrote that but that's the only time i'll do that)
+        to randomise npcs and cutscenes, naturally i discovered a new modding technique - function library hooking.
+        <ul>
+          <li>create a dummy of the function library with all the correct function names, inputs and outputs and then duplicate that</li>
+          <li>name that duplicate to whatever you want and for each function in it call the original function that is in your dummy (i'd back this duplicate up)</li>
+          <li>then you can change the function to do whatever you want</li>
+          <li>cook the project and you'll have your hook and your dummy</li>
+          <li>delete the dummy</li>
+          <li>change any name reference to the function library in the target actor to your hook</li>
+          <li>since you didn't include the dummy the game will call the actual functions provided the function target is the dummy along with your stuff</li>
+        </ul>
+        and finally full randomisation was possible after transplanting was put into stove
+      </p>
+      <p>
+        after the gargantuan task of documenting checks was finished it was done.
+        after that i managed to optimise writing to be so much faster from 5 minutes to 5 seconds
+      </p>
+      <p>
+        once the pseudoregalia rando was finished i updated the blue fire rando with the logic improvements 
+        (shuffling within each area and freezing progression items made progression appearing early very likely).
       </p>
     </div>
     
