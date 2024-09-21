@@ -32,6 +32,7 @@
       </div>
     </div>
     <div id="contents" hidden>
+    	<a onclick="turn('announcement', 'community')" class="right"> > </a>
       <a onclick="turn('announcement', 'community')" class="rotate">
       	<img src="blue-fire/announcement.png" alt="announcement trailer thumbnail" class="object" style="top: 5vw; left: 55vw; width: 15vw">
         <span class="text" style="top: 2vw; left: 54vw">ANNOUNCEMENT</span>
@@ -69,22 +70,8 @@
         <span class="text" style="top: 43vw; left: 84vw">VOIDMAKER</span>
       </a>
     </div>
-    <div id="demo" hidden>
-      <p>
-        the demo was released to day one supporters (people who joined the discord early) a week early
-        and i'm still so gutted i could've been part of that group had i heard about the game earlier.
-        the demo still released to the public though and i got my hands on it
-      </p>
-      <p>
-        like every great demo it left me longing for the full game - the movement, overall gameplay and vibe were really great.
-        it also still had separate buttons for vertical and horizontal slashes (kind of glad that was removed).
-        it released with fire keep and the uthas temple (starting area and second temple) which was a fair chunk of the game.
-        people were speedrunning it like crazy (bridge skip was cool and just going around the gate in uthas was left in).
-        although i was surprised how little the atmosphere of the areas reflected the announcement trailer -
-        but i wasn't concerned because we'd get those cooler areas in the full game...right?
-      </p>
-    </div>
     <div id="announcement" hidden>
+    	<a onclick="turn('owner','contents', false)" class="left"> < </a>
       <p>
         i first heard about blue fire from its
         <a href="https://youtu.be/TPDIlhB0emM" target="_blank" rel="noopener noreferrer">announcement trailer</a>
@@ -98,6 +85,7 @@
       </p>
     </div>
     <div id="community" hidden>
+    	<a onclick="turn('demo', 'anticipation')" class="right"> > </a>
       <p>
         so i searched the game up and somehow found a link to its discord community (i think on the studio website).
         for context this was the first time i had ever done anything social on the internet (surprising since i'm a 2000s kid ik) -
@@ -128,7 +116,24 @@
         (xel, photo, evolair, luukie13, squishie, nicky, youtube101, kito you're awesome).
       </p>
     </div>
+    <div id="demo" hidden>
+    	<a onclick="turn('announcement', 'community')" class="left"> < </a>
+      <p>
+        the demo was released to day one supporters (people who joined the discord early) a week early
+        and i'm still so gutted i could've been part of that group had i heard about the game earlier.
+        the demo still released to the public though and i got my hands on it
+      </p>
+      <p>
+        like every great demo it left me longing for the full game - the movement, overall gameplay and vibe were really great.
+        it also still had separate buttons for vertical and horizontal slashes (kind of glad that was removed).
+        it released with fire keep and the uthas temple (starting area and second temple) which was a fair chunk of the game.
+        people were speedrunning it like crazy (bridge skip was cool and just going around the gate in uthas was left in).
+        although i was surprised how little the atmosphere of the areas reflected the announcement trailer -
+        but i wasn't concerned because we'd get those cooler areas in the full game...right?
+      </p>
+    </div>
     <div id="anticipation" hidden>
+    	<a onclick="turn('release', 'review')" class="right"> > </a>
       <p>
         graffiti games, the publisher, released an
         <a href="https://youtu.be/zVPMkBGd1zU" target="_blank" rel="noopener noreferrer">overview trailer</a>
@@ -173,6 +178,7 @@
       <img src="blue-fire/1_Countdown.png" alt="1" style="width: 19.5%">
     </div>
     <div id="release" hidden>
+    	<a onclick="turn('demo', 'anticipation')" class="left"> < </a>
       <p>
         it finally released with on a
         <a href="https://youtu.be/R0wPny3_8nQ" target="_blank" rel="noopener noreferrer">launch trailer</a>
@@ -196,6 +202,7 @@
       </p>
     </div>
     <div id="review" hidden>
+    	<a onclick="turn('modding', 'dlc')" class="right"> > </a>
       <p>
         of course i got it on day one and i got to playing the game i'd been obsessing over for months.
       </p>
@@ -246,6 +253,7 @@
       </p>
     </div>
     <div id="modding" hidden>
+    	<a onclick="turn('release', 'review')" class="left"> < </a>
       <p>
         blue fire was the game that got me into the incredible world of modding and programming
         and that is probably one of the most amazing thing this game and community has done for me.
@@ -266,11 +274,12 @@
         <a href="https://next.nexusmods.com/profile/organicspuds/mods?gameId=3956">nexus</a>.
         it meant i learnt basic 3D modelling and i'm quite proud of the zote model tbh.
         but i wanted to do more with the game.
-        i wanted to make a randomiser
-        (this wouldn't become a reality for a while)
+        i wanted to make a randomiser...this only happened after like a year -
+        you can read about this whole ordeal in the devlog on the <a href="../coding/blue-fire-rando.html">blue fire rando</a> page
       </p>
     </div>
     <div id="dlc" hidden>
+    	<a onclick="turn('voidmaker', ' ')" class="right"> > </a>
       <p>
         the leadup to the void of sorrows DLC was very much just as exciting as the leadup to the base game
         since the devs had been hinting at more content for quite some time.
@@ -307,80 +316,8 @@
         funnily enough von became a villain which might have been an intentional reference to a debate i had with bazop about how trustworthy von was
       </p>
     </div>
-    <div id="randomiser" hidden>
-      <p>
-        honestly i should probably copy out my devlogs for stove and the rando and put them on their dedicated projects page...
-        okay i'll leave out the pain of figuring out the intricacies of map files and the many PRs and backend changes but i did it and figured out how to transplant actors between maps
-      </p>
-      <p>
-        yeah yeah shut up americans for me it's an s not a z.
-        for people who don't know a randomiser is a game mode that enhances replayability by shuffling pickups randomly
-        while ensuring the game is still beatable without glitches.
-        this was where i really started to learn coding because to do this i had to edit the data, not just some 3D models or textures.
-      </p>
-      <p>
-        eventually after a ridiculous amount of digging for specific modding communities for games made in unreal
-        i did discover the awesome work of dmgvol in the ghostrunner community and his modding guides
-        which mentioned uassetapi so i learned c# just to use it
-        <img src="blue-fire/uassetapi.png" alt="uassetapi code" style="width: 100%">
-        i honestly didn't really do much with this except changing object positions
-      </p>
-      <p>
-        then buckminsterfullerine dropped into the server and showed us what modding plebians we were,
-        showering us with cool tools and resources about blueprints.
-        <img src="blue-fire/limited.png" alt="uassetapi is limited" style="width: 100%">
-        yeah i'm a stubborn motherfucker.
-      </p>
-      <p>
-        after a couple months of procrastinating actually making the randomiser by making it look pretty in winforms
-        i actually started doing some research on how i could implement it.
-        my first attempts involved editing the enums and datatables.
-        while this worked it only worked within the item types so after i realised this i was kind of stumped
-      </p>
-      <p>
-        i realised since i could change object positions using uassetapi i could make a small map editor to make this easier.
-        i originally made this using opentk and the GL_EditorFramework used in spotlight, the super mario 3D world editor.
-        in doing this, i noticed that some actors would have properties which other actors of the same type did not
-        and after adding in those properties i was delighted see those were used in-game so i could mix drops from chests and change sapphire ore chests
-      </p>
-      <p>
-        it was only by SUMMER 2022 that i finally was getting somewhere and was getting better at coding.
-        ALSO CAN I STILL MENTION HOW AWESOME IT WAS WE WERE STILL TALKING ON THE SERVER.
-        a lot of the trouble was with figuring out randomiser logic and 3D graphics shenanigans.
-        by the end of the holiday i had a broken mess of a randomiser, a questionably functional map editor and i decided to learn rust
-        since i had heard that somebody had written a uasset library for the language and i wanted something fresh.
-      </p>
-      <p>
-        it literally only took 2 days for rust to click for me.
-        i made a pretty functional uassetgui clone to learn the language and familiarise myself with unreal_asset
-        and i also got a commision to make a modding tool for multiversus before modders got shut down and got paid with journey to the savage planet.
-      </p>
-      <p>
-        after the absurd developments with stove i could finally place whatever i wanted in the world.
-        that didn't affect cutscenes and npcs though which really sucked.
-        of course i eventually found the solution after a bunch of work -
-        the shops were located in the savegame blueprint so i could edit them there (actually nilo still doesn't work :p).
-        however the npcs were still yet to be figured out.
-      </p>
-      <p>
-        to fix this, naturally i discovered a new modding technique - function library hooking.
-        create a dummy of the function library with all the correct function names, inputs and outputs and then duplicate that
-        name that duplicate to whatever you want and for each function in it call the original function that is in your dummy (i'd back this duplicate up)
-        then you can change the function to do whatever you want
-        cook the project and you'll have your hook and your dummy
-        delete the dummy
-        change any name reference to the function library in the target actor to your hook
-        since you didn't include the dummy the game will call the actual functions provided the function target is the dummy along with your stuff
-      </p>
-      <p>
-        the finished logic still wasn't great since it tried to procedurally place items
-        rather than check random seeds for beatability
-        and that led to all the good items being at the start.
-        this wasn't fixed until i made the pseudoregalia randomiser and ported the implementation to the blue fire randomiser
-        but there wasn't much fanfare for it as by then another year had gone and the server had essentially come to a standstill :(
-      </p>
-    </div>
     <div id="voidmaker" hidden>
+    	<a onclick="turn('modding', 'dlc')" class="left"> < </a>
       voidmaker was an surprise announcement.
       a level creation tool for blue fire's movement? i'm absolutely in.
       also, instead of being a DLC this would be a standalone free spinoff.

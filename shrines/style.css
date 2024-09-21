@@ -17,3 +17,17 @@ body {
   height: 60vw;
   overflow-y: auto;
 }
+.left, .right {
+  position: absolute;
+  top: 30vw;
+  width: 2vw;
+  height: 3vw;
+  background: lightblue;
+}
+.left {
+  left: -2vw;
+}
+.right {
+  right: -2vw;
+  text-align: right
+}
