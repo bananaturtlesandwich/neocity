@@ -2,387 +2,400 @@
 <html lang="en">
   <head>
     <title>blue fire</title>
-    <link rel="icon" type="image/x-icon" href="blue-fire/umby.ico">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="blue-fire.css">
-    <meta name="description" content="this damn game did a hell of a lot for me">
+    <meta name="description" content="whoagh this game did a lot for me">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../book.js"></script>
   </head>
-  <body>
-  	<img src="../progress.gif" alt="site in progress" style="width: 50vw">
-    <!--
-    some cool ways to stylise this shrine:
-    - an elevator taking you between areas
-    - a fire shrine warping you between areas
-    - onops talking and you click to see what's in their head
-    - platform in 3D to select (bonkers option)
-    -->
-    <details>
-      <summary>DISCOVERY</summary>
-      <div style="margin: 0vw 5vw; text-align: left">
-        <p>
-          i first heard about blue fire from its
-          <a href="https://youtu.be/TPDIlhB0emM" target="_blank" rel="noopener noreferrer">announcement trailer</a>
-          in a
-          <a href="https://youtu.be/PHUIV8DYptQ" target="_blank" rel="noopener noreferrer">nintendo indie world showcase</a>
-          which announced it for summer 2020 (the pandemic meant otherwise).
-          as soon as i watched it i was immediately captivated by its atmosphere, music, platforming, environments, enemies and characters.
-        </p>
-        <p>
-          its entire world just enamored me and i wanted to know more
-        </p>
+  <body onload="turn('owner','contents', false)">
+    <iframe src="https://open.spotify.com/embed/album/03Z4nidZmlWCC4BrgUBXXP?utm_source=generator" width="60%" height="160" frameBorder="0" allow="encrypted-media" loading="lazy"></iframe>
+    <div class="scene">
+      <div class="page" style="float: left">
+        <div id="left" class="innerpage">
+        </div>
       </div>
-    </details>
-    <details>
-      <summary>COMMUNITY</summary>
-      <div style="margin: 0vw 5vw; text-align: left">
-        <p>
-          so i searched the game up and somehow found a link to its discord community (i think on the studio website).
-          for context this was the first time i had ever done anything social on the internet (surprising since i'm a 2000s kid ik) -
-          i had only ever really used it for emails, youtube and searching info.
-          so after making a discord account, into the server i dropped...
-        </p>
-        <img src="blue-fire/welcome.png" alt="welcome from the blue fire server" style="width: 100%">
-        <p>
-          the devs and everyone else on the server were so lovely!
-          it was really a great first experience of online togetherness
-          i'm not sure i'll be able to capture the magic of again.
-        </p>
-        <img src="blue-fire/orip.png" alt="welcome from the orip bot" style="width: 100%">
-        <p>
-          and of course i was greeted by the engineer of penumbra himself, orip
-          (unfortunately he's is no longer operational so i suppose this counts as lost media)
-        </p>
-        <p>
-          i would spend hours in the evenings just talking on the server - we even had our wonderful duck cult.
-          in hindsight i realise the pandemic lockdown meant i had the time to keep track of everything happening there.
-          i think the fact that the community was fairly small meant that the interactions felt so much more intimate.
-          not that i didn't want more people excited about the game just that i could easily know all the other active members.
-        </p>
-        <p>
-          even though that was only 4 years ago at the time of writing, i already feel nostalgic for when the server was always buzzing with activity.
-          nowadays the server is very quiet and doesn't see much discussion apart from questions to the devs or people asking for help
-          which is a shame since i loved talking with a lot of people there
-          (xel, photo, evolair, luukie13, squishie, nicky, youtube101, kito you're awesome).
-        </p>
+      <div class="page" style="float: right">
+        <div id="right" class="innerpage">
+        </div>
       </div>
-    </details>
-    <details>
-      <summary>DEMO</summary>
-      <div style="margin: 0vw 5vw; text-align: left">
-        <p>
-          the demo was released to day one supporters (people who joined the discord early) a week early
-          and i'm still so gutted i could've been part of that group had i heard about the game earlier.
-          the demo still released to the public though and i got my hands on it
-        </p>
-        <p>
-          like every great demo it left me longing for the full game - the movement, overall gameplay and vibe were really great.
-          it also still had separate buttons for vertical and horizontal slashes (kind of glad that was removed).
-          it released with fire keep and the uthas temple (starting area and second temple) which was a fair chunk of the game.
-          people were speedrunning it like crazy (bridge skip was cool and just going around the gate in uthas was left in).
-          although i was surprised how little the atmosphere of the areas reflected the announcement trailer -
-          but i wasn't concerned because we'd get those cooler areas in the full game...right?
-        </p>
+    	<img src="binder.png" alt="binder" style="position: absolute; top: 7vw; left: calc(50% - 2.5vw); width: 5vw">
+    	<a onclick="turn('owner','contents', false)" style="position: absolute; top: 2vw; left: -7vw; width: 7vw; height: 3vw; background: lightblue">
+        index
+      </a>
+    </div>
+    <div id="owner" hidden>
+      <div style="margin: 20vw 5vw; text-align: center">
+        <s>this scrapbook</s> my heart belongs to <u style="font-family: grapesoda">umbra</u>
       </div>
-    </details>
-    <details>
-      <summary>ANTICIPATION</summary>
-      <div style="margin: 0vw 5vw; text-align: left">
-        <p>
-          graffiti games, the publisher, released an
-          <a href="https://youtu.be/zVPMkBGd1zU" target="_blank" rel="noopener noreferrer">overview trailer</a>
-          which showed off a large portion of the game
-          and is the last trailer showing the all black enemies and shadow lords with detailed texturing
-        </p>
-        <p>
-          relyea, well known hollow knight youtuber, did a
-          <a href="https://youtu.be/soEBdEDqT_g" target="_blank" rel="noopener noreferrer">dev interview</a>
-          with gabriel which gave us a bunch of info to be excited about.
-        </p>
-        <p>
-          a <a href="https://youtu.be/BlgsCIOqdEQ" target="_blank" rel="noopener noreferrer">release date announcement trailer</a>
-          was released and it looked awesome - some new areas were revealed which looked really damn cool
-          but the areas from the initial trailer no longer seemed to exist and the enemy designs had been colorised.
-        </p>
-        <p>
-          the devs explained they cut a lot of content for budget and time constraints,
-          which was a real shame that the game could not release at its full potential
-          but very understandable for an indie studio who developed in the pandemic.
-        </p>
-        <p>
-          i was signed up to a newsletter from graffiti games which sent out some behind-the-scenes footage for blue fire.
-          <img src="blue-fire/leak.png" alt="behind the scenes" style="width: 100%">
-          <img src="blue-fire/phantom-knight.png" alt="phantom knight" style="width: 33%">
-          <img src="blue-fire/queen.png" alt="queen" style="width: 33%">
-          <img src="blue-fire/test.png" alt="test" style="width: 33%">
-          this included clips of a cut boss, SIRION (A MAJOR BOSS) AND QUEEN (THE FINAL BOSS).
-          apparently they hadn't been given permission to post that footage so it was quickly taken down!
-          i just wish i had the forethought to download the videos - yet more lost media :p
-        </p>
-        <p>
-          the <a href="https://youtu.be/m31G0TcW600" target="_blank" rel="noopener noreferrer">making of blue fire</a>
-          was released which was such a great introspection into the development and evolution of the game
-          (plus it was lovely to see the community mentioned...although in the footage i had a typo and it has annoyed me since)
-          <img src="blue-fire/typo.png" alt="the typo" style="width: 100%">
-        </p>
-        <img src="blue-fire/5_Countdown.png" alt="5" style="width: 19.5%">
-        <img src="blue-fire/4_Countdown.png" alt="4" style="width: 19.5%">
-        <img src="blue-fire/3_Countdown.png" alt="3" style="width: 19.5%">
-        <img src="blue-fire/2_Countdown.png" alt="2" style="width: 19.5%">
-        <img src="blue-fire/1_Countdown.png" alt="1" style="width: 19.5%">
-      </div>
-    </details>
-    <details>
-      <summary>RELEASE</summary>
-      <div style="margin: 0vw 5vw; text-align: left">
-        <p>
-          it finally released with on a
-          <a href="https://youtu.be/R0wPny3_8nQ" target="_blank" rel="noopener noreferrer">launch trailer</a>
-          to add to boot and weirdly a
-          <a href="https://www.makeship.com/products/umbra" target="_blank" rel="noopener noreferrer">makeship campaign</a>
-          (although i think that's standard for graffiti games releases) -
-          they even got failboat to promote it in a sponsored
-          <a href="https://youtu.be/QEo-kbHEi2s" target="_blank" rel="noopener noreferrer">video</a>.
-          i do wish i got myself an umby but alas teenage lack of financial freedom...oh shit the blue fire t-shirts are still being sold on the
-          <a href="https://graffiti-games.myshopify.com/collections/all" target="_blank" rel="noopener noreferrer">graffiti games store</a>
-          i gotta get one.
-        </p>
-        <p>
-          i think blue fire was quite well received in general by critics.
-          from my perpective it didn't sell as well as it deserved.
-          obviously it is an indie game so wasn't going to sell as well as a game from an established studio
-          but i think the pandemic was a major factor
-          since it changed development cycles and meant more difficult decisions in regards to choices in game direction
-          and of course delayed the release which meant that initial hype had died down more and more people had forgotten about it.
-          i may be completely wrong about this though this was just the impression i got.
-        </p>
-      </div>
-    </details>
-    <details>
-      <summary>REVIEW</summary>
-      <div style="margin: 0vw 5vw; text-align: left">
-        <p>
-          of course i got it on day one and i got to playing the game i'd been obsessing over for months.
-        </p>
-        <p>
-          the floaty movement is still just as fun to use but spirits can make the game feel a bit too easy
-          so i normally play without very many movement ones equipped.
-          the voids which test the movement are really challenging yet still very fun (although douklans leap was rough).
-          the spin attack, wallrun and fire charm are definitely the best balanced movement options
-          and feel much more satisfying to use than the dash, double dash, double jump and triple jump.
-          the combat works really well i think and the bosses are really well-designed around it.
-          the characters are very charming and have really cool designs (nilo and orip my beloved)
-          and the sidequests give them even more personality and expand on the lore.
-          i find the lore and world the game has created very compelling and leaves me wanting to see more of penumbra.
-        </p>
-        <p>
-          now that my hype has died down i think i can review the game a bit more critically.
-          i still love the game very dearly but there are definitely flaws i was overlooking due to said hype.
-        </p>
-        <p>
-          the biggest flaw is the pacing of the game.
-          by this i don't just mean game length because not every game is able to produce a large amount of content
-          but the allocation of types of gameplay and levels of excitement.
-          the start of the game is really good with this
-          as it mixes combat, exploration and platforming together without one overshadowing the other.
-        </p>
-        <p>
-          however once once the three temples (steam house was a shortened fire temple) are completed,
-          the game is just a backtracking exercise to fight the shadow lords and get to the queen.
-          this is especially jarring considering there is little backtracking otherwise (the game is pretty linear).
-          samael has you activating flames around the map
-          and beira has you collecting pieces of her soul like in the spirit tear sections from twilight princess.
-          when you point out that sirion has an entire area and dungeon it becomes quite obvious they didn't have enough time or money to do the other shadow lords justice
-          but still wanted to give them a substantial part of the game.
-        </p>
-        <p>
-          choosing to pad out the runtime was not the best solution and really impacts enjoyment at the end
-          (although the movement spirits make this a bit more bearable).
-          i honestly think if the shadow lord doors were immediately accessible after the tower of gods
-          the game would have been a much better experience (even if shorter)
-          which didn't feel like it was giving you busywork.
-        </p>
-        <p>
-          my other main criticism is the sidequests
-          which are essentially all single fetch quests for items you will find anyway:
-          bremur's family photo, fara's mother's necklace, the musicians, barry's rose and nuno's medicine.
-          spirit hunter, mork and codi's quests are a bit better since there's multiple items to find in more hidden places
-          and you can check in on the characters multiple times throughout
-        </p>
-      </div>
-    </details>
-    <details>
-      <summary>MODDING</summary>
-      <div style="margin: 0vw 5vw; text-align: left">
-        <p>
-          blue fire was the game that got me into the incredible world of modding and programming
-          and that is probably one of the most amazing thing this game and community has done for me.
-          there was talk about support for user generated content but nothing ever really happened until voidmaker which we'll get to.
-        </p>
-        <p>
-          six months after release the community was still extremely active which really was amazing when you think about it
-          and shows how much we just talked and i decided to try and see if i could make any modifications without official support.
-          lo and behold the only thing that came up when i searched up unreal engine 4 modding was 
-          <a href="https://youtu.be/ouf1zBEVeVo" target="_blank" rel="noopener noreferrer">this video</a>
-          by fatihg which i watched like five times over the next week of trying to understand everything going on until finally, something clicked
-          <img src="blue-fire/mod.png" alt="i have created the first blue fire mod" style="width: 100%">
-          <img src="blue-fire/hell.jpg" alt="douklan's leap with the word hell written over it" style="width: 100%">
-        </p>
-        <p>
-          of course like most modders starting off i just did a bunch of cosmetic mods
-          which are still the majority of the blue fire mods i've put on
-          <a href="https://next.nexusmods.com/profile/organicspuds/mods?gameId=3956">nexus</a>.
-          it meant i learnt basic 3D modelling and i'm quite proud of the zote model tbh.
-          but i wanted to do more with the game.
-          i wanted to make a randomiser
-          (this wouldn't become a reality for a while)
-        </p>
-      </div>
-    </details>
-    <details>
-      <summary>DLC</summary>
-      <div style="margin: 0vw 5vw; text-align: left">
-        <p>
-          the leadup to the void of sorrows DLC was very much just as exciting as the leadup to the base game
-          since the devs had been hinting at more content for quite some time.
-          there was a few patches (i really admire how much effort robi studios put into polish and quality of life improvements)
-          and some ducks were added as a very sweet homage to the server meme.
-        </p>
-          but eventually robi studios put out a teaser on a
-          <a href="https://www.robistudios.com/julynewsnewcontentepicgrant" target="_blank" rel="noopener noreferrer">blog post</a>
-          on their website.
-          of course the final trailer was accidentally posted by graffiti too early but the
-          <a href="https://youtu.be/uosHr8YOYtI" target="_blank" rel="noopener noreferrer">trailer</a>
-          was eventually posted
-        </p>
-        <p>
-          honestly, i think the void of sorrows dlc is perfect
-        </p>
-        <p>
-          the new voids and boss are fiendishly challenging and exhilarating to complete;
-          the lore really feels like an organic expansion to the world;
-          the area is really fun to explore and the non-linearity of it was great;
-          the easter eggs were extremely well integrated and extremely sweet (i think i cried when i read the robi coin);
-          and the new cosmetics are great and made me laugh
-        </p>
-        <p>
-          unfortunately the way the promotion was handled meant that a lot of people have no idea this expansion exists.
-          the dlc is hidden behind a door in the fire keep which only lights up if you watched the full credits
-          which pretty much no-one did and there isn't a skip button.
-          also the dlc was released for free which, while appreciated,
-          meant since you didn't have to make any conscious effort to get it
-          many people didn't realise it released.
-          WE WANT TO SUPPORT THE STUDIO LET US GIVE YOU MONEY!
-        </p>
-        <p>
-          funnily enough von became a villain which might have been an intentional reference to a debate i had with bazop about how trustworthy von was
-        </p>
-      </div>
-    </details>
-    <details>
-      <summary>RANDOMISER</summary>
-      <div style="margin: 0vw 5vw; text-align: left">
-        <p>
-          honestly i should probably copy out my devlogs for stove and the rando and put them on their dedicated projects page...
-          okay i'll leave out the pain of figuring out the intricacies of map files and the many PRs and backend changes but i did it and figured out how to transplant actors between maps
-        </p>
-        <p>
-          yeah yeah shut up americans for me it's an s not a z.
-          for people who don't know a randomiser is a game mode that enhances replayability by shuffling pickups randomly
-          while ensuring the game is still beatable without glitches.
-          this was where i really started to learn coding because to do this i had to edit the data, not just some 3D models or textures.
-        </p>
-        <p>
-          eventually after a ridiculous amount of digging for specific modding communities for games made in unreal
-          i did discover the awesome work of dmgvol in the ghostrunner community and his modding guides
-          which mentioned uassetapi so i learned c# just to use it
-          <img src="blue-fire/uassetapi.png" alt="uassetapi code" style="width: 100%">
-          i honestly didn't really do much with this except changing object positions
-        </p>
-        <p>
-          then buckminsterfullerine dropped into the server and showed us what modding plebians we were,
-          showering us with cool tools and resources about blueprints.
-          <img src="blue-fire/limited.png" alt="uassetapi is limited" style="width: 100%">
-          yeah i'm a stubborn motherfucker.
-        </p>
-        <p>
-          after a couple months of procrastinating actually making the randomiser by making it look pretty in winforms
-          i actually started doing some research on how i could implement it.
-          my first attempts involved editing the enums and datatables.
-          while this worked it only worked within the item types so after i realised this i was kind of stumped
-        </p>
-        <p>
-          i realised since i could change object positions using uassetapi i could make a small map editor to make this easier.
-          i originally made this using opentk and the GL_EditorFramework used in spotlight, the super mario 3D world editor.
-          in doing this, i noticed that some actors would have properties which other actors of the same type did not
-          and after adding in those properties i was delighted see those were used in-game so i could mix drops from chests and change sapphire ore chests
-        </p>
-        <p>
-          it was only by SUMMER 2022 that i finally was getting somewhere and was getting better at coding.
-          ALSO CAN I STILL MENTION HOW AWESOME IT WAS WE WERE STILL TALKING ON THE SERVER.
-          a lot of the trouble was with figuring out randomiser logic and 3D graphics shenanigans.
-          by the end of the holiday i had a broken mess of a randomiser, a questionably functional map editor and i decided to learn rust
-          since i had heard that somebody had written a uasset library for the language and i wanted something fresh.
-        </p>
-        <p>
-          it literally only took 2 days for rust to click for me.
-          i made a pretty functional uassetgui clone to learn the language and familiarise myself with unreal_asset
-          and i also got a commision to make a modding tool for multiversus before modders got shut down and got paid with journey to the savage planet.
-        </p>
-        <p>
-          after the absurd developments with stove i could finally place whatever i wanted in the world.
-          that didn't affect cutscenes and npcs though which really sucked.
-          of course i eventually found the solution after a bunch of work -
-          the shops were located in the savegame blueprint so i could edit them there (actually nilo still doesn't work :p).
-          however the npcs were still yet to be figured out.
-        </p>
-        <p>
-          to fix this, naturally i discovered a new modding technique - function library hooking.
-          create a dummy of the function library with all the correct function names, inputs and outputs and then duplicate that
-          name that duplicate to whatever you want and for each function in it call the original function that is in your dummy (i'd back this duplicate up)
-          then you can change the function to do whatever you want
-          cook the project and you'll have your hook and your dummy
-          delete the dummy
-          change any name reference to the function library in the target actor to your hook
-          since you didn't include the dummy the game will call the actual functions provided the function target is the dummy along with your stuff
-        </p>
-        <p>
-          the finished logic still wasn't great since it tried to procedurally place items
-          rather than check random seeds for beatability
-          and that led to all the good items being at the start.
-          this wasn't fixed until i made the pseudoregalia randomiser and ported the implementation to the blue fire randomiser
-          but there wasn't much fanfare for it as by then another year had gone and the server had essentially come to a standstill :(
-        </p>
-      </div>
-    </details>
-    <details>
-      <summary>VOIDMAKER</summary>
-      <div style="margin: 0vw 5vw; text-align: left">
-        voidmaker was an surprise announcement.
-        a level creation tool for blue fire's movement? i'm absolutely in.
-        also, instead of being a DLC this would be a standalone free spinoff.
-        ROBI LET US PAY FOR YOUR BLOODY AWESOME GAMES!
-        i think partially because of it being an spinoff rather than a dlc
-        despite the asset sharing it didn't get much attention.
-        there's some really cool levels on the platform too
-        and they released it as a free update for consoles anyway.
-        AND THERE'S SOME BANGER LEVEL MUSIC TOO WHICH HAS NEVER BEEN RELEASED
-        (mushroom king my beloved)
-      </div>
-    </details>
-    <details>
-      <summary>CONCLUSION</summary>
-      <div style="margin: 0vw 5vw; text-align: left">
-        this was my first shrine and probably the one which i have the most to talk about with as well.
-        writing it all out felt great and i definitely want to make it as pretty as the game deserves.
-        this game did a lot for me.
-        it showed me how great online community can feel and how fun modding and programming can be.
-        thank you blue fire and thank you robi studios
-      </div>
-    </details>
+    </div>
+    <div id="contents" hidden>
+      <a onclick="turn('announcement', 'community')" class="rotate">
+      	<img src="blue-fire/announcement.png" alt="announcement trailer thumbnail" class="object" style="top: 5vw; left: 55vw; width: 15vw">
+        <span class="text" style="top: 2vw; left: 54vw">ANNOUNCEMENT</span>
+      </a>
+      <a onclick="turn('announcement', 'community')" class="rotate">
+      	<img src="blue-fire/duckbra.gif" alt="umbra riding a duck" class="object" style="top: 10vw; left: 69vw; width: 15vw">
+        <span class="text" style="top: 7vw; left: 70vw">COMMUNITY</span>
+      </a>
+      <a onclick="turn('demo', 'anticipation')" class="rotate">
+      	<img src="blue-fire/demo.png" alt="bridge skip" class="object" style="top: 18vw; left: 57vw; width: 15vw">
+        <span class="text" style="top: 15vw; left: 61vw">DEMO</span>
+      </a>
+      <a onclick="turn('demo', 'anticipation')" class="rotate">
+      	<img src="blue-fire/anticipation.png" alt="queen leak" class="object" style="top: 13vw; left: 75vw; width: 15vw">
+        <span class="text" style="top: 10vw; left: 79vw">ANTICIPATION</span>
+      </a>
+      <a onclick="turn('release', 'review')" class="rotate">
+      	<img src="blue-fire/game.jpg" alt="game key art" class="object" style="top: 25vw; left: 74vw; width: 15vw">
+        <span class="text" style="top: 22vw; left: 77vw">RELEASE</span>
+      </a>
+      <a onclick="turn('release', 'review')" class="rotate">
+      	<img src="blue-fire/fight.png" alt="game key art" class="object" style="top: 32vw; left: 54vw; width: 15vw">
+        <span class="text" style="top: 29vw; left: 56vw">REVIEW</span>
+      </a>
+      <a onclick="turn('modding', 'dlc')" class="rotate">
+      	<img src="blue-fire/hell.jpg" alt="my first mod" class="object" style="top: 37vw; left: 68vw; width: 15vw">
+        <span class="text" style="top: 34vw; left: 71vw">MODDING</span>
+      </a>
+      <a onclick="turn('modding', 'dlc')" class="rotate">
+      	<img src="blue-fire/dlc.png" alt="dlc key art" class="object" style="top: 44vw; left: 56vw; width: 15vw">
+        <span class="text" style="top: 41vw; left: 60vw">DLC</span>
+      </a>
+      <a onclick="turn('voidmaker', ' ')" class="rotate">
+      	<img src="blue-fire/voidmaker.png" alt="voidmaker key art" class="object" style="top: 46vw; left: 75vw; width: 15vw">
+        <span class="text" style="top: 43vw; left: 84vw">VOIDMAKER</span>
+      </a>
+    </div>
+    <div id="demo" hidden>
+      <p>
+        the demo was released to day one supporters (people who joined the discord early) a week early
+        and i'm still so gutted i could've been part of that group had i heard about the game earlier.
+        the demo still released to the public though and i got my hands on it
+      </p>
+      <p>
+        like every great demo it left me longing for the full game - the movement, overall gameplay and vibe were really great.
+        it also still had separate buttons for vertical and horizontal slashes (kind of glad that was removed).
+        it released with fire keep and the uthas temple (starting area and second temple) which was a fair chunk of the game.
+        people were speedrunning it like crazy (bridge skip was cool and just going around the gate in uthas was left in).
+        although i was surprised how little the atmosphere of the areas reflected the announcement trailer -
+        but i wasn't concerned because we'd get those cooler areas in the full game...right?
+      </p>
+    </div>
+    <div id="announcement" hidden>
+      <p>
+        i first heard about blue fire from its
+        <a href="https://youtu.be/TPDIlhB0emM" target="_blank" rel="noopener noreferrer">announcement trailer</a>
+        in a
+        <a href="https://youtu.be/PHUIV8DYptQ" target="_blank" rel="noopener noreferrer">nintendo indie world showcase</a>
+        which announced it for summer 2020 (the pandemic meant otherwise).
+        as soon as i watched it i was immediately captivated by its atmosphere, music, platforming, environments, enemies and characters.
+      </p>
+      <p>
+        its entire world just enamored me and i wanted to know more
+      </p>
+    </div>
+    <div id="community" hidden>
+      <p>
+        so i searched the game up and somehow found a link to its discord community (i think on the studio website).
+        for context this was the first time i had ever done anything social on the internet (surprising since i'm a 2000s kid ik) -
+        i had only ever really used it for emails, youtube and searching info.
+        so after making a discord account, into the server i dropped...
+      </p>
+      <img src="blue-fire/welcome.png" alt="welcome from the blue fire server" style="width: 100%">
+      <p>
+        the devs and everyone else on the server were so lovely!
+        it was really a great first experience of online togetherness
+        i'm not sure i'll be able to capture the magic of again.
+      </p>
+      <img src="blue-fire/orip.png" alt="welcome from the orip bot" style="width: 100%">
+      <p>
+        and of course i was greeted by the engineer of penumbra himself, orip
+        (unfortunately he's is no longer operational so i suppose this counts as lost media)
+      </p>
+      <p>
+        i would spend hours in the evenings just talking on the server - we even had our wonderful duck cult.
+        in hindsight i realise the pandemic lockdown meant i had the time to keep track of everything happening there.
+        i think the fact that the community was fairly small meant that the interactions felt so much more intimate.
+        not that i didn't want more people excited about the game just that i could easily know all the other active members.
+      </p>
+      <p>
+        even though that was only 4 years ago at the time of writing, i already feel nostalgic for when the server was always buzzing with activity.
+        nowadays the server is very quiet and doesn't see much discussion apart from questions to the devs or people asking for help
+        which is a shame since i loved talking with a lot of people there
+        (xel, photo, evolair, luukie13, squishie, nicky, youtube101, kito you're awesome).
+      </p>
+    </div>
+    <div id="anticipation" hidden>
+      <p>
+        graffiti games, the publisher, released an
+        <a href="https://youtu.be/zVPMkBGd1zU" target="_blank" rel="noopener noreferrer">overview trailer</a>
+        which showed off a large portion of the game
+        and is the last trailer showing the all black enemies and shadow lords with detailed texturing
+      </p>
+      <p>
+        relyea, well known hollow knight youtuber, did a
+        <a href="https://youtu.be/soEBdEDqT_g" target="_blank" rel="noopener noreferrer">dev interview</a>
+        with gabriel which gave us a bunch of info to be excited about.
+      </p>
+      <p>
+        a <a href="https://youtu.be/BlgsCIOqdEQ" target="_blank" rel="noopener noreferrer">release date announcement trailer</a>
+        was released and it looked awesome - some new areas were revealed which looked really damn cool
+        but the areas from the initial trailer no longer seemed to exist and the enemy designs had been colorised.
+      </p>
+      <p>
+        the devs explained they cut a lot of content for budget and time constraints,
+        which was a real shame that the game could not release at its full potential
+        but very understandable for an indie studio who developed in the pandemic.
+      </p>
+      <p>
+        i was signed up to a newsletter from graffiti games which sent out some behind-the-scenes footage for blue fire.
+        <img src="blue-fire/leak.png" alt="behind the scenes" style="width: 100%">
+        <img src="blue-fire/phantom-knight.png" alt="phantom knight" style="width: 33%">
+        <img src="blue-fire/queen.png" alt="queen" style="width: 33%">
+        <img src="blue-fire/test.png" alt="test" style="width: 33%">
+        this included clips of a cut boss, SIRION (A MAJOR BOSS) AND QUEEN (THE FINAL BOSS).
+        apparently they hadn't been given permission to post that footage so it was quickly taken down!
+        i just wish i had the forethought to download the videos - yet more lost media :p
+      </p>
+      <p>
+        the <a href="https://youtu.be/m31G0TcW600" target="_blank" rel="noopener noreferrer">making of blue fire</a>
+        was released which was such a great introspection into the development and evolution of the game
+        (plus it was lovely to see the community mentioned...although in the footage i had a typo and it has annoyed me since)
+        <img src="blue-fire/typo.png" alt="the typo" style="width: 100%">
+      </p>
+      <img src="blue-fire/5_Countdown.png" alt="5" style="width: 19.5%">
+      <img src="blue-fire/4_Countdown.png" alt="4" style="width: 19.5%">
+      <img src="blue-fire/3_Countdown.png" alt="3" style="width: 19.5%">
+      <img src="blue-fire/2_Countdown.png" alt="2" style="width: 19.5%">
+      <img src="blue-fire/1_Countdown.png" alt="1" style="width: 19.5%">
+    </div>
+    <div id="release" hidden>
+      <p>
+        it finally released with on a
+        <a href="https://youtu.be/R0wPny3_8nQ" target="_blank" rel="noopener noreferrer">launch trailer</a>
+        to add to boot and weirdly a
+        <a href="https://www.makeship.com/products/umbra" target="_blank" rel="noopener noreferrer">makeship campaign</a>
+        (although i think that's standard for graffiti games releases) -
+        they even got failboat to promote it in a sponsored
+        <a href="https://youtu.be/QEo-kbHEi2s" target="_blank" rel="noopener noreferrer">video</a>.
+        i do wish i got myself an umby but alas teenage lack of financial freedom...oh shit the blue fire t-shirts are still being sold on the
+        <a href="https://graffiti-games.myshopify.com/collections/all" target="_blank" rel="noopener noreferrer">graffiti games store</a>
+        i gotta get one.
+      </p>
+      <p>
+        i think blue fire was quite well received in general by critics.
+        from my perpective it didn't sell as well as it deserved.
+        obviously it is an indie game so wasn't going to sell as well as a game from an established studio
+        but i think the pandemic was a major factor
+        since it changed development cycles and meant more difficult decisions in regards to choices in game direction
+        and of course delayed the release which meant that initial hype had died down more and more people had forgotten about it.
+        i may be completely wrong about this though this was just the impression i got.
+      </p>
+    </div>
+    <div id="review" hidden>
+      <p>
+        of course i got it on day one and i got to playing the game i'd been obsessing over for months.
+      </p>
+      <p>
+        the floaty movement is still just as fun to use but spirits can make the game feel a bit too easy
+        so i normally play without very many movement ones equipped.
+        the voids which test the movement are really challenging yet still very fun (although douklans leap was rough).
+        the spin attack, wallrun and fire charm are definitely the best balanced movement options
+        and feel much more satisfying to use than the dash, double dash, double jump and triple jump.
+        the combat works really well i think and the bosses are really well-designed around it.
+        the characters are very charming and have really cool designs (nilo and orip my beloved)
+        and the sidequests give them even more personality and expand on the lore.
+        i find the lore and world the game has created very compelling and leaves me wanting to see more of penumbra.
+      </p>
+      <p>
+        now that my hype has died down i think i can review the game a bit more critically.
+        i still love the game very dearly but there are definitely flaws i was overlooking due to said hype.
+      </p>
+      <p>
+        the biggest flaw is the pacing of the game.
+        by this i don't just mean game length because not every game is able to produce a large amount of content
+        but the allocation of types of gameplay and levels of excitement.
+        the start of the game is really good with this
+        as it mixes combat, exploration and platforming together without one overshadowing the other.
+      </p>
+      <p>
+        however once once the three temples (steam house was a shortened fire temple) are completed,
+        the game is just a backtracking exercise to fight the shadow lords and get to the queen.
+        this is especially jarring considering there is little backtracking otherwise (the game is pretty linear).
+        samael has you activating flames around the map
+        and beira has you collecting pieces of her soul like in the spirit tear sections from twilight princess.
+        when you point out that sirion has an entire area and dungeon it becomes quite obvious they didn't have enough time or money to do the other shadow lords justice
+        but still wanted to give them a substantial part of the game.
+      </p>
+      <p>
+        choosing to pad out the runtime was not the best solution and really impacts enjoyment at the end
+        (although the movement spirits make this a bit more bearable).
+        i honestly think if the shadow lord doors were immediately accessible after the tower of gods
+        the game would have been a much better experience (even if shorter)
+        which didn't feel like it was giving you busywork.
+      </p>
+      <p>
+        my other main criticism is the sidequests
+        which are essentially all single fetch quests for items you will find anyway:
+        bremur's family photo, fara's mother's necklace, the musicians, barry's rose and nuno's medicine.
+        spirit hunter, mork and codi's quests are a bit better since there's multiple items to find in more hidden places
+        and you can check in on the characters multiple times throughout
+      </p>
+    </div>
+    <div id="modding" hidden>
+      <p>
+        blue fire was the game that got me into the incredible world of modding and programming
+        and that is probably one of the most amazing thing this game and community has done for me.
+        there was talk about support for user generated content but nothing ever really happened until voidmaker which we'll get to.
+      </p>
+      <p>
+        six months after release the community was still extremely active which really was amazing when you think about it
+        and shows how much we just talked and i decided to try and see if i could make any modifications without official support.
+        lo and behold the only thing that came up when i searched up unreal engine 4 modding was 
+        <a href="https://youtu.be/ouf1zBEVeVo" target="_blank" rel="noopener noreferrer">this video</a>
+        by fatihg which i watched like five times over the next week of trying to understand everything going on until finally, something clicked
+        <img src="blue-fire/mod.png" alt="i have created the first blue fire mod" style="width: 100%">
+        <img src="blue-fire/hell.jpg" alt="douklan's leap with the word hell written over it" style="width: 100%">
+      </p>
+      <p>
+        of course like most modders starting off i just did a bunch of cosmetic mods
+        which are still the majority of the blue fire mods i've put on
+        <a href="https://next.nexusmods.com/profile/organicspuds/mods?gameId=3956">nexus</a>.
+        it meant i learnt basic 3D modelling and i'm quite proud of the zote model tbh.
+        but i wanted to do more with the game.
+        i wanted to make a randomiser
+        (this wouldn't become a reality for a while)
+      </p>
+    </div>
+    <div id="dlc" hidden>
+      <p>
+        the leadup to the void of sorrows DLC was very much just as exciting as the leadup to the base game
+        since the devs had been hinting at more content for quite some time.
+        there was a few patches (i really admire how much effort robi studios put into polish and quality of life improvements)
+        and some ducks were added as a very sweet homage to the server meme.
+      </p>
+        but eventually robi studios put out a teaser on a
+        <a href="https://www.robistudios.com/julynewsnewcontentepicgrant" target="_blank" rel="noopener noreferrer">blog post</a>
+        on their website.
+        of course the final trailer was accidentally posted by graffiti too early but the
+        <a href="https://youtu.be/uosHr8YOYtI" target="_blank" rel="noopener noreferrer">trailer</a>
+        was eventually posted
+      </p>
+      <p>
+        honestly, i think the void of sorrows dlc is perfect
+      </p>
+      <p>
+        the new voids and boss are fiendishly challenging and exhilarating to complete;
+        the lore really feels like an organic expansion to the world;
+        the area is really fun to explore and the non-linearity of it was great;
+        the easter eggs were extremely well integrated and extremely sweet (i think i cried when i read the robi coin);
+        and the new cosmetics are great and made me laugh
+      </p>
+      <p>
+        unfortunately the way the promotion was handled meant that a lot of people have no idea this expansion exists.
+        the dlc is hidden behind a door in the fire keep which only lights up if you watched the full credits
+        which pretty much no-one did and there isn't a skip button.
+        also the dlc was released for free which, while appreciated,
+        meant since you didn't have to make any conscious effort to get it
+        many people didn't realise it released.
+        WE WANT TO SUPPORT THE STUDIO LET US GIVE YOU MONEY!
+      </p>
+      <p>
+        funnily enough von became a villain which might have been an intentional reference to a debate i had with bazop about how trustworthy von was
+      </p>
+    </div>
+    <div id="randomiser" hidden>
+      <p>
+        honestly i should probably copy out my devlogs for stove and the rando and put them on their dedicated projects page...
+        okay i'll leave out the pain of figuring out the intricacies of map files and the many PRs and backend changes but i did it and figured out how to transplant actors between maps
+      </p>
+      <p>
+        yeah yeah shut up americans for me it's an s not a z.
+        for people who don't know a randomiser is a game mode that enhances replayability by shuffling pickups randomly
+        while ensuring the game is still beatable without glitches.
+        this was where i really started to learn coding because to do this i had to edit the data, not just some 3D models or textures.
+      </p>
+      <p>
+        eventually after a ridiculous amount of digging for specific modding communities for games made in unreal
+        i did discover the awesome work of dmgvol in the ghostrunner community and his modding guides
+        which mentioned uassetapi so i learned c# just to use it
+        <img src="blue-fire/uassetapi.png" alt="uassetapi code" style="width: 100%">
+        i honestly didn't really do much with this except changing object positions
+      </p>
+      <p>
+        then buckminsterfullerine dropped into the server and showed us what modding plebians we were,
+        showering us with cool tools and resources about blueprints.
+        <img src="blue-fire/limited.png" alt="uassetapi is limited" style="width: 100%">
+        yeah i'm a stubborn motherfucker.
+      </p>
+      <p>
+        after a couple months of procrastinating actually making the randomiser by making it look pretty in winforms
+        i actually started doing some research on how i could implement it.
+        my first attempts involved editing the enums and datatables.
+        while this worked it only worked within the item types so after i realised this i was kind of stumped
+      </p>
+      <p>
+        i realised since i could change object positions using uassetapi i could make a small map editor to make this easier.
+        i originally made this using opentk and the GL_EditorFramework used in spotlight, the super mario 3D world editor.
+        in doing this, i noticed that some actors would have properties which other actors of the same type did not
+        and after adding in those properties i was delighted see those were used in-game so i could mix drops from chests and change sapphire ore chests
+      </p>
+      <p>
+        it was only by SUMMER 2022 that i finally was getting somewhere and was getting better at coding.
+        ALSO CAN I STILL MENTION HOW AWESOME IT WAS WE WERE STILL TALKING ON THE SERVER.
+        a lot of the trouble was with figuring out randomiser logic and 3D graphics shenanigans.
+        by the end of the holiday i had a broken mess of a randomiser, a questionably functional map editor and i decided to learn rust
+        since i had heard that somebody had written a uasset library for the language and i wanted something fresh.
+      </p>
+      <p>
+        it literally only took 2 days for rust to click for me.
+        i made a pretty functional uassetgui clone to learn the language and familiarise myself with unreal_asset
+        and i also got a commision to make a modding tool for multiversus before modders got shut down and got paid with journey to the savage planet.
+      </p>
+      <p>
+        after the absurd developments with stove i could finally place whatever i wanted in the world.
+        that didn't affect cutscenes and npcs though which really sucked.
+        of course i eventually found the solution after a bunch of work -
+        the shops were located in the savegame blueprint so i could edit them there (actually nilo still doesn't work :p).
+        however the npcs were still yet to be figured out.
+      </p>
+      <p>
+        to fix this, naturally i discovered a new modding technique - function library hooking.
+        create a dummy of the function library with all the correct function names, inputs and outputs and then duplicate that
+        name that duplicate to whatever you want and for each function in it call the original function that is in your dummy (i'd back this duplicate up)
+        then you can change the function to do whatever you want
+        cook the project and you'll have your hook and your dummy
+        delete the dummy
+        change any name reference to the function library in the target actor to your hook
+        since you didn't include the dummy the game will call the actual functions provided the function target is the dummy along with your stuff
+      </p>
+      <p>
+        the finished logic still wasn't great since it tried to procedurally place items
+        rather than check random seeds for beatability
+        and that led to all the good items being at the start.
+        this wasn't fixed until i made the pseudoregalia randomiser and ported the implementation to the blue fire randomiser
+        but there wasn't much fanfare for it as by then another year had gone and the server had essentially come to a standstill :(
+      </p>
+    </div>
+    <div id="voidmaker" hidden>
+      voidmaker was an surprise announcement.
+      a level creation tool for blue fire's movement? i'm absolutely in.
+      also, instead of being a DLC this would be a standalone free spinoff.
+      ROBI LET US PAY FOR YOUR BLOODY AWESOME GAMES!
+      i think partially because of it being an spinoff rather than a dlc
+      despite the asset sharing it didn't get much attention.
+      there's some really cool levels on the platform too
+      and they released it as a free update for consoles anyway.
+      AND THERE'S SOME BANGER LEVEL MUSIC TOO WHICH HAS NEVER BEEN RELEASED
+      (mushroom king my beloved)
+    </div>
+    <div id=" " hidden>
+    </div>
     <a href="../shrines.html" class="rotate">
     	<img src="../back.png" alt="back" style="position: absolute; top: 1vw; left: 1vw; width: 15vw">
-      <span class="text" style="top: 1vw; left: 16vw">back</span>
     </a>
   </body>
 </html>
