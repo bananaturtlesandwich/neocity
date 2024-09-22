@@ -29,6 +29,15 @@ body {
   image-rendering: crisp-edges;
 }
 
+ul > hr {
+  margin: 0;
+}
+:not(ul) > hr {
+  height: 3px;
+  border-width: 0;
+  background-color: white;
+}
+
 /*we don't care if they've visited the link*/
 a:link, a:visited {
   color: lightgreen;
