@@ -13,7 +13,7 @@ body {
   text-align: left;
 }
 .innerpage {
-  margin: 0vw 3vw;
+  margin: 0vw 2vw 0vw 1vw ;
   height: 60vw;
   overflow-y: auto;
 }
