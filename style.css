@@ -29,10 +29,10 @@ body {
   image-rendering: crisp-edges;
 }
 
-ul > hr {
+ul > hr, details > hr {
   margin: 0;
 }
-:not(ul) > hr {
+:not(ul, details) > hr {
   height: 3px;
   border-width: 0;
   background-color: white;
