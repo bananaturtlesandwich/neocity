@@ -1,6 +1,7 @@
 body {
-  background: url("shrine.png");
-  background-size: 100%;
+  background-image: url("shrine.png");
+  background-size: cover;
+  background-attachment: fixed;
   color: black;
 }
 
@@ -23,7 +24,7 @@ body {
   top: 30vw;
   width: 2vw;
   height: 3vw;
-  background: lightblue;
+  background-color: lightblue;
 }
 .left {
   left: -2vw;
@@ -31,4 +32,13 @@ body {
 .right {
   right: -2vw;
   text-align: right
+}
+.index {
+  font-size: 3vw;
+  position: absolute;
+  top: 2vw;
+  left: -7vw;
+  width: 7vw;
+  height: 3vw;
+  background-color: lightblue;
 }

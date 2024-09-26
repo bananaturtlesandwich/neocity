@@ -1,5 +1,5 @@
 body {
-  background: url("thoughts.png");
+  background-image: url("thoughts.png");
   background-size: 100%;
 }
 ul, p {

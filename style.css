@@ -15,7 +15,7 @@
 }
 
 body {
-  background: url("galaxy.png");
+  background-image: url("galaxy.png");
   background-size: 50vw;
   font-family: grapesoda, zpix;
   font-size: 2.5em;
