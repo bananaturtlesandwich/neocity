@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>pseudoregalia</title>
+    <link rel="icon" type="image/x-icon" href="pseudoregalia/sybil.ico">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="i swear i'm not a furry">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../book.js"></script>
+    <style>
+      @font-face {
+        font-family: parklane;
+        src: url("pseudoregalia/parklane.ttf") format("truetype");
+      }
+      .text {
+        font-family: parklane;
+        font-size: 2vw;
+        color: black;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scene" style="transform: scale(0.75) translate(13vw, -10vw);">
+      <iframe src="https://bandcamp.com/EmbeddedPlayer/album=2607406251/size=large/bgcol=333333/linkcol=0f91ff/transparent=true/" style="border: 0; position: absolute; top: 10vw; left: -25vw; width: 20vw; height: 50vw"></iframe>
+      <div class="page" style="float: left">
+        <div id="left" class="innerpage">
+          <div style="margin: 20vw 5vw; font-size: 3vw; text-align: center">
+            <s>this scrapbook</s> my heart belongs to <u>rittz's characters</u>
+          </div>
+        </div>
+      </div>
+      <div class="page" style="float: right">
+        <div id="right" class="innerpage">
+        	<a onclick="turn('blazing dynamo', 'community')" class="right"> > </a>
+          <a onclick="turn('blazing dynamo', 'community')" class="rotate">
+          	<img src="pseudoregalia/blazing-dynamo.png" alt="blazing dynamo key art" class="object" style="top: 5vw; left: 75vw; width: 15vw">
+            <span class="text" style="top: 2vw; left: 75vw">blazing dynamo</span>
+          </a>
+          <a onclick="turn('blazing dynamo', 'community')" class="rotate">
+          	<img src="pseudoregalia/cube.gif" alt="rotating cube with sybil's face" class="object" style="top: 9vw; left: 64vw; width: 15vw">
+            <span class="text" style="top: 6vw; left: 65vw">community</span>
+          </a>
+          <a onclick="turn('game jam', 'release')" class="rotate">
+          	<img src="pseudoregalia/game-jam.png" alt="pseudoregalia game jam key art" class="object" style="top: 12vw; left: 52vw; width: 15vw">
+            <span class="text" style="top: 9vw; left: 53vw">game jam</span>
+          </a>
+          <a onclick="turn('game jam', 'release')" class="rotate">
+          	<img src="pseudoregalia/pseudoregalia.png" alt="pseudoregalia key art" class="object" style="top: 21vw; left: 70vw; width: 15vw">
+            <span class="text" style="top: 18vw; left: 78vw">release</span>
+          </a>
+        </div>
+      </div>
+    	<img src="binder.png" alt="binder" style="position: absolute; top: 7vw; left: calc(50% - 2.5vw); width: 5vw">
+    	<a onclick="turn('owner','contents', false)" class="index">
+        index
+      </a>
+    </div>
+    <!-- copy over later -->
+    <div id="owner" hidden>
+    </div>
+    <div id="contents" hidden>
+    </div>
+    <div id="blazing dynamo" hidden>
+    	<a onclick="turn('owner','contents', false)" class="left"> < </a>
+      <p>
+        i first encountered rittz's stuff on his
+        <a href="https://rittzler.itch.io/" target="_blank" rel="noopener noreferrer">itch page</a>
+        (i can't remember how i found it)
+      </p>
+      <p>
+         at the time there was only blazing dynamo and death roll frenzy on there (i'll make reviews of the rest of the itch games later)
+      </p>
+      <img src="pseudoregalia/blazing-dynamo.png" alt="blazing dynamo key art" style="width: 95%"">
+      <p>
+        you have to try it out I'M BEGGING YOU
+      </p>
+      <p>
+        the amount of options you have at your disposal to get around the levels is incredible.
+        you can really see that this is where rittz experimented and cooked his 3D platforming sauce.
+        the animations, effects and sound design of everything bucket can do just screams polish and refinement.
+        and there's a lot bucket can do.
+      </p>
+      <details>
+        <summary>there's polished versions of genre staples</summary>
+        <ul>
+          <li>air lift (double jump)</li>
+          <li>triple jump (mario style)</li>
+          <li>wall jump (like mario's)</li>
+          <li>dive (more like a hat in time's than mario's)</li>
+          <li>ledge grab</li>
+          <li>sprint</li>
+          <li>quick drop (ground pound)</li>
+          <li>rebound (ground pound jump)</li>
+          <li>grapple (a hat in time style)</li>
+          <li>spring heel (mario's side flip)</li>
+          <li>emergency jets (a quick hover)</li>
+        </ul>
+      </details>
+      <p>
+        and then there's everything else
+      </p>
+      <img src="pseudoregalia/chain.gif" alt="clever use of movement" style="width: 95%">
+      <details>
+        <summary>check this stuff out:</summary>
+        <ul>
+          <li>polarity disc (like bouncing on cappy in odyssey)</li>
+          <li>slide + slide hop (doesn't preserve momentum and has set arc)</li>
+          <li>wall spin (jumping off a wall to your side)</li>
+          <li>jet flip (a small air flip which stops momentum)</li>
+          <li>spiral a (a drop kick which can be jumped out of for momentum or stayed in for a better slide)</li>
+        </ul>
+      </details>
+      <p>
+        but the coolest thing by far is the overheat system which powers it all.
+        moving around will give you heat which can be used up to boost moves
+        e.g you can double jump and dive twice as far.
+        the hover also uses heat.
+      </p>
+      <img src="pseudoregalia/boost.gif" alt="boosted dive" style="width: 95%">
+      <p>
+        since building up heat takes time and using the boosted moves fully drains heat,
+        this balances the powerful movement options better a time-based system (*cough* yooka laylee *cough*).
+      </p>
+      <p>
+        it encourages using the entire moveset rather than waiting around to just use the overpowered stuff which is really smart
+      </p>
+    </div>
+    <div id="community" hidden>
+    	<a onclick="turn('game jam', 'release')" class="right"> > </a>
+      <p>
+        there was a discord linked on the itch page so i joined since i wanted to keep up with the cool stuff rittz was making
+        <img src="pseudoregalia/welcome.png" alt="my rittz server welcome" style="width: 95%">
+        i was immediately welcomed by rittz and everyone else!
+      </p>
+      <p>
+        there's really something special about seeing projects evolve over time
+      </p>
+      <p>
+        mini devlogs were posted quite regularly on the server which was really cool to see what was being worked on.
+        <img src="pseudoregalia/devlog.png" alt="a mini devlog on electrokinetic" style="width: 95%">
+        rittz tends to hop from project to project -
+        at this time there was already prototype versions of goodnight sunlight, electrokinetic and radical avalanche!
+      </p>
+      <p>
+        we could chat with each other and with rittz about games, development and other stuff.
+      </p>
+      <p>
+        we could all get hyped together whenever rittz released something new, like stratospear and radical avalanche.
+      </p>
+      <img src="pseudoregalia/stratospear.png" alt="stratospear release" style="width: 45%">
+      <img src="pseudoregalia/radical-avalanche.png" alt="radical avalanche release" style="width: 45%">
+      <p>
+        and of course, when pseudoregalia began development...
+        <img src="pseudoregalia/game-jam-announcement.png" alt="pseudoregalia announcement" style="width: 95%">
+      </p>
+    </div>
+    <div id="game jam" hidden>
+    	<a onclick="turn('blazing dynamo', 'community')" class="left"> < </a>
+      <img src="pseudoregalia/ranking.png" alt="metroidvania month game jam ranking" style="width: 95%">
+      <p>
+        pseudoregalia won the metroidvania month game jam by a landslide.
+      </p>
+      <p>
+        i think that says a lot.
+        rittz and matt did a great job with the movement and world and.
+      </p>
+      <p>
+        even in this version the movement is tight and fluid - the full release did not add much to it.
+      </p>
+      <p>
+        of course there is the tried and tested ledge grab and plunge (ground pound) but everything else is very special...
+      </p>
+      <p>
+        the slide jump is the evolution of blazing dynamo's.
+        not only does it now have a free-er arc but also requires less inputs.
+        also the silhouette effects are gorgeous
+      </p>
+      <p>
+        bright soul is much in the vain of blue fire where striking enemies keeps you in the air and refreshes abilities
+        which was in turn inspired by hollow knight's iconic pogo.
+      </p>
+      <p>
+        cling gem is also very much like blue fire where you stick to a wall and slowly glide down along the wall.
+        i like the weight you have and the stickiness on curved surfaces
+      </p>
+      <p>
+        but the wallkick...oughhhh
+      </p>
+      <p>
+        i genuinely consider the wallkick one of the most innovative movement abilities ever made.
+        it is a refinement of radical avalanche's wallkick which was developed from blazing dynamo's wallspin.
+        wall movement has essentially always been about getting onto the wall and sliding down or climbing up -
+        the wallkick completely subverts this.
+        you're deflected from the wall depending on your angle of approach to the wall alongside a constant vertical boost.
+        once you understand how it works, you have an incredible amount of control:
+        you can extend your jumps with shallow angles along the wall
+        and climb up 90 degree corners by kicking perpendicular to each wall!
+      </p>
+      <p>
+        the design for sybil here is kinda goofy but i really like it.
+      </p>
+      <p>
+        performance was pretty bad though
+      </p>
+      <p>
+        i very much recommend playing it if you're interested in seeing the game's beginnings.
+      </p>
+      <p>
+        given the very positive response, more work was done on the game and made into a full release
+      </p>
+    </div>
+    <div id="release" hidden>
+      <p>
+        the full release took the game jam version and polished it until it gleamed.
+      </p>
+      <p>
+        the visual identity of the game was completely enhanced:
+        volumetric fog, skyboxes, crisper textures and more environment decoration!
+      </p>
+      <p>
+        upgrades were given new names e.g bright soul -> ascendant light, wallkick -> sun greaves, etc.
+        slide was separated from solar wind and strikebreak from soul cutter.
+      </p>
+      <p>
+        the movement changes were so cool as well.
+      </p>
+      <p>
+        a backflip similar to mario's sideflip was added.
+        however it was implemented in such an ingenious way the game feels weird without it -
+        you flip higher at faster velocity.
+        with the momentum you're able to gain in the game, sliding off ledges, jumping off moving platforms and solar wind, this is an incredible addition to the moveset
+      </p>
+      <p>
+        blazing dynamo's jet flip was added as a sunsetter cop-out.
+        not only is this great for stopping momentum but it chains exceptionally well with a kick away from a wall at a ledge.
+      </p>
+      <p>
+        you can now throw the dream breaker.
+        not only does this provide light, making traversing dark areas early easier,
+        but it can also be kicked which not only looks super cool but also deals a lot of damage.
+      </p>
+      <p>
+        you can now hit projectiles.
+        while a small change this is just a neat addition to combat.
+      </p>
+      <p>
+        but apart from polish there was an awesome amount of content added.
+      </p>
+      <p>
+        existing areas were all expanded!
+      </p>
+      <p>
+        new areas with awesome music were added!
+        twilight theatre is a super fun massive platforming gauntlet for a key!
+        listless library now houses sun greaves and has such a cosy vibe which partially inspired the look of my
+        <a href="../index.html">shack</a>!
+      </p>
+      <p>
+        aspects are upgrades which give smaller boons
+      </p>
+      <p>
+        a boss and a final boss with sick music were made!
+      </p>
+    </div>
+    <div id=" " hidden></div>
+    <a href="../shrines.html" class="rotate">
+    	<img src="../back.png" alt="back" style="position: absolute; top: 1vw; left: 1vw; width: 15vw">
+    </a>
+  </body>
+</html>
+
+
