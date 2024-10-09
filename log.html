@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>medialog</title>
+    <link rel="icon" type="image/x-icon" href="log.ico">
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="the ramblings of a madman">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="tag.js"></script>
+    <style>
+      summary > img {
+        border-radius: 10%;
+      }
+      details[open] {
+        width: 95%;
+      }
+      .scene {
+        height: 10vw;
+      }
+      .log {
+        margin-top: 10vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        color: black;
+        border: 4vw solid;
+        border-image: url(log/tape.png) 25% fill repeat
+      }
+      .category {
+        background-color: lightgreen;
+      }
+      .platform {
+        background-color: lightpink;
+      }
+      .genre {
+        background-color: lightyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="progress.gif" alt="site in progress" style="width: 50%">
+    <div style="margin-left: 15vw; border: 1vw solid #2a2349; background-color: #74adbb; color: black">
+      <a onclick="filter('games')" class="category">#games</a>
+      <a onclick="filter('wii')" class="platform">#wii</a>
+      <a onclick="filter('3DS')" class="platform">#3DS</a>
+      <a onclick="filter('PC')" class="platform">#PC</a>
+      <a onclick="filter('switch')" class="platform">#switch</a>
+      <a onclick="filter('3D platformer')" class="genre">#3D platformer</a>
+      <a onclick="filter('2D platformer')" class="genre">#2D platformer</a>
+      <a onclick="filter('metroidvania')" class="genre">#metroidvania</a>
+      <a onclick="filter('rpg')" class="genre">#rpg</a>
+      <a onclick="filter('zelda')" class="genre">#zelda</a>
+      <a onclick="filter('roguelike')" class="genre">#roguelike</a>
+      <br>
+      <a onclick="filter('films')" class="category">#films</a>
+      <br>
+      <a onclick="filter('shows')" class="category">#shows</a>
+      <br>
+      <a onclick="filter('books')" class="category">#books</a>
+    </div>
+    <div class="scene" style="pointer-events: none">
+      <img src="log/wheels.png" style="position: absolute; top: 8vw; left: 20vw; width: 80vw">
+      <img src="log/reel.png" style="position: absolute; top: 13vw; left: -12vw; width: 122vw">
+    </div>
+    <main id="display" class="log">
+      <details tags="['games', 'switch', '3D platformer']">
+        <summary><img src="log/spyro reignited trilogy.webp" alt="spyro reignited trilogy"></summary>
+      </details>
+      <details tags="['games', 'switch', 'zelda']">
+        <summary><img src="log/tears of the kingdom.webp" alt="tears of the kingdom"></summary>
+      </details>
+      <details tags="['games', 'switch', 'roguelike']">
+        <summary><img src="log/enter the gungeon.webp" alt="enter the gungeon"></summary>
+      </details>
+      <details tags="['games', 'switch', '2D platformer']">
+        <summary><img src="log/the adventure pals.webp" alt="the adventure pals"></summary>
+      </details>
+      <details tags="['games', 'switch', '2D platformer']">
+        <summary><img src="log/super kirby clash.webp" alt="super kirby clash"></summary>
+      </details>
+      <details tags="['games', 'switch', '2D platformer']">
+        <summary><img src="log/shovel knight treasure trove.webp" alt="shovel knight treasure trove"></summary>
+      </details>
+      <details tags="['games', 'switch', 'metroidvania']">
+        <summary><img src="log/hollow knight.webp" alt="hollow knight"></summary>
+      </details>
+      <details tags="['games', 'switch']">
+        <summary><img src="log/spiritfarer.webp" alt="spiritfarer"></summary>
+      </details>
+      <details tags="['games', 'switch', 'rpg']">
+        <summary><img src="log/deltarune.webp" alt="deltarune"></summary>
+      </details>
+      <details tags="['games', 'switch', '3D platformer']">
+        <summary><img src="log/a hat in time.webp" alt="a hat in time"></summary>
+      </details>
+      <details tags="['games', 'switch', '3D platformer']">
+        <summary><img src="log/super mario odyssey.webp" alt="super mario odyssey"></summary>
+        <p>
+          this was my first game on the switch and really deserves all the praise its been given.
+        </p>
+        <p>
+          the movement is so expressive and the worlds are so well conceptualised and designed -
+          every nook and cranny has something to find, although this can be a bit annoying when playing to full completion.
+          i don't really mind this moon overinflation except some of the really gimmicky moons (fuck jump rope genius).
+        </p>
+        <p>
+          the game can get pretty challenging, especially in the dark and darker sides, but they're fair and fun to complete.
+        </p>
+      </details>
+    </main>
+    <a href="index.html" class="rotate">
+    	<img src="back.png" alt="back" style="position: absolute; top: 1vw; left: 1vw; width: 15vw">
+    </a>
+  </body>
+</html>
+
