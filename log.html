@@ -35,44 +35,255 @@
         background-color: lightpink;
       }
       .genre {
-        background-color: lightyellow;
+        background-color: orange;
+      }
+      .franchise {
+        background-color: lightblue;
       }
     </style>
   </head>
   <body>
     <div style="margin-left: 15vw; border: 1vw solid #2a2349; background-color: #74adbb; color: black">
+      <a onclick="filter('all')" class="category">#all</a>
+      <div id="all" hidden>
+        this is my media log!
+        a relatively exhaustive list of media i've consumed in a roughly chronological order and my thoughts on them.
+        i will only put media on here that i think is worth talking about so i won't put any generic novels or mediocre shovelware here.
+        it is by no means complete and will continue to grow as long as i continue to be a huge fucking nerd :p
+      </div>
+      <br>
       <a onclick="filter('games')" class="category">#games</a>
+      <div id="games" hidden>
+        i love games - they combine all different techniques and can incorporate story, art, interactivity, worldbuilding, music and so much else.
+        because you take control you can really immerse yourself in a world
+        or you can just play a simple little puzzle game.
+        both are valid.
+        although i fucking hate microtransactions.
+        fuck that.
+      </div>
       <a onclick="filter('wii')" class="platform">#wii</a>
+      <div id="wii" hidden>
+        the wii was my first console.
+        i got it as a birthday present when i was around six but didn't play it much until years later.
+        i think the simplicity of the wii-mote and novelty of motion controls removed a lot of mental tax in control schemes
+        but also felt a bit limiting for more technical games
+      </div>
+      <a onclick="filter('gameboy')" class="platform">#gameboy</a>
+      <div id="gameboy" hidden>
+        my dad had a gameboy which has now been passed on ceremoniously to me.
+        despite how miniscule the screen is, it is such a charming little handheld console.
+        i'm a big fan of the tiny sprites and chirpy audio
+        and have found a bunch of good cartridges for it from CEX...
+        although i do also have a bunch of shovelware on it from my dad
+      </div>
       <a onclick="filter('3DS')" class="platform">#3DS</a>
+      <div id="3DS" hidden>
+        my mum actually never knew i had a 3DS.
+        since she wasn't often home due to business trips,
+        my dad got me a 3DS which she wouldn't have been very happy with
+        because she used to be quite strict.
+        i managed to get a bunch of games for it from my cousin (who sucks).
+        the 3D view is really awesome i wish more consoles had that feature.
+      </div>
       <a onclick="filter('PC')" class="platform">#PC</a>
+      <div id="PC" hidden>
+        i didn't really think of the pc as a platform until i got steam during the pandemic.
+        but as soon as i got into modding i suddenly had a lot more interest in getting games on the pc
+        (even if my computer specifications aren't exactly up to scratch).
+        i also have a bunch of freebies from epic and amazon games
+        (which a lot of people literally have no idea exists)
+      </div>
       <a onclick="filter('switch')" class="platform">#switch</a>
+      <div id="switch" hidden>
+        i got my switch for christmas in the year of the pandemic.
+        it's so convenient to have by virtue of being a hybrid console
+        and being able to play handheld and on the big screen.
+        i also have an industrial-grade travel case for it so it can go anywhere i do
+      </div>
       <a onclick="filter('3D platformer')" class="genre">#3D platformer</a>
+      <div id="3D platformer" hidden>
+        3D platformers might be my favourite game genre at the moment.
+        the extra axis of movement introduces so much freedom,
+        lending itself to larger spaces and incredible variety in movesets
+      </div>
       <a onclick="filter('2D platformer')" class="genre">#2D platformer</a>
+      <div id="2D platformer" hidden>
+        although the pool of 2D platformer games is full of baby's first games and a shit ton of shovelware,
+        there really is some gems in the genre which you can find.
+        these games can still be very diverse in movesets with enough creativity from developers.
+      </div>
       <a onclick="filter('metroidvania')" class="genre">#metroidvania</a>
+      <div id="metroidvania" hidden>
+        the focus on exploration and ability-based progression makes metroidvanias very cool to me.
+        they lend themselves to large, interconnected worlds which have incredibly deep lore which is always so fucking cool.
+        but nowadays the genre is so saturated that standing out is extremely difficult.
+      </div>
       <a onclick="filter('rpg')" class="genre">#rpg</a>
-      <a onclick="filter('zelda')" class="genre">#zelda</a>
+      <div id="rpg" hidden>
+        honestly, an rpg really has to be special to appeal to me.
+        it's not normally my type of game but there is some which slipped through the cracks
+      </div>
       <a onclick="filter('roguelike')" class="genre">#roguelike</a>
+      <div id="roguelike" hidden>
+        i think the reason i don't play more roguelikes is because they have infinite replayability
+        so would take up a lot of my time if i had more in my library.
+        although a lot of roguelikes don't have enough variety to stay fresh and fun.
+      </div>
+      <a onclick="filter('zelda')" class="franchise">#zelda</a>
+      <div id="zelda" hidden>
+        i love the zelda franchise for its sense of adventure, its deep lore and its puzzle box dungeons.
+        breath of the wild and tears of the kingdom took the genre in the open-world direction.
+        i didn't really like that in the process they chose to dumb down the dungeons and make the world empty
+        (since there is such a massive area to fill with content)
+      </div>
+      <a onclick="filter('pokemon')" class="franchise">#pokemon</a>
+      <div id="pokemon" hidden>
+        i do love the world of pokemon.
+        so many awesome creatures with their own (often dark) origins.
+        the battle system hold a surprising amount of depth
+        and battles can be fun to strategise around when well designed.
+        personally, i don't think the mainline games have been good since sun and moon and haven't played any past it.
+        the move to switch meant a doubled price for a buggier game of the same scope and DLC that cost the same.
+        while i like some of the newer designs most don't really do it for me.
+        fangames are where the innovation is happening and i firmly believe this will continue to be the case.
+      </div>
       <br>
       <a onclick="filter('films')" class="category">#films</a>
+      <div id="films" hidden>
+        films and cinema are very special.
+        for that hour to two hours of screentime
+        (yes that's how long films should be)
+        to stick with you the film-makers need to do a damn good job.
+        the acting, cinematography, effects and sound design all work together to communicate stories and experiences.
+      </div>
       <br>
       <a onclick="filter('shows')" class="category">#shows</a>
+      <div id="shows" hidden>
+        shows are very much in the vain of films but have even more oppurtunity for character development and worldbuilding
+        because of the drastic increase in screentime.
+        they can be fun and episodic but in terms of show storytelling,
+        serialisation is the best way to go (or a hybrid like teen titans)
+      </div>
       <br>
       <a onclick="filter('books')" class="category">#books</a>
+      <div id="books" hidden>
+        although books lack the visual and audio aspect, this can be a strength.
+        when reading, your mind creates its own details and idea of what characters look like or how they act
+        which may contrast completely with someone else's interpretation.
+        you can imagine scenes which would be technically extremely challenging and costly to make on screen.
+        this can make worlds feel more personal because nobody perceives it how you have in your head.
+      </div>
+      <br>
+      <a onclick="filter('podcasts')" class="category">#podcasts</a>
+      <div id="podcasts" hidden>
+        much like books, podcasts only use a single sense in audio,
+        which means worlds and characters are open to the interpretation of your mind.
+        i'm not much of a podcast listener but horror/thriller stories really lend themselves to this
+        as you can't see the threat but you can hear it.
+      </div>
     </div>
     <div class="scene" style="pointer-events: none">
       <img src="log/wheels.png" style="position: absolute; top: 8vw; left: 20vw; width: 80vw">
       <img src="log/reel.png" style="position: absolute; top: 13vw; left: -12vw; width: 122vw">
-      <img src="progress.gif" alt="site in progress" style="position: absolute; top: 25vw; left: 25vw; width: 50vw">
     </div>
     <main id="display" class="log">
+      <div id="desc" style="width: 95%; transform: translateY(-6vw)">
+        this is my media log!
+        a relatively exhaustive list of media i've consumed in a roughly chronological order and my thoughts on them.
+        i will only put media on here that i think is worth talking about so i won't put any generic novels or mediocre shovelware here.
+        it is by no means complete and will continue to grow as long as i continue to be a huge fucking nerd :p
+      </div>
       <details tags="['games', 'switch', '3D platformer']">
         <summary><img src="log/spyro reignited trilogy.webp" alt="spyro reignited trilogy"></summary>
+        <p>
+          this is what i'm currently playing and i am loving it so far
+        </p>
+        <p>
+          the levels are designed in such a way that you have a nice balance between exploration and platforming.
+          the core moveset is simple but versatile and the level mechanics and design mean that you are constantly using all of it.
+          you can really get into a flow state because of it and that's super fun.
+          i like that you can fully complete a level the first time you enter
+          (which makes sense considering they're linear levels with room for exploration
+          but still it means game time isn't padded out by revisiting old content which is a major pain point of mine)
+        </p>
+        <p>
+          visually, the game is really pretty - i think the style they went with works really well.
+          spyro's animation communicates every move so clearly
+          (i love his run cycle so much it's just full of life)
+        </p>
+        <p>
+          i can't speak much for how similar the game is to the original but from what i've heard it's pretty good.
+          i believe they've done a lot of good quality of life changes and improved the game feel a lot and it feels great to play.
+        </p>
       </details>
       <details tags="['games', 'switch', 'zelda']">
         <summary><img src="log/tears of the kingdom.webp" alt="tears of the kingdom"></summary>
+        <p>
+          i traded shovel knight: treasure trove with my friend for this game...
+          i still haven't got shovel knight back from them and they still haven't played it which is a bit annoying.
+        </p>
+        <p>
+          since i never played breath of the wild all of hyrule was completely new to me.
+          the addition of the sky and depths probably didn't help with how overwhelmed with content i was.
+          honestly i felt like a lot of these worlds were just empty.
+          it's kind of sad how modern games feel like they have to create such a massive amount of content for players -
+          it contributes to the prevalence of crunch in the industry.
+        </p>
+        <p>
+          maybe this type of zelda game isn't for me.
+          i don't know.
+        </p>
+        <p>
+          i really enjoyed the storylines of each area of the game and the dungeons.
+          the sudden appearance of zonai artifacts and disappearance of sheikah technology wasn't really ever explained but i dig the vibes.
+          the characters were great and having your own little crew of glowy airheads was a fun addition.
+          there isn't too much to say about those areas because they're the classic zelda environments
+          but the variety of biomes around the rest of the map is something i am a big fan of.
+          the bosses were really cinematic and epic (colgera is so awesome).
+          the puzzles were...i mean i don't really care for the building part of the game
+          but there was a few where i got "aha" moments which felt great.
+        </p>
+        <p>
+          i don't really like sidequests because they didn't feel like things i would want to do when the story is right there.
+          i didn't end up finishing the daily gazette and yiga shenanigans
+          (although i did fight kohga all the times because he's so goofy).
+        </p>
+        <p>
+          my friend was very frustrated that i never went where i was supposed to go -
+          she accused me of being ADHD with how much i just never followed the map
+          (to be fair i did have the minimap off because i hate just following an arrow).
+          i really loved exploring hyrule and finding little monuments
+          but after a certain point (after fighting ganon) i thought it was too much to do
+          and there wasn't much point if i wasn't going to find much.
+        </p>
+        <p>
+          that was when i stopped playing
+        </p>
       </details>
       <details tags="['games', 'switch', 'roguelike']">
         <summary><img src="log/enter the gungeon.webp" alt="enter the gungeon"></summary>
+        <p>
+          enter the gungeon has so much passion put into it it's insane.
+        </p>
+        <p>
+          every aspect of the world, from the enemies to the environments to the lore is gun-themed.
+          the variety of guns you can get on runs is so damn fun and there's some cool references sprinkled in as well
+          (i am a sucker for references lol)
+        </p>
+        <p>
+          i love that despite being a shooter it is primary a bullet hell.
+          the enemies on their own have simple bullet patterns
+          but when combined, patterns which are extremely satifying to weave through emerge.
+          the bosses are especially cool tests of skill (fuck ammoconda though)
+        </p>
+        <p>
+          the game really does reward skillful play by giving extra hearts for mastery of bosses and randomly spawning items.
+          bonus stages were a really cool thing i didn't know about which give more chances at cool weapons and items but are hard.
+        </p>
+        <p>
+          unfortunately for me, i'm not the best at bullet hells and enter the gungeon is a fucking hard one
+          so most of the time i don't make it past the third stage :p
+        </p>
       </details>
       <details tags="['games', 'switch', '2D platformer']">
         <summary><img src="log/the adventure pals.webp" alt="the adventure pals"></summary>
@@ -279,6 +490,46 @@
         </p>
         <p>
           the game can get pretty challenging, especially in the dark and darker sides, but they're not unfair and are fun to complete.
+        </p>
+      </details>
+      <details tags="['games', 'gameboy', 'pokemon']">
+        <summary><img src="log/pokemon silver.webp" alt="pokemon silver"></summary>
+        <p>
+          this was my first pokemon game!
+        </p>
+        <p>
+          i love the designs in this generation -
+          i just wish there was more since kanto pokemon still have a dominating presence and i knew them from the anime.
+        </p>
+        <p>
+          i still managed to get a full team of johto pokemon i adore though!
+        </p>
+        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/typhlosion.gif" alt="typhlosion" style="margin: 0em -0.5em">
+        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/sunflora.gif" alt="sunflora" style="margin: 0em -0.5em">
+        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/crobat.gif" alt="crobat" style="margin: 0em -0.5em">
+        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/quagsire.gif" alt="quagsire" style="margin: 0em -0.5em">
+        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/heracross.gif" alt="heracross" style="margin: 0em -0.5em">
+        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/sudowoodo.gif" alt="sudowoodo" style="margin: 0em -0.5em">
+        <p>
+          i was a big fan of the open-ended middle of the game where you could do stuff in any order.
+          of course this had the consequence of interesting (bad) level scaling later but was really neat.
+        </p>
+        <p>
+          the entirety of the kanto region being in the game is pretty awesome.
+          i love the changes made and the progression of time for the gym leaders.
+        </p>
+        <p>
+          fuck red though - the only way to beat him is to grind
+        </p>
+      </details>
+      <details tags="['games', 'gameboy']">
+        <summary><img src="log/tetris.webp" alt="tetris"></summary>
+        <p>
+          it's a classic what can i say
+        </p>
+        <p>
+          there's plenty of versions of tetris nowadays that i could be playing but i'll always prefer this one.
+          i just love this version with its muted colours and chirpy arrangement of korobeiniki.
         </p>
       </details>
     </main>
