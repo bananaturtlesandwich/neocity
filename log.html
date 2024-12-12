@@ -40,6 +40,9 @@
       .franchise {
         background-color: lightblue;
       }
+      .pokemon {
+        margin: 0em -0.5em;
+      }
     </style>
   </head>
   <body>
@@ -111,6 +114,10 @@
         there really is some gems in the genre which you can find.
         these games can still be very diverse in movesets with enough creativity from developers.
       </div>
+      <a onclick="filter('arcade')" class="genre">#arcade</a>
+      <div id="arcade" hidden>
+        just simple little games where you can start playing and try to get high score
+      </div>
       <a onclick="filter('metroidvania')" class="genre">#metroidvania</a>
       <div id="metroidvania" hidden>
         the focus on exploration and ability-based progression makes metroidvanias very cool to me.
@@ -127,6 +134,13 @@
         i think the reason i don't play more roguelikes is because they have infinite replayability
         so would take up a lot of my time if i had more in my library.
         although a lot of roguelikes don't have enough variety to stay fresh and fun.
+      </div>
+      <a onclick="filter('mario')" class="franchise">#mario</a>
+      <div id="mario" hidden>
+        mario is such a goofy property.
+        my favourite games in the series are the 3D platformers but that's a genre bias.
+        there's so many bloody spinoffs it's crazy, from olympics with sonic, tennis, american football, typing and doctoring what can't mario do?
+        and of course there's the iconic tv series and crisp rat movie...
       </div>
       <a onclick="filter('zelda')" class="franchise">#zelda</a>
       <div id="zelda" hidden>
@@ -187,7 +201,14 @@
         a relatively exhaustive list of media i've consumed in a roughly chronological order and my thoughts on them.
         i will only put media on here that i think is worth talking about so i won't put any generic novels or mediocre shovelware here.
         it is by no means complete and will continue to grow as long as i continue to be a huge fucking nerd :p
+        <br>
+        thank you <a href="https://www.igdb.com" target="_blank" rel="noopener noreferrer">igdb</a>, <a href="https://www.themoviedb.org" target="_blank" rel="noopener noreferrer">moviedb</a> and <a href="https://isbnsearch.org" target="_blank" rel="noopener noreferrer">isbnsearch</a> for the thumbnails
       </div>
+<!--
+      <details tags="['games']">
+        <summary><img src="log/tetris.webp" alt="tetris"></summary>
+      </details>
+-->
       <details tags="['games', 'switch', '3D platformer']">
         <summary><img src="log/spyro reignited trilogy.webp" alt="spyro reignited trilogy"></summary>
         <p>
@@ -457,7 +478,7 @@
           each of them have their own cool vibes:
           <ul>
             <li>mafia town is such a quaint island full of a gang who haven't foggiest idea how to do anything</li>
-            <li>dead bird studio pits two cut-throat birds against each in the race to the film awards</li>
+            <li>dead bird studio pits two cut-throat birds against each other in the race to the film awards</li>
             <li>subcon forest has a tragic backstory but when you arrive you bring some happiness to the place</li>
             <li>alpine skyline has so much culture and freedom to explore</li>
             <li>the cruise's seals are so fucking cute and ship shape is such an intense mission</li>
@@ -473,7 +494,7 @@
           yes i know i'm a muppet for playing it on the switch when the modding community on pc is prolifically incredible but here we are
         </p>
       </details>
-      <details tags="['games', 'switch', '3D platformer']">
+      <details tags="['games', 'switch', '3D platformer', 'mario']">
         <summary><img src="log/super mario odyssey.webp" alt="super mario odyssey"></summary>
         <p>
           super mario odyssey was my first game on the switch and really deserves all the praise its been given.
@@ -490,21 +511,18 @@
       <details tags="['games', 'gameboy', 'pokemon']">
         <summary><img src="log/pokemon silver.webp" alt="pokemon silver"></summary>
         <p>
-          this was my first pokemon game!
-        </p>
-        <p>
           i love the designs in this generation -
           i just wish there was more since kanto pokemon still have a dominating presence and i knew them from the anime.
         </p>
         <p>
           i still managed to get a full team of johto pokemon i adore though!
         </p>
-        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/typhlosion.gif" alt="typhlosion" style="margin: 0em -0.5em">
-        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/sunflora.gif" alt="sunflora" style="margin: 0em -0.5em">
-        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/crobat.gif" alt="crobat" style="margin: 0em -0.5em">
-        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/quagsire.gif" alt="quagsire" style="margin: 0em -0.5em">
-        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/heracross.gif" alt="heracross" style="margin: 0em -0.5em">
-        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/sudowoodo.gif" alt="sudowoodo" style="margin: 0em -0.5em">
+        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/typhlosion.gif" alt="typhlosion" class="pokemon">
+        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/sunflora.gif" alt="sunflora" class="pokemon">
+        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/crobat.gif" alt="crobat" class="pokemon">
+        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/quagsire.gif" alt="quagsire" class="pokemon">
+        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/heracross.gif" alt="heracross" class="pokemon">
+        <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/sudowoodo.gif" alt="sudowoodo" class="pokemon">
         <p>
           i was a big fan of the open-ended middle of the game where you could do stuff in any order.
           of course this had the consequence of interesting (bad) level scaling later but was really neat.
@@ -517,7 +535,200 @@
           fuck red though - the only way to beat him is to grind
         </p>
       </details>
-      <details tags="['games', 'gameboy']">
+      <details tags="['games', 'wii', 'arcade']">
+        <summary><img src="log/ocarina of time 3D.webp" alt="ocarina of time 3D"></summary>
+        <p>
+          this was my first zelda game!
+        </p>
+        <p>
+          when i played it i didn't realise this was considered the best game in the zelda series at the time, even the best game period by many
+          since i just got the cartridge from my cousin but i certainly support that opinion now
+        </p>
+        <p>
+          the game is endlessly full of life and care - the world, characters, environments, lore, enemies and music are 
+        </p>
+        <p>
+          the world has such a rich variety of cultures and environments based off of earlier games
+          and the 3D environments really enhance their depth:
+          the gorons have their city carved into the base of a volcano;
+          the zora made their home in an idyllic cave under lake hylia;
+          the kokiri dwell in the vibrant lost lost woods;
+          and the hylians have towns dotted all over the place
+        </p>
+      </details>
+      </details><details tags="['games', '3DS', 'pokemon']">
+        <summary><img src="log/pokemon ultra sun.webp" alt="pokemon silver"></summary>
+        <p>
+          this was my first pokemon game!
+        </p>
+        <p>
+          being my first pokemon game i had no idea what i was doing -
+          i remember from the start using my level 50 regigigas with slow start from mystery gift which was painful.
+          i was quite annoyed i couldn't get the ash greninja into ultra sun from the sun demo because i had just watched the xyz anime.
+        </p>
+        <p>
+          unfortunately i can't quite remember what exactly my first team was,
+          especially since i've done two playthroughs (the second one completing the entire pokedex)
+          but here's some pokemon i remember having on my team at some point
+          (if only lively animated gen 5 spritework existed for newer generations)
+        </p>
+        <img src="https://www.pokencyclopedia.info/sprites/3ds/ani_7/3ani__724__sm.gif" alt="decidueye" class="pokemon">
+        <img src="https://www.pokencyclopedia.info/sprites/3ds/ani_6/3ani__486__xy.gif" alt="regigas" class="pokemon">
+        <img src="https://www.pokencyclopedia.info/sprites/3ds/ani_6/3ani__012_f_xy.gif" alt="butterfree" class="pokemon">
+        <img src="https://www.pokencyclopedia.info/sprites/3ds/ani_6/3ani__571__xy.gif" alt="zoroark" class="pokemon">
+        <img src="https://www.pokencyclopedia.info/sprites/3ds/ani_7/3ani__738__sm.gif" alt="vikavolt" class="pokemon">
+        <img src="https://www.pokencyclopedia.info/sprites/3ds/ani_6/3ani__701__xy.gif" alt="hawlucha" class="pokemon">
+        <img src="https://www.pokencyclopedia.info/sprites/3ds/ani_7/3ani__778-disguised__sm.gif" alt="mimikyu" class="pokemon">
+        <img src="https://www.pokencyclopedia.info/sprites/3ds/ani_7/3ani__800-dusk__uu.gif" alt="necrozma" class="pokemon">
+        <img src="https://www.pokencyclopedia.info/sprites/3ds/ani_7/3ani__773__sm.gif" alt="silvally" class="pokemon">
+        <img src="https://www.pokencyclopedia.info/sprites/3ds/ani_6/3ani__718__xy.gif" alt="zygarde" class="pokemon">
+        <img src="https://www.pokencyclopedia.info/sprites/3ds/ani_7/3ani__025-6kaloscap__sm.gif" alt="ash pikachu" class="pokemon">
+        <p>
+          and some more i shiny hunted, used in the battle tree and got from mystery gift (yes i went to GAME and got zeraora which was so cool)
+        </p>
+        <img src="https://www.pokencyclopedia.info/sprites/3ds/ani_7_shiny/3ani_-S_770__sm.gif" alt="palossand" class="pokemon">
+        <img src="https://www.pokencyclopedia.info/sprites/3ds/ani_6_shiny/3ani_-S_561__xy.gif" alt="sigilyph" class="pokemon">
+        <img src="https://www.pokencyclopedia.info/sprites/3ds/ani_7/3ani__748__sm.gif" alt="toxapex" class="pokemon">
+        <img src="https://www.pokencyclopedia.info/sprites/3ds/ani_6_shiny/3ani_-S_530__xy.gif" alt="extradrill" class="pokemon">
+        <img src="https://www.pokencyclopedia.info/sprites/3ds/ani_7/3ani__807__uu.gif" alt="zeraora" class="pokemon">
+        <p>
+          what sucks is i used the free period of pokemon bank to transfer my pokemon to a new save
+          instead of transferring them to pokemon home before selling my 3DS
+          so i don't have an actual record of all the time i spent on the game :(
+        </p>
+        <p>
+          being my first pokemon game, i didn't care about changes like how gyms had been turned to trials and the lack of any HMs -
+          i enjoyed the variety of trials and HMs are just progression blockers there's no reason for progression to hinder movesets
+        </p>
+        <p>
+          <details>
+            <summary>there is some STUNNING environments in alola</summary>
+            <ul>
+              <li>melemele meadow</li>
+              <li>mount hokulani</li>
+              <li>thrifty megamart</li>
+              <li>poni canyon</li>
+              <li>altar of the sun</li>
+              <li>ultra megalopolis</li>
+              <li>literally all the ultra beast worlds</li>
+            </ul>
+          </details>
+          i just wish 3D wasn't only available in the photo mode so we could appreciate them even more :/
+          <details>
+            <summary>the music is pretty nostalgic to me now</summary>
+            <ul>
+              <li>title theme</li>
+              <li>melemele route 1</li>
+              <li>hau's battle theme</li>
+              <li>hau'oli city</li>
+              <li>heahea city</li>
+              <li>paniola ranch</li>
+              <li>poke pelago</li>
+              <li>aether paradise</li>
+              <li>abandoned thrifty megamart</li>
+              <li>seafolk village</li>
+              <li>the battle tree</li>
+              <li>the summit of mount lanakila</li>
+              <li>elite four</li>
+              <li>ultra beast theme</li>
+              <li>beach spot</li>
+              <li>ultra wormhole</li>
+              <li>ultra necrozma battle</li>
+              <li>ultra jungle</li>
+              <li>mantine surf (although i got annoyed with it because i played too much of it to farm BP)</li>
+            </ul>
+          </details>
+        </p>
+        <p>
+          speaking of minigames, a lot of the side content was pretty fun!
+          <ul>
+            <li>mantine surfing was really fun to figure out maximising scores and a great way to grind BP</li>
+            <li>totem stickers were a fun excuse to explore every nook and cranny</li>
+            <li>photo spots were pretty cool to see pokemon in their natural environments</li>
+            <li>poke pelago was a great way to interact with your party and put your boxed pokemon to use
+            (plus mohn being lillie's father after amnesia from an ultra wormhole was a pretty cool twist)</li>
+            <li>festival plaza was a good little cyberspace for battles and shops...and rainbow rocket</li>
+            <li>ultra wormholes were fun to zip through and brought some cool pokemon (sigilyph)</li>
+          </ul>
+        </p>
+        <p>
+          rainbow rocket was an awesome postgame!
+          i didn't realise it was a throwback adventure until i saw lysandre and i had no bloody idea who anyone else was
+          (the reveal of ghetsis and colress's involvement was just confusing for me lol)
+          team skull was a really fun antagonistic force which weren't actually that threatening but had a great vibe -
+          the aether foundation being the true sinister force felt even more unsettling yet also more fitting
+        </p>
+        <p>
+          the characters are still some of my favourite in the series!
+          the anime probably helped instill some life in them but i really love acerola, hau, mallow, sophocles, guzma, hapu and zossie
+        </p>
+      </details>
+      <details tags="['games', 'wii', '3D platformer', 'mario']">
+        <summary><img src="log/super mario galaxy.webp" alt="super mario galaxy"></summary>
+        <p>i got this game as a hand-me-down from my cousin when i first got my wii</p>
+        <p>now i'm thinking about it mario galaxy was probably my first non arcade game i ever played</p>
+        <p>
+          i don't think we've had a mario adventure of such scale since galaxy -
+          the bombastic music, the planetoids, the vastness of space and the proportion of bossfights are uncomparable
+          (yes galaxy 2 exists but i think the world map detracts from it).
+          the gravity mechanics are a fun gimmick which play well with a bunch of other mechanics 
+        </p>
+        <p>
+          galaxy was the first 3D mario to have worlds which were purely linear which i'm slightly disappointed by.
+          my disappointment mostly stems from the fact that the less open-ended levels meant galaxy limited mario's moveset.
+          it really is a stark difference from odyssey's vast pool of moves -
+          mario can jump, sideflip, backflip, longjump and spin and that's it.
+          the spin allows for some cool sequence breaks but there isn't much beyond that.
+          otherwise levels are pretty scripted in terms of how you can approach obstacles.
+        </p>
+        <p>
+          the power ups are fun -
+          bee mushroom allows climbing on honeycombs and limited flight,
+          boo mushroom is infinite flight and intangibility,
+          spring mushroom gives big jump but limits movement,
+          koopa shell boosts swimming
+          and fire and ice flowers do what you expect.
+          they add some gameplay variety and are used sporadically so don't overstay their welcome.
+          i think my favourite is the ice flower because it completely recontextualises water in the environment -
+          you can skate on ponds, fountains become platforms and even waterfalls can be walljumped.
+        </p>
+        <p>the motion control games on the other hand can go fuck themselves</p>
+        <p>
+          there's literally an entire motion control set of galaxies which were are a slog to get through.
+          ball balancing, manta surfing and bubble blowing aren't bad just slow to control
+          but the amount of levels dedicated to them and how long they are is what pisses me off.
+        </p>
+        <p>
+          the proper levels are so good though!
+          the imagination put into each galaxy is brilliant and some mechanics really put a smile on your face.
+          i loved disassembling toy bowser, climbing up buoy base, soaring with dandelions and so many more things.
+          the boss fights are so well done as well!
+          they don't feel similar whatsoever despite all having the three-hit pattern (apart from bonefin who was just terrifying).
+          the endgame stuff can get pretty intense and awesome too with purple comets.
+          the purple comets are great because they open up the entire galaxy, merge levels together in a galaxy finale or create some new terrifying gauntlet.
+        </p>
+        <p>
+          but the levels get soured in full completion with the other comets...
+        </p>
+        <p>
+          prankster comets essentially just recycle content artificially with modifiers.
+          one hit death, time limit, racing, faster enemies, whatever.
+          all it does is bloat the already massive amount of content -
+          they're an eighth of the content and the main reason i'm reluctant to do the full completion with luigi
+        </p>
+      </details>
+      <details tags="['games', 'wii', 'arcade']">
+        <summary><img src="log/wii sports resort.webp" alt="wii sports resort"></summary>
+        <p>first game on the wii!</p>
+        <p>
+          it's just as iconic as ever and has given me much joy whenever i've had friends over.
+          the whimsical miis and locales will never get old and the amount of gameplay variety is refreshing.
+        </p>
+        <p>
+          despite the name it doesn't count as exercise though >:p
+        </p>
+      </details>
+      <details tags="['games', 'gameboy', 'arcade']">
         <summary><img src="log/tetris.webp" alt="tetris"></summary>
         <p>
           it's a classic what can i say

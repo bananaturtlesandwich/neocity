@@ -23,11 +23,9 @@ body {
   color: white;
   overflow-x: hidden;
   /*nice and crunchy*/
-  font-smooth: never;
   -webkit-font-smoothing: none;
   -moz-font-smoothing: greyscale;
   image-rendering: pixelated;
-  image-rendering: crisp-edges;
 }
 
 ul > hr, details > hr {
