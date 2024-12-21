@@ -3,27 +3,495 @@
   <head>
     <title>thoughts</title>
     <link rel="icon" type="image/x-icon" href="thoughts.ico">
-    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="style.css">
     <meta name="description" content="the ramblings of a madman">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="display.js"></script>
+    <style>
+      .brain, .vortex {
+        position: fixed;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      @keyframes rotate {
+        from {
+          transform: translate(-50%, -50%) rotate(0deg);
+        }
+        to {
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+      }
+      .vortex {
+        width: 120vw;
+        animation: rotate 25s infinite linear;
+      }
+      @keyframes float {
+        0% {
+          rotate: 0deg;
+        }
+        50% {
+          rotate: 20deg;
+        }
+        100% {
+          rotate: 0deg;
+        }
+      }
+      .thought {
+        width: 20vw;
+        position: absolute;
+        animation: float 8s infinite linear;
+      }
+      .thought:hover {
+        animation-play-state: paused;
+      }
+    </style>
   </head>
-  <body style="background-image: url(thoughts/thoughts.png); background-size: 100%">
+  <body style="background: black">
+    <img src="thoughts/vortex.png" alt="vortex" class="vortex">
+    <img src="thoughts/vortex2.png" alt="vortex" class="vortex" style="animation-duration: 50s">
+    <a onclick="display('3D platformer feel')">
+      <img src="thoughts/brain.png" alt="brain" class="brain" style="width: 18%">
+    </a>
+    <img src="thoughts/bubbles.png" alt="bubbles" style="position: fixed; width: 9%; top: 25%; left: 38%">
+    <div id="display" style="overflow-y: auto; z-index: 1; position: fixed; left: 15%; width: 70%; min-height: 10vw; height: 10vw; resize: vertical; color: black; border: 2vw solid; border-image: url(thoughts/cloud.png) 25% fill repeat">
+      <p>i hoard my brain tingles here :)</p>
+    </div>
     <main class="scene">
-      <a href="thoughts/personal.html" class="rotate">
-      	<img src="thoughts/personal.png" alt="brain in a jar" class="object" style="top: 5vw; left: 66vw; width: 30vw">
-        <span class="text" style="top: 1vw; left: 75vw">personal</span>
+      <a onclick="display('my first website')">
+      	<img src="contact/neocities.png" alt="neocities" class="thought" style="top: 15vw; left: 66vw">
+        <span class="text" style="top: 33vw; left: 60vw">my first website</span>
       </a>
-      <a href="" class="rotate">
-      	<img src="thoughts/media.png" alt="a controller, dvd and book" class="object" style="top: 30vw; left: 33vw; width: 30vw">
-        <span class="text" style="top: 25vw; left: 42vw">media (wip)</span>
-      </a>
-      <a href="" class="rotate">
-      	<img src="thoughts/hobbies.png" alt="a laptop, oil pastels and an origami bird" class="object" style="top: 9vw; left: 0vw; width: 30vw">
-        <span class="text" style="top: 3vw; left: 4vw">hobbies (wip)</span>
+      <a onclick="display('3D platformer feel')">
+      	<img src="coding/sybil.png" alt="sybil" class="thought" style="top: 25vw; left: 10vw">
+        <span class="text" style="top: 44vw; left: 2vw">3D platformer feel</span>
       </a>
     </main>
+    <div id="3D platformer feel" hidden>
+      <p>
+        unsurprisingly, different games implement the same mechanics in different ways.
+        this is often even true for what at first seems to be the most trivial things, such as locomotion and jumping.
+        however in genres where these simple actions form the core fun in the gameplay, these must feel perfect.
+        the thing is, what's perfect for one character or dev will be different for another.
+        i did a study of all the 3D platformers i own to find these different perspectives
+      </p>
+      <p>
+        walking around is simple right? go in the direction the player pushes the stick.
+        however it would feel slightly unnatural to go to max speed instantly, despite how responsive it would be.
+        it's all about striking a balance between responsiveness and liveliness.
+      </p>
+      <p>
+        higher accelerations increase responsiveness but making them too high can stretch believability.
+        umbra treads this line since he reaches max speed in 1560/9000 = 0.17 seconds - that's half sybil's 550/1600 = 0.34 seconds!
+        (using MaxWalkSpeed and MaxAcceleration in the player blueprints).
+      </p>
+      <p>
+        max speeds will also change responsiveness but in more of a sweet spot way -
+        high values sacrifice precision while low ones sacrifice the player's patience.
+        max speeds can also change e.g going down a slope or sprinting you'll be able to go faster than you could walking on flat ground.
+      </p>
+      <p>
+        turning is also involved in this responsiveness balance as characters shouldn't be able to make sharp turns instantly.
+        again, umbra shows how light a character can feel if this is the case.
+        to acknowledge this, most games will have some sort of skid state or animation if you make too extreme a turn.
+        but even for less extreme turns characters like sev and mario have lower turn rates (and accelerations) to sell their heft.
+      </p>
+      <p>
+        what about turning in the air though? this ends up being decoupled to the model rotation and actual turning.
+      </p>
+      <p>
+        it's not like we can easily rotate in the air if we don't start with any angular momentum.
+        surprisingly, most characters do actually this with the exception of hat kid who has her rotation locked once you leave the ground.
+        some do slow your rotation like spyro but some like mario just straight up face wherever you're pointing.
+      </p>
+      <p>
+        similarly, humans can't really fall backwards if they didn't start going backwards.
+        but that can make mistakes feel more punishing, so many characters don't change how turning works in the air e.g hat kid.
+        when this is changed, it's normally just slightly muted but caster actually can't fall backwards!
+      </p>
+      <p>
+        in terms of jump arcs you'd probably assume that all jumps would just follow parabolic motion (a symmetrical curve) like in real life.
+        most of the time, this assumption would be correct but double fine actually did something different in psychonauts 2.
+        honestly, if not for this <a href="https://www.doublefine.com/news/devin-article-raz-jump" target="_blank" rel="noopener noreferrer">blog post</a> i wouldn't have noticed
+        but replaying through this fantastic game i can kind of notice that raz's gravity at the peak of his jump is lower to allow for better precision.
+        while i can understand this, ultimately it may be overengineering a problem which didn't need solving.
+      </p>
+      <p>
+        okay you get some more rambling on cameras. my treat.
+      </p>
+      <p>
+        if a camera directly follows a character it can feel a bit jerky since every time the character jumps there's movement.
+        a very simple fix surprisingly absent in most games is to not move the camera for jumps which will land on the same elevation.
+        however if not handled gracefully this might result in a bigger jerk whenever the player lands
+      </p>
+      <p>
+        the camera also has to contend with the environment.
+        if the player is blocked by an object then you might be unsure where they've gone.
+        spyro deals with this by always having the camera snap to ensure he's visible.
+        many games have the character silhouette show over geometry although seeing the character is still important.
+        this allows the camera to snap less but different games will snap differently either way.
+        mario odyssey has snapping if otherwise the camera would be clipping into geometry.
+        i think a hat in time always has snapping if the geometry isn't a prop.
+        pseudoregalia might apply mario's method with a hat in time's.
+        celeste 64 might only snap if the width of the obstruction is too large since it still clips.
+      </p>
+      <p>
+        something i didn't see very often was lookahead, which is normally quite common in 2D games.
+        obviously if you're holding a certain direction you want to go that way so the camera should point to show what's ahead.
+        while automatic camera adjustment serves this purpose alot of the time this could result in fighting with the camera for certain angles.
+        lookahead in 2D simply shifts the camera so a larger portion of the screen is in front of the character.
+        the same principle could be applied based on how perpendicular to the camera the character is moving which i've only seen in pseudoregalia.
+        applying this for rotation essentially gives us the normal camera adjustment we see but this usually applied relative to the player and not on the camera itself.
+        honestly there's plenty of routes to go in terms of making the camera point in the most optimal way.
+      </p>
+      <style>
+        table {
+          display: block;
+          overflow-x: auto;
+          white-space: nowrap;
+        }
+        th:first-child, td:first-child {
+          position: sticky;
+          left: 0;
+          background-color: #ddd;
+          padding: 0px;
+        }
+        th, td {
+          padding: 10px;
+        }
+      </style>
+      <table>
+        <tr>
+          <th>game</th>
+          <th>character</th>
+          <th>ground acceleration</th>
+          <th>turn rate</th>
+          <th>skid</th>
+          <th>air acceleration</th>
+          <th>air rotation</th>
+          <th>air turn rate</th>
+          <th>jump arc</th>
+          <th>direct follow</th>
+          <th>silhouette</th>
+          <th>snapping</th>
+          <th>lookahead</th>
+        </tr>
+        <!-- template
+        <tr>
+          <td>game</td>
+          <td>character</td>
+          <td>ground acceleration</td>
+          <td>turn rate</td>
+          <td>skid</td>
+          <td>air acceleration</td>
+          <td>air rotation</td>
+          <td>air turn rate</td>
+          <td>jump arc</td>
+          <td>one to one camera</td>
+          <td>silhouette</td>
+          <td>snapping</td>
+          <td>lookahead</td>
+        </tr>
+        -->
+        <tr>
+          <td>the big catch</td>
+          <td>caster</td>
+          <td>high</td>
+          <td>high</td>
+          <td>yes</td>
+          <td>high</td>
+          <td>none but looks back</td>
+          <td>cannot go backwards</td>
+          <td>parabolic</td>
+          <td>yes</td>
+          <td>no</td>
+          <td>if clipping</td>
+          <td>looks back</td>
+        </tr>
+        <tr>
+          <td>super kiwi 64</td>
+          <td>kiwi</td>
+          <td>high</td>
+          <td>instant</td>
+          <td>no</td>
+          <td>high</td>
+          <td>high</td>
+          <td>instant</td>
+          <td>parabolic</td>
+          <td>yes</td>
+          <td>no</td>
+          <td>no</td>
+          <td>no</td>
+        </tr>
+        <tr>
+          <td>metro gravity</td>
+          <td>stephanie</td>
+          <td>low</td>
+          <td>instant</td>
+          <td>no</td>
+          <td>medium</td>
+          <td>delayed</td>
+          <td>medium</td>
+          <td>parabolic</td>
+          <td>yes</td>
+          <td>no</td>
+          <td>yes</td>
+          <td>no</td>
+        </tr>
+        <tr>
+          <td>celeste 64</td>
+          <td>madeline</td>
+          <td>high</td>
+          <td>medium</td>
+          <td>yes</td>
+          <td>high</td>
+          <td>none</td>
+          <td>low</td>
+          <td>parabolic</td>
+          <td>yes</td>
+          <td>yes</td>
+          <td>by width of geometry</td>
+          <td>lookahead</td>
+        </tr>
+        <tr>
+          <td>blazing dynamo</td>
+          <td>bucket</td>
+          <td>high</td>
+          <td>instant</td>
+          <td>only when sprinting</td>
+          <td>high</td>
+          <td>instant</td>
+          <td>low</td>
+          <td>parabolic</td>
+          <td>no</td>
+          <td>yes</td>
+          <td>by width of geometry</td>
+          <td>no</td>
+        </tr>
+        <tr>
+          <td>psychonauts</td>
+          <td>raz</td>
+          <td>high</td>
+          <td>instant</td>
+          <td>animation</td>
+          <td>high</td>
+          <td>instant</td>
+          <td>low</td>
+          <td>parabolic</td>
+          <td>no</td>
+          <td>no</td>
+          <td>if clipping</td>
+          <td>no</td>
+        </tr>
+        <tr>
+          <td>corn kidz 64</td>
+          <td>sev</td>
+          <td>medium</td>
+          <td>low</td>
+          <td>yes</td>
+          <td>medium</td>
+          <td>delayed</td>
+          <td>medium</td>
+          <td>parabolic</td>
+          <td>no</td>
+          <td>no</td>
+          <td>yes</td>
+          <td>yes</td>
+        </tr>
+        <tr>
+          <td>pseudoregalia</td>
+          <td>sybil</td>
+          <td>high</td>
+          <td>instant</td>
+          <td>yes</td>
+          <td>high</td>
+          <td>high</td>
+          <td>medium</td>
+          <td>parabolic</td>
+          <td>no</td>
+          <td>yes</td>
+          <td>if clipping?</td>
+          <td>yes</td>
+        </tr>
+        <tr>
+          <td>blue fire</td>
+          <td>umbra</td>
+          <td>high</td>
+          <td>instant</td>
+          <td>no</td>
+          <td>high</td>
+          <td>yes</td>
+          <td>instant</td>
+          <td>parabolic</td>
+          <td>lerps</td>
+          <td>no</td>
+          <td>yes</td>
+          <td>no</td>
+        </tr>
+        <tr>
+          <td>mario odyssey</td>
+          <td>mario</td>
+          <td>low</td>
+          <td>low</td>
+          <td>yes</td>
+          <td>high</td>
+          <td>high</td>
+          <td>low</td>
+          <td>parabolic</td>
+          <td>no</td>
+          <td>yes</td>
+          <td>if clipping</td>
+          <td>yes</td>
+        </tr>
+        <tr>
+          <td>a hat in time</td>
+          <td>hat kid</td>
+          <td>high</td>
+          <td>instant</td>
+          <td>animation</td>
+          <td>high</td>
+          <td>none</td>
+          <td>high</td>
+          <td>parabolic</td>
+          <td>yes</td>
+          <td>yes</td>
+          <td>on level geometry</td>
+          <td>no</td>
+        </tr>
+        <tr>
+          <td>spyro reignited trilogy</td>
+          <td>spyro</td>
+          <td>high</td>
+          <td>instant</td>
+          <td>animation</td>
+          <td>high</td>
+          <td>medium</td>
+          <td>high</td>
+          <td>parabolic</td>
+          <td>yes</td>
+          <td>no</td>
+          <td>yes</td>
+          <td>no</td>
+        </tr>
+      </table>
+    </div>
+    <div id="alcohol" hidden>
+      yeah lmao i don't know if writing this is a good idea we'll have to see.
+      i dunno if i'm a lightweight or not but current evidence is pointing to a big fat fucking YAAAAAs
+      honestly i'm pretty fine with that and would probably prefer to keep my alcohol tolerance low tbh
+      (more bang for your buck am i right or am i right?)
+      i wouldn't say i'm much of an alcohol connosieur either way -
+      beer's fucking disgusting because it's so fucking bitter, wine is drunk by pretentious people and whisky compelled me to write this shitfest lol.
+      cider is nice big fan apples are my favourite fruit yeahh i'm a basic bitch i know but i just don't like the texture and flavour of most fruits
+      like you want to eat a pear? a fucking pear? have fun chewing on the fibres which grate against your teeth.
+      a kiwi perhaps? it tastes and feels like in your mouth how cartoon snot looks like it would.
+      i stan all vegetables though. just fucking cook them or they're shit no surprise thats part of british culture STIR FRIED LETTUCE SLAPS TRUST.
+      wow i mean i think the alcohol is getting to me i can already notice i'm talking aloud alot more shit and laughing in the wheezy way i do.
+      like i think i have three different levels of laugh and i want to keep it that way because it keeps me #quirky xoxo o=o
+      like if something's ok or i'm laughing because i'm reading the room i'll do a normie chuckle...a cheeky chuckle
+      but if something is really getting to me then i'll give it a wheeze or a weird fucking inhale
+      and that can then evolve into the magnum opus, the grand finale, the apex, the zenith, the titan wing, the mega forme, my iconic witch cackle which should be the goal for any prospective comedians out there.
+      my friend patrick does this thing when i reach this state where the fucker makes a stirring motion with his hands and makes direct eye contact to wrile me up even more.
+      anyway i'm getting sidetracked all that happened was there was some whisky left in a glass which nobody wanted and i was like shit i could have that if no-one wants it.
+      i've had a baileys and that's always really tasty but apparently i took two shots worth of whisky in one gulp which i'm sure is TOTALLY FINE
+      my throat felt tingly hehe
+      um but apparently six shots is what most people get tipsy on which is weird because i believe i am feeling effects after that even after i made SOME FUCKING BOMB PASTA with my smuggled steak from the master's buffet, carrots, beans, onion and mushrooms
+      oughhh i should've taken a picture dammit oh wait no my phone was out of charge because using spotify in conjuction with google maps makes shit DRAIN
+      anyway i've drunk entire bottles of cider (from my extremely sweet aunt on my bday) and been fine so this could literally be all in my head
+      whoagh this could just be me somehow convincing myself i'm drunk when i'm literally fine...hold on pause for stumble check???
+      ...
+      ...
+      maybe but also i could be faking stumbling...i literally never write for my blog like why now of all times am i deluding myself this much?
+      i mean it's kinda fun to be stumbly but even right now i'm still aware enough to write coherently...we'll see if this is coherent tomorrow morning
+      but then again i've always been extremely pedantic with spelling so maybe i'll be a spelling bitch regardless of how delirious i get.
+      i don't even think alcohol's that amazing like OMG APPLETISER? SCHLOER? ELDERFLOWER CORDIAL? GINGER BEER? any day over cider...
+      although i do normally get cider at ceilidh band sessions because they're badasses who give out free drinks and it's fun to be a bit buzzed up and play folk music in a pub
+      if this article is just the product of me being slightly under the influence then maybe this is a more genuine version of me (although that's bad thinking which creates *jazz hands* alcoholics *cheering*)
+      i'd say i'm a fairly guarded person and am way too slow to come out of my shell.
+      for gods sake i had no friends in year 7.
+      this could also just be coming from a place of writing shit down being so much more personal and me feeling safe to dump my brain tingles
+      or it could be from a place of sleep deprivation coming from the consistent pipeline of sidbar friday -> late night -> 9am lecture saturday
+      although i think with that i'm doing a lot better than some certain people *cough* harry *cough*.
+      i might be sleep's bitch but i'll be a well rested bitch without those horrifically deep eyebags my dad has
+      wow it's only twenty to 1am i'm doing okay and i can wake up whenever i want for once (perhaps this is a call for help hmmm...)
+      also this is probably the most i've written on this website period and it's just my drunken/placebo drunken ramblings.
+      ya know what time for bed fuck you
+    </div>
+    <div id="growing up mixed race" hidden>
+      <p>
+        if you didn't know i am half british and half chinese.
+        have been all my life funnily enough and i think it's granted me a very unique cultural perspective.
+      </p>
+      <p>
+        because my dad couldn't speak mandarin (also because my mum was at home less) i didn't speak mandarin at home
+        although i did go to a "chinese school" every week to learn the language.
+        the school was a place where chinese families could meet and chat while the kids learnt.
+        i always felt out of place because i was the only one who didn't have black hair
+        (which is weird because every other half'n half person i know does)
+        and i personally don't feel i look very chinese anyway,
+        although according to other people and a face ai i do.
+        i definitely wouldn't have the confidence to join any chinese clubs at my uni since i'd definitely feel alienated.
+      </p>
+      <p>
+        i can speak mandarin fairly well and can hold a conversation with anyone who speaks standard mandarin
+        but definitely have more to be desired in terms of language ability because i couldn't speak it at home.
+        this hurts how well i can connect with my chinese family -
+        although many speak in dialects which sound completely alien anyway.
+        of course i love them very much but i do feel slightly disconnected,
+        not only because of my background but also because i'm not considered part of the main family line (i don't have the surname).
+      </p>
+      <p>
+        i had two very different cooking styles in my household:
+        my dad served cauliflower cheese, casserole, pies and sausages while my mum brought noodles, rice, dumplings, 粥 and 粽子 to the table.
+        i loved this and i think it really sucks that most families don't have as large a range of dishes.
+        it also meant i didn't hate vegetables like the rest of the people in this country because i had stir-fried vegetables.
+        COOK YOUR FUCKING VEGETABLES DON'T PUT THEM IN A SALAD.
+      </p>
+      <p>
+        i was able to experience both cultures simultaneously which was very cool.
+        i know quite a few immigrant families don't celebrate a lot of festivals like bonfire night, halloween and christmas
+        and obviously most british families don't celebrate 春节, 中秋节, 端午节 or 清明节
+        so i felt very priveliged to be able to both trick or treat and make dumplings with good company
+      </p>
+      <p>
+        i honestly don't think the uk's a very racist place, at least where i'm from.
+        of course there's the whole 'ching chong' stuff that happens on the playground in primary school
+        but other than that i haven't experienced anything and neither have any of my not-ethnically-british friends as far as i know.
+      </p>
+      <p>
+        funniest story i got from it was getting asked if i was mixed race by a drunk chinese lady at a corner shop at 3 am where i just bought some ginger beer
+      </p>
+    </div>
+    <div id="my first website" hidden>
+      <p>
+    		well this is my first post on my first website! ISN'T THAT COOL?
+        i think i've always wanted a little outlet to just talk about stuff i love that no-one else really gives a shit about.
+      </p>
+      <p>
+        i initially heard about neocities from a great <a href="https://youtu.be/rTSEr0cRJY8" target="_blank" rel="noopener noreferrer">video</a> about the indie web -
+        i wholeheartedly agree that the mainstream internet has regressed and want to be a part of this lovely community.
+        i've always been a big believer that the internet is for collaboration and sharing, especially in regards to open source software and learning resources.
+        additionally, despite being born in the 2000s i missed the entirety of the early internet so i thought that this would be a nice way to try and experience it.
+      </p>
+      <p>
+        in terms of what i actually want this website to be i want it to be a place i can ramble about my interests, dump my thoughts and document my hobbies.
+        one thing i really don't want to do is add to the pile of unoriginal trash that already exists here
+        this should be a place which is completely, absolutely, truly mine
+      </p>
+      <p>
+        what will i actually do here then?
+        <ul>
+          <li>i want to create a ridiculous amount of shrines!</li>
+          <li>i want to talk about subjects on my mind!</li>
+          <li>i want to braindump intricacies of coding stuff!</li>
+          <li>i want to make and post covers of tracks i love!</li>
+          <li>i want to find other people who like things i like!</li>
+          <li>i want to discover incredible personal websites!</li>
+        </ul>
+      </p>
+      <p>thank you neocities!</p>
+    </div>
     <a href="index.html" class="rotate">
     	<img src="back.png" alt="back" style="position: absolute; top: 1vw; left: 1vw; width: 15vw">
     </a>

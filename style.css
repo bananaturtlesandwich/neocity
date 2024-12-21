@@ -63,18 +63,14 @@ a:active {
 }
 
 /*thank you so much ribose for this setup*/
-.rotate:hover img, .rotate:focus img {
+.rotate:hover img {
   transform: rotate(5deg);
 }
-.rotate:hover .text, a:focus .text {
-  opacity: 1;
-}
-
 .appear img {
-	 opacity: 0;
+  opacity: 0;
 }
-.appear:hover img, .appear:hover .text, a:focus img {
-	 opacity: 1;
+.rotate:hover .text, .appear:hover .text, .appear:hover img, a:hover .text {
+  opacity: 1;
 }
 
 .text {
