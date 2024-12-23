@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>art</title>
+    <link rel="icon" type="image/x-icon" href="art.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shrines/style.css">
+    <meta name="description" content="my scribblings">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="tag.js"></script>
+    <style>
+      main img {
+        max-width: 60%;
+        max-height: 60%;
+      }
+      .category {
+        background-color: lightgreen;
+      }
+      .medium {
+        background-color: lightpink;
+      }
+      .year {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body style="background-image: url('desk/surface.png')">
+    <div style="position: absolute; font-size: 2vw; width: 7vw; top: -13vw; left: 30vw; rotate: -90deg; text-align: left">
+      <a onclick="filter('all')" class="category">all</a>
+      <a onclick="filter('fanart')" class="category">fanart</a>
+      <a onclick="filter('gcse')" class="category">gcse</a>
+      <a onclick="filter('other')" class="category">other</a>
+      <a onclick="filter('pastel')" class="medium">pastel</a>
+      <a onclick="filter('felt tip')" class="medium">felt tip</a>
+      <a onclick="filter('biro')" class="medium">biro</a>
+      <a onclick="filter('fineliner')" class="medium">fineliner</a>
+      <a onclick="filter('pencil')" class="medium">pencil</a>
+      <a onclick="filter('felt tip')" class="medium">felt tip</a>
+      <a onclick="filter('digital')" class="medium">digital</a>
+      <a onclick="filter('earlier')" class="year">earlier</a>
+      <a onclick="filter('2021')" class="year">2021</a>
+      <a onclick="filter('2021')" class="year">2022</a>
+      <a onclick="filter('2022')" class="year">2023</a>
+      <a onclick="filter('2024')" class="year">2024</a>
+    </div>
+    <main id="display" style="display: flexbox; position: absolute; overflow-y: auto; top: 7vw; left: 3%; width: 95%; height: calc(100% - 7vw); background-image: url('shrines/crumpled.jpg')">
+      <img tags="['digital', '2024']" src="art/doodle.png" alt="doodle" loading="lazy">
+      <img tags="['fanart', 'pastel', '2024']" src="art/coraline.jpg" alt="coraline" loading="lazy">
+      <img tags="['other', 'pencil', '2024']" src="art/shack.jpg" alt="shack" loading="lazy">
+      <img tags="['fanart', 'pastel', '2024']" src="art/library.jpg" alt="library" loading="lazy">
+      <img tags="['fanart', 'biro', '2024']" src="art/crossover.jpg" alt="crossover" loading="lazy">
+      <img tags="['fanart', 'biro', '2024']" src="art/gunjumper.jpg" alt="gunjumper" loading="lazy">
+      <img tags="['fanart', 'pastel', '2024']" src="art/meme.jpg" alt="meme" loading="lazy">
+      <img tags="['fanart', 'fineliner', '2024']" src="art/raz.jpg" alt="raz" loading="lazy">
+      <img tags="['fanart', 'pencil', '2024']" src="art/olm.jpg" alt="olm" loading="lazy">
+      <img tags="['fanart', 'pencil', '2024']" src="art/character.jpg" alt="character" loading="lazy">
+      <img tags="['fanart', 'pastel', '2024']" src="art/solar raiders.jpg" alt="solar raiders" loading="lazy">
+      <img tags="['fanart', 'pastel', '2024']" src="art/gylfie.jpg" alt="gylfie" loading="lazy">
+      <img tags="['fanart', 'pastel', '2024']" src="art/ezylryb.jpg" alt="ezylryb" loading="lazy">
+      <img tags="['fanart', 'pastel', '2024']" src="art/kludd.jpg" alt="kludd" loading="lazy">
+      <img tags="['other', 'biro', '2023']" src="art/inktober2.jpg" alt="inktober2" loading="lazy">
+      <img tags="['other', 'biro', '2023']" src="art/inktober.jpg" alt="inktober" loading="lazy">
+      <img tags="['pencil', '2023']" src="art/dnd.jpg" alt="dnd" loading="lazy">
+      <img tags="['fanart', 'pastel', '2022']" src="art/forest.jpg" alt="forest" loading="lazy">
+      <img tags="['fanart', 'biro', '2022']" src="art/memory.jpg" alt="memory" loading="lazy">
+      <img tags="['fanart', 'pencil', '2022']" src="art/grimes.jpg" alt="grimes" loading="lazy">
+      <img tags="['gcse', 'pastel', '2022']" src="art/gcse/final.jpg" alt="final" loading="lazy">
+      <img tags="['gcse', 'fineliner', 'biro', '2022']" src="art/gcse/petri.jpg" alt="petri" loading="lazy">
+      <img tags="['gcse', 'pastel', 'biro', '2022']" src="art/gcse/anteater.jpg" alt="anteater" loading="lazy">
+      <img tags="['gcse', 'pastel', '2022']" src="art/gcse/octopus.jpg" alt="octopus" loading="lazy">
+      <img tags="['gcse', 'biro', '2021']" src="art/gcse/glass.jpg" alt="glass" loading="lazy">
+      <img tags="['gcse', 'pastel', '2021']" src="art/gcse/jelly.jpg" alt="jelly" loading="lazy">
+      <img tags="['gcse', 'pastel', '2021']" src="art/gcse/cham4.jpg" alt="cham4" loading="lazy">
+      <img tags="['gcse', 'pastel', '2021']" src="art/gcse/cham3.jpg" alt="cham3" loading="lazy">
+      <img tags="['fanart', 'pencil', '2021']" src="art/beira.jpg" alt="beira" loading="lazy">
+      <img tags="['fanart', 'pencil', '2021']" src="art/zote.jpg" alt="zote" loading="lazy">
+      <img tags="['gcse', 'pastel', '2021']" src="art/gcse/cham2.jpg" alt="cham2" loading="lazy">
+      <img tags="['fanart', 'pencil', '2021']" src="art/rookie.jpg" alt="rookie" loading="lazy">
+      <img tags="['gcse', 'fineliner', '2021']" src="art/gcse/cham.jpg" alt="cham" loading="lazy">
+      <img tags="['fanart', 'pastel', '2021']" src="art/gurut.jpg" alt="gurut" loading="lazy">
+      <img tags="['gcse', 'pastel', '2021']" src="art/gcse/mushroom.jpg" alt="mushroom" loading="lazy">
+      <img tags="['fanart', 'pastel', '2021']" src="art/imprisoned.jpg" alt="imprisoned" loading="lazy">
+      <img tags="['fanart', 'pencil', '2021']" src="art/umbra.jpg" alt="umbra" loading="lazy">
+      <img tags="['other', 'pencil', 'earlier']" src="art/baby/henge.jpg" alt="henge" loading="lazy">
+      <img tags="['other', 'pencil', 'earlier']" src="art/baby/room2.jpg" alt="room2" loading="lazy">
+      <img tags="['other', 'pencil', 'earlier']" src="art/baby/room.jpg" alt="room" loading="lazy">
+      <img tags="['fanart', 'felt tip', 'earlier']" src="art/baby/goodra.jpg" alt="goodra" loading="lazy">
+      <img tags="['fanart', 'pencil', 'earlier']" src="art/baby/dragon.jpg" alt="dragon" loading="lazy">
+      <img tags="['fanart', 'pencil', 'earlier']" src="art/baby/dragon2.jpg" alt="dragon2" loading="lazy">
+      <img tags="['other', 'pencil', 'earlier']" src="art/baby/birb2.jpg" alt="birb2" loading="lazy">
+      <img tags="['other', 'pencil', 'earlier']" src="art/baby/birb.jpg" alt="birb" loading="lazy">
+      <img tags="['fanart', 'pencil', 'earlier']" src="art/baby/tigress.jpg" alt="tigress" loading="lazy">
+      <img tags="['fanart', 'biro', 'earlier']" src="art/baby/angry birds.jpg" alt="angry birds" loading="lazy">
+      <img tags="['fanart', 'felt tip', 'earlier']" src="art/aliens/heatblast.jpg" alt="heatblast" loading="lazy">
+      <img tags="['fanart', 'felt tip', 'earlier']" src="art/aliens/diamondhead.jpg" alt="diamondhead" loading="lazy">
+      <img tags="['fanart', 'felt tip', 'earlier']" src="art/aliens/fourarms.jpg" alt="fourarms" loading="lazy">
+      <img tags="['fanart', 'felt tip', 'earlier']" src="art/aliens/grey matter.jpg" alt="grey matter" loading="lazy">
+      <img tags="['fanart', 'felt tip', 'earlier']" src="art/aliens/goastfreak.jpg" alt="goastfreak" loading="lazy">
+      <img tags="['fanart', 'felt tip', 'earlier']" src="art/aliens/stinkfly.jpg" alt="stinkfly" loading="lazy">
+      <img tags="['fanart', 'felt tip', 'earlier']" src="art/aliens/upgrade.jpg" alt="upgrade" loading="lazy">
+      <img tags="['fanart', 'pencil', 'earlier']" src="art/baby/octonauts2.jpg" alt="octonauts2" loading="lazy">
+      <img tags="['fanart', 'pencil', 'earlier']" src="art/baby/octonauts.jpg" alt="octonauts" loading="lazy">
+      <img tags="['fanart', 'pencil', 'earlier']" src="art/baby/crab.jpg" alt="crab" loading="lazy">
+      <img tags="['fanart', 'pencil', 'earlier']" src="art/baby/prarna.jpg" alt="prarna" loading="lazy">
+      <img tags="['fanart', 'pencil', 'earlier']" src="art/baby/giantsqide.jpg" alt="giantsqide" loading="lazy">
+      <img tags="['fanart', 'pencil', 'earlier']" src="art/baby/vanqiyspide.jpg" alt="vanqiyspide" loading="lazy">
+    </main>
+  	<img src="shrines/binder.png" alt="binder" style="position: absolute; top: 7vw; left: 0vw; width: 5vw; height: calc(100% - 7vw)">
+    <a href="desk.html" class="rotate">
+    	<img src="back.png" alt="back" style="position: absolute; top: 1vw; left: 1vw; width: 15vw">
+    </a>
+  </body>
+</html>
+
+
