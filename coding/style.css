@@ -12,6 +12,10 @@ hr {
   background-color: white;
 }
 
+a:link[href="#"], a:visited[href="#"] {
+  color: white;
+}
+
 .sidebar {
   height: 100%;
   width: 20vw;

@@ -73,7 +73,7 @@ a:active {
 .appear img {
   opacity: 0;
 }
-.rotate:hover .text, .appear:hover .text, .appear:hover img, a:hover .text {
+.rotate:hover .text, .rotate:focus .text, .appear:hover .text, .appear:focus .text, .appear:hover img, .appear:focus img, a:hover .text, a:focus .text {
   opacity: 1;
 }
 
