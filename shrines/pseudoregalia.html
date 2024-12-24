@@ -25,7 +25,7 @@
   <body>
     <img src="../progress.gif" alt="site in progress" style="width: 50%">
     <div class="scene" style="transform: scale(0.75) translate(13vw, -10vw);">
-      <iframe src="https://bandcamp.com/EmbeddedPlayer/album=2607406251/size=large/bgcol=333333/linkcol=0f91ff/transparent=true/" style="border: 0; position: absolute; top: 10vw; left: -25vw; width: 20vw; height: 50vw"></iframe>
+      <iframe tabindex="-1" src="https://bandcamp.com/EmbeddedPlayer/album=2607406251/size=large/bgcol=333333/linkcol=0f91ff/transparent=true/" style="border: 0; position: absolute; top: 10vw; left: -25vw; width: 20vw; height: 50vw"></iframe>
       <div class="page" style="float: left">
         <div id="left" class="innerpage">
           <div style="margin: 20vw 5vw; font-size: 3vw; text-align: center">
@@ -35,31 +35,31 @@
       </div>
       <div class="page" style="float: right">
         <div id="right" class="innerpage">
-        	<a onclick="turn('blazing dynamo', 'community')" class="right"> > </a>
-          <a onclick="turn('blazing dynamo', 'community')" class="rotate">
+        	<a href="#" onclick="turn('blazing dynamo', 'community')" class="right"> > </a>
+          <a href="#" onclick="turn('blazing dynamo', 'community')" class="rotate">
           	<img src="pseudoregalia/blazing-dynamo.png" alt="blazing dynamo key art" class="object" style="top: 5vw; left: 75vw; width: 15vw">
             <span class="text" style="top: 2vw; left: 75vw">blazing dynamo</span>
           </a>
-          <a onclick="turn('blazing dynamo', 'community')" class="rotate">
+          <a href="#" onclick="turn('blazing dynamo', 'community')" class="rotate">
           	<img src="pseudoregalia/cube.gif" alt="rotating cube with sybil's face" class="object" style="top: 9vw; left: 64vw; width: 15vw">
             <span class="text" style="top: 6vw; left: 65vw">community</span>
           </a>
-          <a onclick="turn('game jam', 'release')" class="rotate">
+          <a href="#" onclick="turn('game jam', 'release')" class="rotate">
           	<img src="pseudoregalia/game-jam.png" alt="pseudoregalia game jam key art" class="object" style="top: 12vw; left: 52vw; width: 15vw">
             <span class="text" style="top: 9vw; left: 53vw">game jam</span>
           </a>
-          <a onclick="turn('game jam', 'release')" class="rotate">
+          <a href="#" onclick="turn('game jam', 'release')" class="rotate">
           	<img src="pseudoregalia/pseudoregalia.png" alt="pseudoregalia key art" class="object" style="top: 21vw; left: 70vw; width: 15vw">
             <span class="text" style="top: 18vw; left: 78vw">release</span>
           </a>
-          <a onclick="turn('map update', ' ')" class="rotate">
+          <a href="#" onclick="turn('map update', ' ')" class="rotate">
           	<img src="pseudoregalia/pseudoregalia.png" alt="the map" class="object" style="top: 21vw; left: 70vw; width: 15vw">
             <span class="text" style="top: 18vw; left: 78vw">release</span>
           </a>
         </div>
       </div>
     	<img src="binder.png" alt="binder" style="position: absolute; top: 7vw; left: calc(50% - 2.5vw); width: 5vw">
-    	<a onclick="turn('owner','contents', false)" class="index">
+    	<a href="#" onclick="turn('owner','contents', false)" class="index">
         index
       </a>
     </div>
@@ -69,7 +69,7 @@
     <div id="contents" hidden>
     </div>
     <div id="blazing dynamo" hidden>
-    	<a onclick="turn('owner','contents', false)" class="left"> < </a>
+    	<a href="#" onclick="turn('owner','contents', false)" class="left"> < </a>
       <p>
         i first encountered rittz's stuff on his
         <a href="https://rittzler.itch.io/" target="_blank" rel="noopener noreferrer">itch page</a>
@@ -134,7 +134,7 @@
       </p>
     </div>
     <div id="community" hidden>
-    	<a onclick="turn('game jam', 'release')" class="right"> > </a>
+    	<a href="#" onclick="turn('game jam', 'release')" class="right"> > </a>
       <p>
         there was a discord linked on the itch page so i joined since i wanted to keep up with the cool stuff rittz was making
         <img src="pseudoregalia/welcome.png" alt="my rittz server welcome" style="width: 95%">
@@ -163,7 +163,7 @@
       </p>
     </div>
     <div id="game jam" hidden>
-    	<a onclick="turn('blazing dynamo', 'community')" class="left"> < </a>
+    	<a href="#" onclick="turn('blazing dynamo', 'community')" class="left"> < </a>
       <img src="pseudoregalia/ranking.png" alt="metroidvania month game jam ranking" style="width: 95%">
       <p>
         pseudoregalia won the metroidvania month game jam by a landslide.

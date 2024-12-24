@@ -38,6 +38,10 @@ ul > hr, details > hr {
 }
 
 /*we don't care if they've visited the link*/
+a:link[href="#"], a:visited[href="#"] {
+  color: black;
+  text-decoration-line: none;
+}
 a:link, a:visited {
   color: lightgreen;
 }
