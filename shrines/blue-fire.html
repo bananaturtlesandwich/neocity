@@ -20,12 +20,15 @@
         color: black;
         opacity: 1;
       }
-      .rotate:hover .text {
+      .rotate:hover .text, .rotate:focus .text {
         font-family: grapesoda;
       }
     </style>
   </head>
   <body>
+    <a href="../shrines.html" class="rotate">
+    	<img src="../back.png" alt="back" class="back">
+    </a>
     <div class="scene" style="transform: scale(0.75) translate(13vw, -10vw)">
       <iframe tabindex="-1" src="https://bandcamp.com/EmbeddedPlayer/album=343670225/size=large/bgcol=333333/linkcol=0f91ff/transparent=true/" style="border: 0; position: absolute; top: 10vw; left: -25vw; width: 20vw; height: 50vw"></iframe>
       <div class="page" style="float: left">
@@ -439,9 +442,6 @@
       </p>
     </div>
     <div id=" " hidden></div>
-    <a href="../shrines.html" class="rotate">
-    	<img src="../back.png" alt="back" style="position: absolute; top: 1vw; left: 1vw; width: 15vw">
-    </a>
   </body>
 </html>
 

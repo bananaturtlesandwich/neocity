@@ -66,8 +66,16 @@ a:active {
   pointer-events: none;
 }
 
+.back {
+  position: absolute;
+  top: 1vw;
+  left: 1vw;
+  width: 15vw;
+  z-index: 2;
+}
+
 /*thank you so much ribose for this setup*/
-.rotate:hover img {
+.rotate:hover img, .rotate:focus img {
   transform: rotate(5deg);
 }
 .appear img {
@@ -83,5 +91,5 @@ a:active {
   position: absolute;
   color: white;
   pointer-events: none;
-  z-index: 99;
+  z-index: 1;
 }

@@ -11,6 +11,9 @@
     <script src="../display.js"></script>
   </head>
   <body>
+    <a href="../coding.html" class="rotate">
+    	<img src="../back.png" alt="back" class="back">
+    </a>
     <div class="sidebar">
       files
       <hr>
@@ -18,7 +21,6 @@
       <a href="#" onclick="display('concept')">concept.txt</a>
       <a href="#" onclick="display('devlog')">devlog.txt</a>
     </div>
-    
     <main id="display">
       <h1>about</h1>
       <p>
@@ -27,7 +29,6 @@
       </p>
       <img src="stove-about.png" alt="stove" style="width: 100%">
     </main>
-    
     <div id="about" hidden>
       <h1>about</h1>
       <p>
@@ -36,7 +37,6 @@
       </p>
       <img src="stove-about.png" alt="stove" style="width: 100%">
     </div>
-    
     <div id="concept" hidden>
       <h1>concept</h1>
       <p>
@@ -50,7 +50,6 @@
         i was also inspired by the work of Jupahe64 on spotlight (the super mario 3D world editor)
       </p>
     </div>
-    
     <div id="devlog" hidden>
       <h1>devlog</h1>
       <p>
@@ -94,9 +93,5 @@
         this piqued my interest and finally tore me away from my crappy custom renderer to use bevy.
       </p>
     </div>
-    
-    <a href="../coding.html" class="rotate">
-    	<img src="../back.png" alt="back" style="position: absolute; top: 1vw; left: 1vw; width: 15vw">
-    </a>
   </body>
 </html>
