@@ -71,52 +71,48 @@
     <div id="3D platformer feel" hidden>
       <p>
         unsurprisingly, different games implement the same mechanics in different ways.
-        this is often even true for what at first seems to be the most trivial things, such as locomotion and jumping.
-        however in genres where these simple actions form the core fun in the gameplay, these must feel perfect.
-        the thing is, what's perfect for one character or dev will be different for another.
+        in a genre revolving around simple ones those must feel good -
+        however what's perfect for one character or dev will be different for another.
         i did a study of all the 3D platformers i own to find these different perspectives
       </p>
-      <p>
-        walking around is simple right? go in the direction the player pushes the stick.
-        however it would feel slightly unnatural to go to max speed instantly, despite how responsive it would be.
-        it's all about striking a balance between responsiveness and liveliness.
-      </p>
+      <img src="thoughts/3D platformer feel/metro gravity.gif" alt="stephanie schmoving" style="width: 95%">
       <p>
         higher accelerations increase responsiveness but making them too high can stretch believability.
         umbra treads this line since he reaches max speed in 1560/9000 = 0.17 seconds - that's half sybil's 550/1600 = 0.34 seconds!
         (using MaxWalkSpeed and MaxAcceleration in the player blueprints).
       </p>
+      <img src="thoughts/3D platformer feel/blue fire walk.gif" alt="umbra walking" style="width: 45%">
+      <img src="thoughts/3D platformer feel/pseudo walk.gif" alt="sybil walking" style="width: 45%">
       <p>
         max speeds will also change responsiveness but in more of a sweet spot way -
         high values sacrifice precision while low ones sacrifice the player's patience.
         max speeds can also change e.g going down a slope or sprinting you'll be able to go faster than you could walking on flat ground.
       </p>
+      <img src="thoughts/3D platformer feel/mario slope.gif" alt="mario walking down a slope" style="width: 95%">
       <p>
         turning is also involved in this responsiveness balance as characters shouldn't be able to make sharp turns instantly.
         again, umbra shows how light a character can feel if this is the case.
         to acknowledge this, most games will have some sort of skid state or animation if you make too extreme a turn.
         but even for less extreme turns characters like sev and mario have lower turn rates (and accelerations) to sell their heft.
       </p>
+      <img src="thoughts/3D platformer feel/hat turn.gif" alt="hat kid turning" style="width: 45%">
+      <img src="thoughts/3D platformer feel/corn kidz turn.gif" alt="sev turning" style="width: 45%">
       <p>
-        what about turning in the air though? this ends up being decoupled to the model rotation and actual turning.
-      </p>
-      <p>
-        it's not like we can easily rotate in the air if we don't start with any angular momentum.
-        surprisingly, most characters do actually this with the exception of hat kid who has her rotation locked once you leave the ground.
-        some do slow your rotation like spyro but some like mario just straight up face wherever you're pointing.
-      </p>
-      <p>
-        similarly, humans can't really fall backwards if they didn't start going backwards.
+        you can't really fall backwards if you didn't start going backwards.
         but that can make mistakes feel more punishing, so many characters don't change how turning works in the air e.g hat kid.
-        when this is changed, it's normally just slightly muted but caster actually can't fall backwards!
+        even when this is changed, it's only slightly muted so that you can still 
       </p>
+      <img src="thoughts/3D platformer feel/spyro air.gif" alt="spyro turning in the air" style="width: 45%">
+      <img src="thoughts/3D platformer feel/tacklebox air.gif" alt="sev turning in the air" style="width: 45%">
       <p>
         in terms of jump arcs you'd probably assume that all jumps would just follow parabolic motion (a symmetrical curve) like in real life.
-        most of the time, this assumption would be correct but double fine actually did something different in psychonauts 2.
         honestly, if not for this <a href="https://www.doublefine.com/news/devin-article-raz-jump" target="_blank" rel="noopener noreferrer">blog post</a> i wouldn't have noticed
-        but replaying through this fantastic game i can kind of notice that raz's gravity at the peak of his jump is lower to allow for better precision.
+        raz's gravity in psychonauts 2 at the peak of his jump is lower to allow for better precision.
         while i can understand this, ultimately it may be overengineering a problem which didn't need solving.
       </p>
+      <img src="thoughts/3D platformer feel/celeste arc.gif" alt="umbra's jump arc" style="width: 45%">
+      <img src="thoughts/3D platformer feel/psychonauts arc.gif" alt="raz's jump arc" style="width: 45%">
+      <!-- rambling about cameras
       <p>
         okay you get some more rambling on cameras. my treat.
       </p>
@@ -145,6 +141,7 @@
         applying this for rotation essentially gives us the normal camera adjustment we see but this usually applied relative to the player and not on the camera itself.
         honestly there's plenty of routes to go in terms of making the camera point in the most optimal way.
       </p>
+      -->
       <style>
         table {
           display: block;
