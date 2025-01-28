@@ -68,6 +68,30 @@
         <span class="text" style="top: 44vw; left: 2vw">3D platformer feel</span>
       </a>
     </main>
+    <div id="what do i want to do" hidden>
+      <p>
+        i gotta be honest i have no fucking idea what i'm doing.
+      </p>
+      <p>
+        i'm currently studying biology at university and i'm totally enjoying that but at the same time i feel like i'm not even trying to do anything for myself.
+        recently i've been watching some old smosh videos and something kinda resonated with me about how genuine everyone was.
+        they were being creative, making stuff that they wanted, being little goofballs.
+        honestly i haven't found my people yet so it feels a bit disheartening to be here on my own just kinda waiting for an excuse to go outside like the societies i've joined.
+      </p>
+      <p>
+        i want to make shit! but at the same time i don't. it's fucking weird that my brain simultaneously can obsess over really cool projects but then instead want to not do them and watch youtube instead.
+      </p>
+      <p>
+        i want to make more shrines here! i love sharing things that i love but for some reason the pseudoregalia shrine has been stuck in limbo FOREVER.
+        i think it's because the blue fire and pseudoregalia shrines really are stories i'm telling, hence the scrapbookish theme.
+        once that's done I'LL GET TO IT SOON I SWEEAAARRR then i can start doing some cooler shit.
+      </p>
+      <p>
+        i want to embark on some more modding projects! hyper light breaker just released and i've been enjoying digging into that but i'm lacking inspiration for stuff to make for it, especially since the game's in a rough state currently.
+        i can probably make some balance modifications for now like removing boss minions but the custom breaker framework might need some cooking time.
+        custom weapons and modifications and danger level events would be fun to do and i reckon that might be easier and more functional too.
+      </p>
+    </div>
     <div id="3D platformer feel" hidden>
       <p>
         unsurprisingly, different games implement the same mechanics in different ways.
@@ -168,11 +192,12 @@
           <th>air acceleration</th>
           <th>air rotation</th>
           <th>air turn rate</th>
-          <th>jump arc</th>
+          <!-- camera
           <th>direct follow</th>
           <th>silhouette</th>
           <th>snapping</th>
           <th>lookahead</th>
+          -->
         </tr>
         <!-- template
         <tr>
@@ -200,11 +225,12 @@
           <td>high</td>
           <td>none but looks back</td>
           <td>cannot go backwards</td>
-          <td>parabolic</td>
+          <!-- camera
           <td>yes</td>
           <td>no</td>
           <td>if clipping</td>
           <td>looks back</td>
+          -->
         </tr>
         <tr>
           <td>super kiwi 64</td>
@@ -215,11 +241,12 @@
           <td>high</td>
           <td>high</td>
           <td>instant</td>
-          <td>parabolic</td>
+          <!-- camera
           <td>yes</td>
           <td>no</td>
           <td>no</td>
           <td>no</td>
+          -->
         </tr>
         <tr>
           <td>metro gravity</td>
@@ -230,11 +257,12 @@
           <td>medium</td>
           <td>delayed</td>
           <td>medium</td>
-          <td>parabolic</td>
+          <!-- camera
           <td>yes</td>
           <td>no</td>
           <td>yes</td>
           <td>no</td>
+          -->
         </tr>
         <tr>
           <td>celeste 64</td>
@@ -245,11 +273,12 @@
           <td>high</td>
           <td>none</td>
           <td>low</td>
-          <td>parabolic</td>
+          <!-- camera
           <td>yes</td>
           <td>yes</td>
           <td>by width of geometry</td>
           <td>lookahead</td>
+          -->
         </tr>
         <tr>
           <td>blazing dynamo</td>
@@ -260,11 +289,12 @@
           <td>high</td>
           <td>instant</td>
           <td>low</td>
-          <td>parabolic</td>
+          <!-- camera
           <td>no</td>
           <td>yes</td>
           <td>by width of geometry</td>
           <td>no</td>
+          -->
         </tr>
         <tr>
           <td>psychonauts</td>
@@ -275,11 +305,12 @@
           <td>high</td>
           <td>instant</td>
           <td>low</td>
-          <td>parabolic</td>
+          <!-- camera
           <td>no</td>
           <td>no</td>
           <td>if clipping</td>
           <td>no</td>
+          -->
         </tr>
         <tr>
           <td>corn kidz 64</td>
@@ -290,11 +321,12 @@
           <td>medium</td>
           <td>delayed</td>
           <td>medium</td>
-          <td>parabolic</td>
+          <!-- camera
           <td>no</td>
           <td>no</td>
           <td>yes</td>
           <td>yes</td>
+          -->
         </tr>
         <tr>
           <td>pseudoregalia</td>
@@ -305,11 +337,12 @@
           <td>high</td>
           <td>high</td>
           <td>medium</td>
-          <td>parabolic</td>
+          <!-- camera
           <td>no</td>
           <td>yes</td>
           <td>if clipping?</td>
           <td>yes</td>
+          -->
         </tr>
         <tr>
           <td>blue fire</td>
@@ -320,11 +353,12 @@
           <td>high</td>
           <td>yes</td>
           <td>instant</td>
-          <td>parabolic</td>
+          <!-- camera
           <td>lerps</td>
           <td>no</td>
           <td>yes</td>
           <td>no</td>
+          -->
         </tr>
         <tr>
           <td>mario odyssey</td>
@@ -335,11 +369,12 @@
           <td>high</td>
           <td>high</td>
           <td>low</td>
-          <td>parabolic</td>
+          <!-- camera
           <td>no</td>
           <td>yes</td>
           <td>if clipping</td>
           <td>yes</td>
+          -->
         </tr>
         <tr>
           <td>a hat in time</td>
@@ -350,11 +385,12 @@
           <td>high</td>
           <td>none</td>
           <td>high</td>
-          <td>parabolic</td>
+          <!-- camera
           <td>yes</td>
           <td>yes</td>
           <td>on level geometry</td>
           <td>no</td>
+          -->
         </tr>
         <tr>
           <td>spyro reignited trilogy</td>
@@ -365,11 +401,12 @@
           <td>high</td>
           <td>medium</td>
           <td>high</td>
-          <td>parabolic</td>
+          <!-- camera
           <td>yes</td>
           <td>no</td>
           <td>yes</td>
           <td>no</td>
+          -->
         </tr>
       </table>
     </div>
