@@ -55,7 +55,7 @@ a:active {
 .scene {
   width: 100%;
   height: 70vw;
-  transform: scale(0.75) translateY(-10vw);
+  transform: scale(0.75) translateY(-12vw);
 }
 
 .object, .static {
@@ -70,7 +70,7 @@ a:active {
   position: absolute;
   top: 1vw;
   left: 1vw;
-  width: 15vw;
+  width: 10vw;
   z-index: 2;
 }
 

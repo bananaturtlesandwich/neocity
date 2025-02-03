@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>modding</title>
+    <link rel="icon" type="image/x-icon" href="updates.ico">
+    <link rel="stylesheet" href="../style.css">
+    <meta name="description" content="the gamedev gateway drug">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../console.js"></script>
+  </head>
+  <body onkeydown="if (event.keyCode == 13) submit()" style="background: black; margin-left: 10vw; margin-top: 5vw; width: 75%; text-align: left; font-family: tamzen; color: lightgreen">
+    <a href="../shrines.html" class="rotate">
+    	<img src="../back.png" alt="back" class="back">
+    </a>
+    <div id="console">
+      welcome to the modding shrine - submit commands with enter!
+      <br>
+    </div>
+    <!-- this doesn't update properly for backspace since it runs before the value is changed -->
+    > <input id="command" type="text" value="help" autofocus onkeydown="this.style.width = (this.value.length + 1) + 'ch'" style="background: black; font-family: tamzen; font-size: 1em; width: 4ch; color: lightgreen">
+    <div id="help" hidden>
+      commands:
+      <br>
+      help - shows this message
+      <br>
+      sayhi - says hi
+      <br>
+      cls - clears console
+      <br>
+    </div>
+    <div id="sayhi" hidden>
+      omg hi
+      <br>
+    </div>
+  </body>
+</html>
