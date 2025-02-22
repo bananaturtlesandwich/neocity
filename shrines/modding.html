@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <title>modding</title>
-    <link rel="icon" type="image/x-icon" href="updates.ico">
+    <link rel="icon" type="image/x-icon" href="../updates.ico">
     <link rel="stylesheet" href="../style.css">
     <meta name="description" content="the gamedev gateway drug">
     <meta charset="UTF-8">
@@ -14,10 +14,7 @@
     <a href="../shrines.html" class="rotate">
     	<img src="../back.png" alt="back" class="back">
     </a>
-    <div id="console">
-      welcome to the modding shrine - submit commands with enter!
-      <br>
-    </div>
+    <div id="console"></div>
     <!-- this doesn't update properly for backspace since it runs before the value is changed -->
     > <input id="command" type="text" value="help" autofocus onkeydown="this.style.width = (this.value.length + 1) + 'ch'" style="background: black; font-family: tamzen; font-size: 1em; width: 4ch; color: lightgreen">
     <div id="help" hidden>
@@ -25,14 +22,97 @@
       <br>
       help - shows this message
       <br>
-      sayhi - says hi
+      intro - how i got into modding
+      <br>
+      skills - the skills which modding encourages
+      <br>
+      more - how mods make games replayable
+      <br>
+      shitpost - the power modding gives you
       <br>
       cls - clears console
       <br>
     </div>
-    <div id="sayhi" hidden>
+    <div id="hi" hidden>
       omg hi
       <br>
+    </div>
+    <div id="intro" hidden>
+      <p>
+        the first time i ever encountered modding was watching a failboat video on a hat in time.
+        the idea that you could just take a game and add whatever you wanted was so cool to me...
+        although unfortunately i only had a hat in time on switch so could not experience it firsthand.
+      </p>
+      <p>
+        blue fire was the first game i ever got on steam and i really wanted to see if i could mod it.
+        the experience is recorded in the modding section of the <a href="../shrines/blue-fire.html">blue fire shrine</a> and was so magical
+      </p>
+      <p>
+    </div>
+    <div id="skills" hidden>
+      <p>
+        for editing models and replacing them you'll probably end up learning blender.
+        i would never have been able to make 3D art otherwise which i love doing.
+      </p>
+      <p>
+        modding will probably lead you to start coding too.
+        i ended up learning c# coding just so i could procedurally edit unreal assets with UAssetAPI which i would never have otherwise done.
+        i eventually used it to make the <a href="../coding/blue-fire-rando.html">blue fire rando</a>
+        and from there i learnt rust which also has a similar api in which i made <a href="../coding/stove.html">stove</a>...
+        although uassetapi does have better compatibility which is slightly annoying
+      </p>
+      <p>
+        for even more advanced modding, reverse engineering is necessary to modify existing systems which is a very useful tool for studying how other developers solve problems.
+        it also solidifies understanding of how memory and programs work - super important stuff for optimisation
+      </p>
+      <p>
+        level design is another very tricky skill to master and modding really allows you to experiment with it.
+        without the pressure of creating your character controller you can focus on just making good levels.
+      </p>
+      <p>
+        modding can equip you to go on and make something even greater.
+        it's essentially a gateway drug to game development.
+      </p>
+    </div>
+    <div id="more" hidden>
+      <p>
+        one of the coolest things that mods can do is to expand on a game
+      </p>
+      <p>
+        even quality of life tweaks can add so much - i recently heard about movement plus, a mod for bomb rush cyberfunk
+        which overhauls the physics of moving around the world and everyone says it's essentially the most fun way to play.
+      </p>
+      <p>
+        new levels and area expansions are so cool!
+        they can add some depth to the world, challenge you, extend the storyline!
+        rainworld custom regions are the gold standard for these
+        as they will often add more to the rich lore of the game through environmental storytelling.
+        not just that, but some are just straight up more gorgeous than some of the main game's regions.
+        my favourites which epitomise this are undersea, concealed garden and the mast.
+      </p>
+      <p>
+        game modes are amazing and can drastically bump up how much you play.
+        randomisers and online multiplayer mods essentially make their games infinitely replayable.
+        i've had people tell me the <a href="../coding/pseudoregalia-rando.html">pseudoregalia rando</a> has given them 200 more hours in the game
+        and the mario odyssey online mod has created an explosion of hide and seek youtube videos.
+      </p>
+      <p>
+        ultimately, expansions allow you to play more of the games you love for longer and in new ways which is beautiful
+      </p>
+    </div>
+    <div id="shitpost" hidden>
+      <p>
+        you can absolutely wreck games with mods
+      </p>
+      <p>
+        what if the final boss was shrek?
+        what if you sliced foes open with deadly bananas?
+        what if hat kid stole the declaration of independence?
+        ...okay that last one actually slaps
+      </p>
+      <p>
+        you can just make the most stupid shit and laugh your ass off it's great
+      </p>
     </div>
   </body>
 </html>

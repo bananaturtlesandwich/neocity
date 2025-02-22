@@ -11,7 +11,7 @@ function submit() {
   if (value == "cls") console.innerHTML = ""
   else {
     const text = document.getElementById(value);
-    console.innerHTML += text == null ? "not a valid command<br>" + document.getElementById("help").innerHTML : text.innerHTML
+    console.innerHTML += text == null ? "not a valid command<br>" + document.getElementById("help").innerHTML : text.innerHTML;
   }
   command.value = "";
 }
