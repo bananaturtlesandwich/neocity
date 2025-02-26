@@ -1,0 +1,122 @@
+/* onionring.js is made up of four files - onionring-widget.js, onionring-index.js, onionring-variables.js and onionring.css (this one!)
+// it's licensed under the cooperative non-violent license (CNPL) v4+ (https://thufie.lain.haus/NPL.html)
+// it was originally made by joey + mord of allium (蒜) house, last updated 2020-10-24 */
+
+/* === ONIONRING.CSS === */
+/* this file affects the style of the widget. remember to replace all instances of #tankring with whatever value you have for ringID in the onionring-widget.js file. make sure it still has the # at the front, though! probably easiest to use find+replace to do it */
+
+#apartment-webring {
+    position: relative;
+    width: 250px;
+    height: auto;
+    box-sizing: border-box;
+    margin: 0 auto !important;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: MS Gothic;
+    font-size: 12px;
+}
+
+#apartment-webring table {
+    display: none;
+}
+
+#apartment-webring .building-icon {
+    position: absolute;
+    top: 0;
+    left: -15px;
+    z-index: 2;
+    width: 130px !important;
+    image-rendering: auto;
+    margin-bottom: 5px;
+}
+
+#apartment-webring .room-picture {
+    width: 240px;
+    margin: 0;
+}
+
+#apartment-webring .apartment-navigation {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#apartment-webring .prev {
+    position: absolute;
+    left: 0;
+    margin-right: 10px;
+}
+
+#apartment-webring .next {
+    position: absolute;
+    right: 0;
+}
+
+#apartment-webring .button {
+    width: 50px;
+    image-rendering: pixelated;
+    position: absolute;
+    bottom: 0;
+}
+
+#apartment-webring .linkboxtitle {
+    width: 248px;
+    height: 20px;
+    background-color: #fc6d27;
+    box-shadow: 0px 2px 0px 0px #ffd0b9 inset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px 20px 0px 0px;
+    margin: 0;
+    border: 1px solid black;
+    padding: 0;
+    font-weight: bold;
+    color: white;
+    overflow: hidden;
+    font-size: 10px;
+}
+
+#apartment-webring .linkbox {
+    position: relative;
+    width: 248px;
+    padding-bottom: 15px;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0px -1px 0px 0px #7d8578 inset;
+    display: flex;
+    align-items: top;
+    border-top: none;
+    background-color: white;
+    color: black;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: underline;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+}
+
+#apartment-webring .linkbox div {
+    text-align: center;
+    text-wrap: nowrap;
+    width: auto;
+}
+
+#apartment-webring .linkbox div:nth-child(3) {
+    position: absolute;
+    width: auto;
+    text-wrap: nowrap;
+    bottom: 1px;
+    font-size: 10px;
+}
+
+#apartment-webring .linkbox a {
+    all: unset;
+    cursor: pointer;
+}
