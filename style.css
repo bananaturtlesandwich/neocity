@@ -1,21 +1,21 @@
 @font-face {
   font-family: grapesoda;
-  src: url("grapesoda.ttf") format("truetype");
+  src: url(grapesoda.ttf) format("truetype");
 }
 
 /*for when i use mandarin*/
 @font-face {
   font-family: zpix;
-  src: url("zpix.ttf") format("truetype");
+  src: url(zpix.ttf) format("truetype");
 }
 
 @font-face {
   font-family: tamzen;
-  src: url("tamzen.ttf") format("truetype");
+  src: url(tamzen.ttf) format("truetype");
 }
 
 body {
-  background-image: url("galaxy.png");
+  background-image: url(galaxy.png);
   background-size: 50vw;
   font-family: grapesoda, zpix;
   font-size: 2.5em;
