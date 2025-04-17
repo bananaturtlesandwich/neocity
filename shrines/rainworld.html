@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>rainworld</title>
+    <link rel="icon" type="image/x-icon" href="">
+    <link rel="stylesheet" href="../style.css">
+    <meta name="description" content="digital ecosystems blow my mind">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../popup.js"></script>
+    <style>
+      @font-face {
+        font-family: rodondo;
+        src: url(rainworld/rodondo.otf) format("opentype");
+      }
+      .text {
+        font-family: rodondo;
+        color: black;
+      }
+    </style>
+  </head>
+  <body style="color: black; background-image: url(rainworld/clouds.png); background-size: 100%">
+    <a href="../shrines.html" class="rotate">
+    	<img src="../back.png" alt="back" class="back">
+    </a>
+    <main class="scene">
+    	<img src="rainworld/daddy.png" alt="daddy long legs body" class="static" style="top: 40vw; left: -9vw; width: 30vw">
+    	<img src="rainworld/wall.png" alt="wall" class="static" style="top: -2vw; left: -20vw; width: 85vw">
+      <a href="#" onclick="popup('atmosphere')" class="rotate">
+      	<img src="rainworld/tentacles.png" alt="daddy long legs tentacles" class="object" style="top: 30vw; left: -20vw; width: 70vw">
+        <span class="text" style="top: 66vw; left: 25vw">atmosphere</span>
+      </a>
+    	<img src="rainworld/floor.png" alt="floor" class="static" style="top: 45vw; left: 50vw; width: 70vw">
+      <a href="#" onclick="popup('mods')" class="rotate">
+      	<img src="rainworld/mods.png" alt="neko arc propelled by deltarune explosion" class="object" style="top: 15vw; left: 80vw; width: 30vw">
+        <span class="text" style="top: 10vw; left: 95vw">mods</span>
+      </a>
+      <a href="#" onclick="popup('ecosystem')" class="rotate">
+      	<img src="rainworld/lizard.png" alt="white lizard" class="object" style="top: 50vw; left: 70vw; width: 35vw">
+        <span class="text" style="top: 47vw; left: 56vw">ecosystem</span>
+      </a>
+    	<img src="rainworld/dead.png" alt="dead slugcat" class="static" style="top: 49vw; left: 90vw; width: 19vw">
+      <a href="#" onclick="popup('scrappiness')" class="rotate">
+      	<img src="rainworld/hunter.png" alt="hunter hurling a spear" class="object" style="top: 30vw; left: 60vw; width: 18vw">
+        <span class="text" style="top: 38vw; left: 77vw">scrappiness</span>
+      </a>
+      <a href="#" onclick="popup('downpour')" class="rotate">
+      	<img src="rainworld/saint.png" alt="saint tongueing a building" class="object" style="top: 5vw; left: 60vw; width: 15vw">
+        <span class="text" style="top: 2vw; left: 75vw">downpour</span>
+      </a>
+      <div id="popup" hidden class="object" style="overflow-y: auto; left: -15vw; width: 65vw; height: 35vw; border: 5vw solid; border-image: url(rainworld/projection.png) 25% fill repeat"></div>
+      <div id="close" hidden>
+        <a href="#" class="object" style="left: 54vw; top: 3vw" onclick="dismiss()">x</a>
+      	<img src="rainworld/light.png" alt="projection light" class="object" style="top: 40vw; left: -10vw; width: 70vw">
+      </div>
+    	<img src="rainworld/overseer.png" alt="overseer" class="static" style="top: 50vw; left: 50vw; width: 15vw">
+    </main>
+    <div id="atmosphere" class="hidden">
+      <p>
+        the environment tells so much to you without a single word.
+        run-down towering megastructures stand unchanging and sprawl so far that you truly feel insignificant.
+        they are in disrepair, caked with grime, reclaimed by the nature they displaced
+        yet the intricate details underneath make you wonder what came before you
+      </p>
+      <p>
+        but in the end only you and the creatures are left.
+        the ambient music is very sparse which allows you to appreciate the sounds of surviving flora and fauna
+        (although when it does let loose it absolutely goes hard).
+      </p>
+      <p>
+        eventually you stumble upon the only remnant of civilisation left - the iterators.
+        they lament the cycles which all those in this world are doomed to repeat and the lengths at which the ancients and themselves went to escape.
+        pearls found around the world hold more fragments of lore which rewards exploration even more...even if lugging them back is extremely tedious.
+        but once you understand the nature of your existence you can make the journey and ascend
+        (a sequence rendering me completely speechless).
+      </p>
+      <p>
+        somehow in my first playthrough i missed five pebbles and ascended through pure coincidence having met all the echoes.
+        i'd even missed the majority of the game by doing so. i'd missed so many regions. this game is massive.
+        luckily i filled in the blanks during my hunter playthrough and fell even more in love with the game.
+      </p>
+    </div>
+    <div id="ecosystem" class="hidden">
+      <p>
+        each creature has their own niche in the ecosystem and their own relationships with others.
+        the scavengers are friendly to you and may even assist you as long as you stay friendly to them,
+        others are indifferent unless you provoke them like the squidcadas.
+        to many such as the lizards, you are just as appetising as any other prey.
+        the network of creature interactions interweave to truly make the ecosystem feel alive too.
+      </p>
+      <p>
+        you aren't the only thing creatures care about.
+        individuals of the same species will dispute over food;
+        most large predators will tussle with each other;
+        larger predators will prey on smaller ones (although you will also do nicely);
+        small creatures flee at the first sight of danger;
+        some will clump together for safety
+      </p>
+      <p>
+        it's also constantly simulated so creatures will interact regardless of whether you are there or not.
+        you could walk in on a falling lizard or scavenger battleground at anytime, and you can be caught in the crossfire.
+        this hammers home your insignificance in the world - sometimes you can just be in the wrong place at the wrong time.
+        but with enough skill you can survive.
+      </p>
+    </div>
+    <div id="scrappiness" class="hidden">
+      <p>scrappy is the best description of base rainworld</p>
+      <p>
+        you are agile (and have opposable thumbs).
+        the freeform nature of your movement allows outmaneuvering your foes with backflips, slides, pounces and rolls.
+        not only to escape danger, but to position yourself for a strike.
+        you can improvise with objects from your environment to gain the upper hand.
+        obviously rocks can stun and rebar can wound but you can also use the ecosystem to your advantage.
+      </p>
+      <p>
+        two lizards will fight each other over food you throw at them, diverting their focus away from you;
+        insects will bind you if aggravated, but can be set on others by throwing their hive;
+        jellyfish which sting you will also sting others;
+        squidcadas and jetfish increase your mobility such that others have no chance of catching you;
+        any large creature chasing you can be lured to a larger creature which will chase them.
+        there is so much emergent gameplay which forms from organism behaviours
+      </p>
+      <p>
+        on top of all the predation though, you also need to find food for yourself.
+        no special provisions are made for you.
+        you aren't special.
+        if you want to survive you need to work for it, just like everyone else.
+        and damn if that isn't satisfying
+      </p>
+      <p>
+        the karma system encourages mastery of the mechanics and learning of the ecology.
+        resting in shelters consecutively without dying builds it up.
+        it permits access to new areas and on to the next ecosystem with new dynamics to understand.
+        higher tiers will even allow you to skip to later areas or discover a new side of somewhere you've previously been which definitely incentivises good play.
+        echoes tucked in the corners of the world will enlighten you further and give you that little more lore too.
+      </p>
+    </div>
+    <div id="mods" class="hidden">
+      <p>mods made me fall in love even further with this game</p>
+      <p>
+        when i first played, rainworld didn't have a steam workshop yet and everything was hosted on good ol'
+        <a href="https://andrewfm.github.io/RainDB/legacy.html">rainDB</a>
+        and <a href="https://github.com/Garrakx/Custom-Regions">CRS</a>
+        honestly most of the mods i still use are from this era and i haven't installed too many more
+      </p>
+      <p>
+        in terms of quality of life, i genuinely hate playing without camera scroll now.
+        getting picked off from off-screen always felt cheap and that's no longer an issue.
+        manual dialogue progression is also a nice one because i read quite quickly so wasn't a fan of how dialogue was handled.
+        discord rich presence is also always nice to have for a game
+      </p>
+      <p>
+        dumb cosmetic stuff is always fun too.
+        splat cat has always been one of my favourites allowing you cosplay the consistencies of water balloons, tuning forks and bread dough.
+        blood and forecast (rip i don't think it's been ported) were also nice ones which added particles for blood and weather (bet you didn't see that coming)
+        deltarune explosion is honestly one of my favourite mods and i even ported it to celeste 64 because i loved it so much.
+      </p>
+      <p>
+        once downpour released dress my slugcat was made which completely opened the floodgates to skins though.
+        this obviously saturated the workshop with them but luckily you can filter them out.
+        plus there's some really well made ones too - neko arc, chaicat, slughoodies and canon bug eye rivulet are nice
+      </p>
+      <p>
+        but the mods that really take my breath away are the custom regions.
+        honestly it blows my mind that the design and art in so many exceed that of the base game.
+        so many also have their own little stories which fit well into the main canon of rainworld.
+        my favourites are aether ridge, undersea, concealed garden, the mast and lush mire -
+        plenty more have been made which i haven't been keeping up to date with though since downpour
+      </p>
+      <p>
+        i don't really like custom slugcats though - the game feels perfectly refined without any major changes
+        and any grand stories don't suit the tone of insignificance which the game really boasts
+      </p>
+    </div>
+    <div id="downpour" class="hidden">
+      <p>
+        yeah downpour added a shit ton to an already huge game.
+        the fact that it started out as a project by modders is such a testament to the great community.
+        the new campaigns boast new creatures, regions, lore and mechanics which all kick major ass
+        and it was amazing to have the world enriched even further in an official capacity...
+        however the new campaigns have the same problem as many of the modded custom campaigns -
+        they fail to capture the scrappiness and insignificance which makes the base game so special.
+      </p>
+      <p>
+        in these campaigns you are special.
+        you can knock out enemies with the might of your body, blow shit up, spam infinite spears, zoom across the landscape and one-shot enemies.
+        why bother to strategise and understand your environment?
+        despite this though the abilities are still a joy to use and provide a great power trip after struggling against these creatures for so long.
+      </p>
+      <p>
+        it also introduced workshop which increased modding accessibility to a ridiculous degree.
+        however it rendered realm obsolete which is sad because the hot reloading was really cool.
+      </p>
+    </div>
+  </body>
+</html>
