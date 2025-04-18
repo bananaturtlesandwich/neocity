@@ -2,6 +2,7 @@ function popup(id) {
   const popup = document.getElementById('popup');
   popup.innerHTML = document.getElementById(id).innerHTML;
   popup.hidden = false;
+  popup.scrollTop = 0;
   document.getElementById('close').hidden = false;
 }
 
