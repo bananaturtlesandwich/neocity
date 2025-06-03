@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>pokemon</title>
+    <link rel="icon" type="image/x-icon" href="pokemon/pokemon.ico">
+    <link rel="stylesheet" href="../style.css">
+    <meta name="description" content="yeah yeah like everyone else on the internet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../case.js"></script>
+    <script src="../popup.js"></script>
+    <style>
+      @font-face {
+        font-family: gameboy;
+        src: url(pokemon/RBYGSC.ttf) format("truetype");
+      }
+      .text {
+        font-size: 3vw;
+        font-family: gameboy;
+      }
+      body {
+        color: white;
+      }
+    </style>
+  </head>
+  <body style="color: black; background-image: url(shrine.png); background-size: 100%">
+    <a href="../shrines.html" class="rotate">
+    	<img src="../back.png" alt="back" class="back">
+    </a>
+    <main class="scene">
+    <div id="case">
+    	<img src="pokemon/closed.png" alt="closed case" class="static" style="left: 0vw; width: 100%">
+      <a href="#" onclick="contents('franchise')" class="rotate">
+        <img src="../placeholder.png" alt="placeholder" class="object" style="left: 15vw; top: 10vw; width: 10vw">
+        <span class="text" style="left: 15vw; top: 5vw">franchise</span>
+      </a>
+    </div>
+    </main>
+    <div id="closed" class="hidden">
+    	<img src="pokemon/closed.png" alt="closed case" class="static" style="left: 0vw; width: 100%">
+      <a href="#" onclick="contents('franchise')" class="rotate">
+        <img src="../placeholder.png" alt="placeholder" class="object" style="left: 15vw; top: 10vw; width: 10vw">
+        <span class="text" style="left: 15vw; top: 5vw">franchise</span>
+      </a>
+    </div>
+    <div id="open" class="hidden">
+    	<img src="pokemon/open.png" alt="open case" class="static" style="left: 0vw; width: 100%">
+      <div id="popup" class="object" style="color: white; overflow-y: auto; top: 12%; left: 8%; width: 80%; height: 55%">
+      </div>
+      <a href="#" class="rotate" onclick="contents()">
+      	<img src="pokemon/shut.png" alt="shut" class="object" style="left: 40vw; top: 2vw; width: 10vw">
+      </a>
+      <div id="contents" class="object" style="left: 10%; top: 80%; width: 80%"></div>
+    	<img src="pokemon/front.png" alt="open case" class="static" style="left: 0vw; top: 97vw; width: 100%">
+    </div>
+    <div id="franchise" class="hidden">
+      <a href="#" onclick="popup('faves')" class="rotate">
+        <img src="../placeholder.png" alt="placeholder" class="object" style="left: 5vw; top: 0vw; width: 30vw">
+        <span class="text" style="left: 10vw; top: -5vw">faves</span>
+      </a>
+    </div>
+    <div id="faves" class="hidden">
+      <img src="pokemon/faves.png" alt="my favourites" style="width: 100%">
+    </div>
+  </body>
+</html>
