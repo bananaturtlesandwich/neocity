@@ -30,6 +30,8 @@ body {
 
 ul > hr, details > hr {
   margin: 0;
+  border-color: black;
+  background-color: black;
 }
 :not(ul, details) > hr {
   height: 3px;
