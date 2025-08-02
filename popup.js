@@ -1,8 +1,13 @@
-function popup(id) {
+function popup() {
   const popup = document.getElementById('popup');
   popup.innerHTML = document.getElementById(id).innerHTML;
   popup.hidden = false;
   popup.scrollTop = 0;
+  document.getElementById('close').hidden = false;
+}
+
+function pop() {
+  document.getElementById('popup').hidden = false;
   document.getElementById('close').hidden = false;
 }
 

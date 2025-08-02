@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>3D platformer feel</title>
+    <link rel="icon" type="image/x-icon" href="thoughts.ico">
+    <link rel="stylesheet" href="../style.css">
+    <meta charset="UTF-8">
+    <style>
+      body {
+        color: black;
+        background-image: none;
+        background-color: #fff9e4;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      unsurprisingly, different games implement the same mechanics in different ways.
+      in a genre revolving around simple ones those must feel good -
+      however what's perfect for one character or dev will be different for another.
+      i did a study of all the 3D platformers i own to find these different perspectives
+    </p>
+    <img src="3D platformer feel/metro gravity.gif" alt="stephanie schmoving" style="width: 95%">
+    <p>
+      higher accelerations increase responsiveness but making them too high can stretch believability.
+      umbra treads this line since he reaches max speed in 1560/9000 = 0.17 seconds - that's half sybil's 550/1600 = 0.34 seconds!
+      (using MaxWalkSpeed and MaxAcceleration in the player blueprints).
+    </p>
+    <img src="3D platformer feel/blue fire walk.gif" alt="umbra walking" style="width: 45%">
+    <img src="3D platformer feel/pseudo walk.gif" alt="sybil walking" style="width: 45%">
+    <p>
+      max speeds will also change responsiveness but in more of a sweet spot way -
+      high values sacrifice precision while low ones sacrifice the player's patience.
+      max speeds can also change e.g going down a slope or sprinting you'll be able to go faster than you could walking on flat ground.
+    </p>
+    <img src="3D platformer feel/mario slope.gif" alt="mario walking down a slope" style="width: 95%">
+    <p>
+      turning is also involved in this responsiveness balance as characters shouldn't be able to make sharp turns instantly.
+      again, umbra shows how light a character can feel if this is the case.
+      to acknowledge this, most games will have some sort of skid state or animation if you make too extreme a turn.
+      but even for less extreme turns characters like sev and mario have lower turn rates (and accelerations) to sell their heft.
+    </p>
+    <img src="3D platformer feel/hat turn.gif" alt="hat kid turning" style="width: 45%">
+    <img src="3D platformer feel/corn kidz turn.gif" alt="sev turning" style="width: 45%">
+    <p>
+      you can't really fall backwards if you didn't start going backwards.
+      but that can make mistakes feel more punishing, so many characters don't change how turning works in the air e.g hat kid.
+      even when this is changed, it's only slightly muted so that you can still 
+    </p>
+    <img src="3D platformer feel/spyro air.gif" alt="spyro turning in the air" style="width: 45%">
+    <img src="3D platformer feel/tacklebox air.gif" alt="sev turning in the air" style="width: 45%">
+    <p>
+      in terms of jump arcs you'd probably assume that all jumps would just follow parabolic motion (a symmetrical curve) like in real life.
+      honestly, if not for this <a href="https://www.doublefine.com/news/devin-article-raz-jump" target="_blank">blog post</a> i wouldn't have noticed
+      raz's gravity in psychonauts 2 at the peak of his jump is lower to allow for better precision.
+      while i can understand this, ultimately it may be overengineering a problem which didn't need solving.
+    </p>
+    <img src="3D platformer feel/celeste arc.gif" alt="umbra's jump arc" style="width: 45%">
+    <img src="3D platformer feel/psychonauts arc.gif" alt="raz's jump arc" style="width: 45%">
+    <!-- rambling about cameras
+    <p>
+      okay you get some more rambling on cameras. my treat.
+    </p>
+    <p>
+      if a camera directly follows a character it can feel a bit jerky since every time the character jumps there's movement.
+      a very simple fix surprisingly absent in most games is to not move the camera for jumps which will land on the same elevation.
+      however if not handled gracefully this might result in a bigger jerk whenever the player lands
+    </p>
+    <p>
+      the camera also has to contend with the environment.
+      if the player is blocked by an object then you might be unsure where they've gone.
+      spyro deals with this by always having the camera snap to ensure he's visible.
+      many games have the character silhouette show over geometry although seeing the character is still important.
+      this allows the camera to snap less but different games will snap differently either way.
+      mario odyssey has snapping if otherwise the camera would be clipping into geometry.
+      i think a hat in time always has snapping if the geometry isn't a prop.
+      pseudoregalia might apply mario's method with a hat in time's.
+      celeste 64 might only snap if the width of the obstruction is too large since it still clips.
+    </p>
+    <p>
+      something i didn't see very often was lookahead, which is normally quite common in 2D games.
+      obviously if you're holding a certain direction you want to go that way so the camera should point to show what's ahead.
+      while automatic camera adjustment serves this purpose alot of the time this could result in fighting with the camera for certain angles.
+      lookahead in 2D simply shifts the camera so a larger portion of the screen is in front of the character.
+      the same principle could be applied based on how perpendicular to the camera the character is moving which i've only seen in pseudoregalia.
+      applying this for rotation essentially gives us the normal camera adjustment we see but this usually applied relative to the player and not on the camera itself.
+      honestly there's plenty of routes to go in terms of making the camera point in the most optimal way.
+    </p>
+    -->
+    <style>
+      table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+      th:first-child, td:first-child {
+        position: sticky;
+        left: 0;
+        background-color: #ddd;
+        padding: 0px;
+      }
+      th, td {
+        padding: 10px;
+      }
+    </style>
+    <table>
+      <tr>
+        <th>game</th>
+        <th>character</th>
+        <th>ground acceleration</th>
+        <th>turn rate</th>
+        <th>skid</th>
+        <th>air acceleration</th>
+        <th>air rotation</th>
+        <th>air turn rate</th>
+        <!-- camera
+        <th>direct follow</th>
+        <th>silhouette</th>
+        <th>snapping</th>
+        <th>lookahead</th>
+        -->
+      </tr>
+      <!-- template
+      <tr>
+        <td>game</td>
+        <td>character</td>
+        <td>ground acceleration</td>
+        <td>turn rate</td>
+        <td>skid</td>
+        <td>air acceleration</td>
+        <td>air rotation</td>
+        <td>air turn rate</td>
+        <td>jump arc</td>
+        <td>one to one camera</td>
+        <td>silhouette</td>
+        <td>snapping</td>
+        <td>lookahead</td>
+      </tr>
+      -->
+      <tr>
+        <td>the big catch</td>
+        <td>caster</td>
+        <td>high</td>
+        <td>high</td>
+        <td>yes</td>
+        <td>high</td>
+        <td>none but looks back</td>
+        <td>cannot go backwards</td>
+        <!-- camera
+        <td>yes</td>
+        <td>no</td>
+        <td>if clipping</td>
+        <td>looks back</td>
+        -->
+      </tr>
+      <tr>
+        <td>super kiwi 64</td>
+        <td>kiwi</td>
+        <td>high</td>
+        <td>instant</td>
+        <td>no</td>
+        <td>high</td>
+        <td>high</td>
+        <td>instant</td>
+        <!-- camera
+        <td>yes</td>
+        <td>no</td>
+        <td>no</td>
+        <td>no</td>
+        -->
+      </tr>
+      <tr>
+        <td>metro gravity</td>
+        <td>stephanie</td>
+        <td>low</td>
+        <td>instant</td>
+        <td>no</td>
+        <td>medium</td>
+        <td>delayed</td>
+        <td>medium</td>
+        <!-- camera
+        <td>yes</td>
+        <td>no</td>
+        <td>yes</td>
+        <td>no</td>
+        -->
+      </tr>
+      <tr>
+        <td>celeste 64</td>
+        <td>madeline</td>
+        <td>high</td>
+        <td>medium</td>
+        <td>yes</td>
+        <td>high</td>
+        <td>none</td>
+        <td>low</td>
+        <!-- camera
+        <td>yes</td>
+        <td>yes</td>
+        <td>by width of geometry</td>
+        <td>lookahead</td>
+        -->
+      </tr>
+      <tr>
+        <td>blazing dynamo</td>
+        <td>bucket</td>
+        <td>high</td>
+        <td>instant</td>
+        <td>only when sprinting</td>
+        <td>high</td>
+        <td>instant</td>
+        <td>low</td>
+        <!-- camera
+        <td>no</td>
+        <td>yes</td>
+        <td>by width of geometry</td>
+        <td>no</td>
+        -->
+      </tr>
+      <tr>
+        <td>psychonauts</td>
+        <td>raz</td>
+        <td>high</td>
+        <td>instant</td>
+        <td>animation</td>
+        <td>high</td>
+        <td>instant</td>
+        <td>low</td>
+        <!-- camera
+        <td>no</td>
+        <td>no</td>
+        <td>if clipping</td>
+        <td>no</td>
+        -->
+      </tr>
+      <tr>
+        <td>corn kidz 64</td>
+        <td>sev</td>
+        <td>medium</td>
+        <td>low</td>
+        <td>yes</td>
+        <td>medium</td>
+        <td>delayed</td>
+        <td>medium</td>
+        <!-- camera
+        <td>no</td>
+        <td>no</td>
+        <td>yes</td>
+        <td>yes</td>
+        -->
+      </tr>
+      <tr>
+        <td>pseudoregalia</td>
+        <td>sybil</td>
+        <td>high</td>
+        <td>instant</td>
+        <td>yes</td>
+        <td>high</td>
+        <td>high</td>
+        <td>medium</td>
+        <!-- camera
+        <td>no</td>
+        <td>yes</td>
+        <td>if clipping?</td>
+        <td>yes</td>
+        -->
+      </tr>
+      <tr>
+        <td>blue fire</td>
+        <td>umbra</td>
+        <td>high</td>
+        <td>instant</td>
+        <td>no</td>
+        <td>high</td>
+        <td>yes</td>
+        <td>instant</td>
+        <!-- camera
+        <td>lerps</td>
+        <td>no</td>
+        <td>yes</td>
+        <td>no</td>
+        -->
+      </tr>
+      <tr>
+        <td>mario odyssey</td>
+        <td>mario</td>
+        <td>low</td>
+        <td>low</td>
+        <td>yes</td>
+        <td>high</td>
+        <td>high</td>
+        <td>low</td>
+        <!-- camera
+        <td>no</td>
+        <td>yes</td>
+        <td>if clipping</td>
+        <td>yes</td>
+        -->
+      </tr>
+      <tr>
+        <td>a hat in time</td>
+        <td>hat kid</td>
+        <td>high</td>
+        <td>instant</td>
+        <td>animation</td>
+        <td>high</td>
+        <td>none</td>
+        <td>high</td>
+        <!-- camera
+        <td>yes</td>
+        <td>yes</td>
+        <td>on level geometry</td>
+        <td>no</td>
+        -->
+      </tr>
+      <tr>
+        <td>spyro reignited trilogy</td>
+        <td>spyro</td>
+        <td>high</td>
+        <td>instant</td>
+        <td>animation</td>
+        <td>high</td>
+        <td>medium</td>
+        <td>high</td>
+        <!-- camera
+        <td>yes</td>
+        <td>no</td>
+        <td>yes</td>
+        <td>no</td>
+        -->
+      </tr>
+    </table>
+  </body>
+</html>
