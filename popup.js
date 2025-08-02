@@ -1,4 +1,4 @@
-function popup() {
+function popup(id) {
   const popup = document.getElementById('popup');
   popup.innerHTML = document.getElementById(id).innerHTML;
   popup.hidden = false;
