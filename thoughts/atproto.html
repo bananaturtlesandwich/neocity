@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>atproto</title>
+    <link rel="icon" type="image/x-icon" href="thoughts.ico">
+    <link rel="stylesheet" href="../style.css">
+    <meta charset="UTF-8">
+    <style>
+      body {
+        color: black;
+        background-image: none;
+        background-color: #fff9e4;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      this is probably unsurprising for someone on neocities,
+      but i'm someone very disenchanted from most social media sites.
+    </p>
+    <p>
+      if i'm using instagram it's to keep up with friends and nothing beyond that,
+      despite how aggressive the site is at trying to suck you into reels
+      (disabling suggested posts only works for 30 days before you have to do it again).
+      i do use discord but nowadays i don't have a community which is very active which sucks.
+      tumblr only gets cracked open when i'm obsessed with a fandom now which i guess was the original intent
+      but i feel like the site is a lot less personal now than it used to be.
+      i am pretty regular on youtube though because i have subscriptions
+      and will occasionally delve through some algorithm stuff
+    </p>
+    <p>
+      and now there's bluesky!
+      i really like bluesky because it seems more people interact with each other.
+      replies always seem to lead to conversations and i like that -
+      there's some people i find really cool that actually follow me back for my stuff too!
+      i think the coolest thing though is the protocol it's build on
+    </p>
+    <p>
+      bluesky is built on the atmosphere protocol (atproto for short)
+      which is an open standard for building decentralised social networks.
+      essentially this means bluesky is simply a client for their own personal data servers (PDS)
+      and anyone can make their own client for those servers or even their own platform if they set up their own servers.
+      if they do users can migrate between platforms pretty easily thanks to unique identifiers.
+    </p>
+    <p>
+      this complete openness also has a wonderful side-effect - you can make your own algorithms!
+      whether a standard discover feed, trusted news sources or specific cultures, games, groups etc. it's likely been made.
+      feed generators work by curating posts coming from the firehose, a stream of all new posts
+    </p>
+    <p>
+      and this leads to my favourite part of atproto - the webtoys!
+      i first heard about these thanks to simone's
+      <a href="https://blog.simone.computer/bluesky-firehose-is-cool" target="_blank">blog post</a>
+      where he talks about making a cool realtime firehose visualiser in the
+      <a href="https://simone.computer/bluerain" target="_blank">matrix style</a>.
+      there's a lot of cool realtime firehose visualisers such as
+      <a href="https://firehose3d.theo.io" target="_blank">windows xp screensaver</a>,
+      <a href="https://firesky.tv" target="_blank">firesky</a>,
+      <a href="https://www.intothebluesky.lol" target="_blank">another matrix one</a>
+      but i really like the ones that do something more creative than just spamming the text like
+      <a href="https://nightsky.hctr.dev" target="_blank">night sky</a>,
+      <a href="https://www.emojirain.lol/" target="_blank">emoji rain</a>,
+      <a href="https://bluesky.toddle.site/signups" target="_blank">signup butterflies</a>,
+      <a href="https://www.bewitched.com/demo/rainbowsky" target="_blank">colour analyser</a>,
+      <a href="https://flo-bit.dev/bluesky-visualizers/emotions" target="_blank">emotion analyser</a>,
+      <a href="https://deletions.bsky.bad-example.com/" target="_blank">deletions</a>,
+      <a href="https://anderegg.ca/bsky-filter" target="_blank">filter</a>,
+      <a href="https://swearsky.bagpuss.org" target="_blank">swear sky</a>,
+      <a href="https://nicesky.bagpuss.org" target="_blank">nice sky</a> and
+      <a href="https://www.avibagla.com/blueskydictionary" target="_blank">bluesky dictionary</a>
+    </p>
+    <p>
+      however there's not many which play around with profiles.
+      i could only find <a href="https://skircle.me" target="_blank">skircle</a> which i thought was meh
+      so i went down the rabbit hole of making a visualiser for bluesky follow relationships...
+      <a href="https://skyweb.spuds.casa" target="_blank">skyweb</a>
+      <img src="skyweb.png" alt="my bluesky follow network" style="width: 100%">
+    </p>
+    <p>
+      the process of coding it was pretty smooth except for the CORS issues grabbing the avatars -
+      i ended up having to request the images straight from the PDS rather than simply from the bluesky cdn.
+      i'd like to improve it by coding the layout engine rather than borrowing one since it doesn't integrate well with the rest of the codebase
+      and i think it'd also be neat if i extended it to work for other sites like github or tumblr
+    </p>
+  </body>
+</html>
