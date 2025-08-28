@@ -3,3 +3,13 @@ body {
   background-image: none;
   background-color: #fff9e4;
 }
+
+a:link, a:visited {
+  color: purple;
+}
+a:hover {
+  color: dodgerblue;
+}
+a:active {
+  color: hotpink;
+}

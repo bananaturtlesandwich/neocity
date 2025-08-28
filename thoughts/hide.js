@@ -1,3 +1,7 @@
 function hide() {
-  if (window.top != window) document.getElementsByClassName("rotate")[0].hidden = true
+  if (window.top != window) {
+    let backs = document.getElementsByClassName("back")
+    backs[0].hidden = true
+    backs[1].hidden = true
+  }
 }
