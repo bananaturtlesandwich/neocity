@@ -1,0 +1,41 @@
+name: husk
+on:
+  push:
+    branches:
+      - main
+jobs:
+  branch:
+    runs-on: ubuntu-latest
+    steps:
+        - uses: breningham/delete-branch@v1.0.0
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            branch_name: husk
+  husk:
+    needs: branch
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v6
+      - run: ./husk.bat
+      - uses: EndBug/add-and-commit@v9.1.4
+        with:
+          new_branch: husk
+  deploy:
+    needs: husk
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: husk
+      - uses: bcomnes/deploy-to-neocities@v3.0.2
+        with:
+          api_key: ${{ secrets.NEOCITIES }}
+          cleanup: true
+          dist_dir: src
+      - uses: indiefellas/deploy2nekoweb@v1.0.0
+        with:
+          nekoweb-api-key: ${{ secrets.NEKOWEB }}
+          nekoweb-domain: spuds.nekoweb.org
+          nekoweb-username: spuds
+          # for some reason you can't zip . with this action
+          directory: src
