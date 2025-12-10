@@ -91,7 +91,7 @@ a:active {
   font-size: 5vw;
   opacity: 0;
   position: absolute;
-  color: white;
+  color: lightcyan;
   pointer-events: none;
   z-index: 1;
 }
