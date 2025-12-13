@@ -4,38 +4,51 @@ on:
     branches:
       - main
 jobs:
-  branch:
+  husk:
     runs-on: ubuntu-latest
     steps:
-        - uses: breningham/delete-branch@v1.0.0
-          with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            branch_name: husk
-  husk:
-    needs: branch
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v6
-      - run: ./husk.bat
-      - uses: EndBug/add-and-commit@v9.1.4
-        with:
-          new_branch: husk
+    - uses: actions/checkout@v6
+    - id: changed
+      uses: tj-actions/changed-files@v47.0.1
+      with:
+        files: '*.html'
+    - uses: actions/checkout@v6
+      with:
+        ref: husk
+    - run: |
+        changed="${{ steps.changed.outputs.all_changed_files }}"
+        if test -n "$changed"; then
+          IFS=' ' read -a split <<< "$changed"
+          for file in "${split[@]}"; do
+            echo "$file"
+            moved="src/$file"
+            echo "<!DOCTYPE html>" > $moved
+            echo "<head>" >> $moved
+            echo "  <meta http-equiv=\"refresh\" content=\"0; url=https://spuds.casa/${file##*/}\">" >> $moved
+            echo "</head>" >> $moved
+            echo "</html>" >> $moved
+            echo "<body>" >> $moved
+            echo "${{ github.sha }}" >> $moved
+            echo "</body>" >> $moved
+          done
+        fi
+    - uses: EndBug/add-and-commit@v9.1.4
   deploy:
     needs: husk
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-        with:
-          ref: husk
-      - uses: bcomnes/deploy-to-neocities@v3.0.2
-        with:
-          api_key: ${{ secrets.NEOCITIES }}
-          cleanup: true
-          dist_dir: src
-      - uses: indiefellas/deploy2nekoweb@v1.0.0
-        with:
-          nekoweb-api-key: ${{ secrets.NEKOWEB }}
-          nekoweb-domain: spuds.nekoweb.org
-          nekoweb-username: spuds
-          # for some reason you can't zip . with this action
-          directory: src
+    - uses: actions/checkout@v6
+      with:
+        ref: husk
+    - uses: bcomnes/deploy-to-neocities@v3.0.2
+      with:
+        api_key: ${{ secrets.NEOCITIES }}
+        cleanup: true
+        dist_dir: src
+    - uses: indiefellas/deploy2nekoweb@v1.0.0
+      with:
+        nekoweb-api-key: ${{ secrets.NEKOWEB }}
+        nekoweb-domain: spuds.nekoweb.org
+        nekoweb-username: spuds
+        # for some reason you can't zip . with this action
+        directory: src
