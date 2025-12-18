@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>custom domain</title>
+    <link rel="icon" type="image/x-icon" href="../thoughts.ico">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="hide.js"></script>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+  	<img src="corner.png" alt="corner" class="back" style="top: 0vw; left: 0vw" onload="hide()">
+    <a href="../thoughts.html" class="rotate">
+    	<img src="../back.png" alt="back" class="back" onload="hide()">
+    </a>
+    <p>so for a while i was thinking a custom domain would be nice to have - you can find fairly cheap ones but you also need to like them lol</p>
+    <p>
+      predictably for a short word like spuds, most of the typical TLDs such as me, io, xyz, world, online and co.uk were taken.
+      of course i would have loved a .shack TLD but that unfortunately doesn't exist so i looked at house but that was a bit pricey for a cheapskate like me.
+      but house in other languages weren't and there was a bit of humour to having maison, haus or casa instead anyway.
+    </p>
+    <p>
+      i ended up choosing casa since it was cheapest, was the same in both italian and spanish and reminded me of ken's "mojo dojo casa house" from barbie.
+      <br>
+      <img src="custom domain/mojodojocasahouse.jpg" alt="smosh tweeting their og film set AKA house as the mojo dojo casa house" style="width: 50%">
+      <br>
+      that said theoretically you could make a website at mojo.dojo.casa.house however <a href="https://casa.house">the domain</a> is currently being used...to sell multidimensional paintings from the museum of austin?
+      <br>
+      <img src="custom domain/casahouse.jpg" alt="casa.house home page" style="width: 75%">
+      <br>
+      i honestly don't know but i emailed the contact us address about the domain but they haven't got back to me :/
+    </p>
+    <p>
+      and of course a few months later they raise the pricing - still reasonable and i guess it makes sense if there's demand but it still feels scummy.
+      <br>
+      <img src="custom domain/raise.jpg" alt="the email showing raises in the price of the casa, luxe and abogado TLDs among more inappropriate ones" style="width: 75%">
+      <br>
+      you can see a few other TLDs are quite popular...
+    </p>
+    <p>
+      however now that i have a custom domain, what happens to spuds.neocities.org?
+      well quite simple! i just redirect all pages to the new domain via the meta tag.
+      i used a fairly simple batch script to automate this and pushed it to a new github branch:
+      <pre><code>
+        for /r %%g in (*.html) do (
+          echo ^&lt;!DOCTYPE html^&gt; &gt;%%g
+          echo ^&lt;head^&gt; &gt;&gt;%%g
+          echo   ^&lt;meta http-equiv=^"refresh^" content=^"0; url=https://spuds.casa/%%~ng^"^&gt; &gt;&gt;%%g
+          echo ^&lt;/head^&gt; &gt;&gt;%%g
+          echo ^&lt;/html^&gt;" &gt;&gt;%%g
+        )
+        for /r %%g in (*.ico,*.png,*.jpg,*.jpeg,*.webp,*.gif,*.ase,*.css,*.js) do del "%%g"
+      </pre></code>
+      and this worked very nicely with my current setup which uses bcomnes' wonderful <a href="https://github.com/bcomnes/deploy-to-neocities">github action</a> because i just needed to change the branch used
+      i could also now easily join nekoweb in addition to neocities since i was now decoupled from both!
+      all i needed to add to my deployment was indiefellas' corresponding <a href="https://github.com/indiefellas/deploy2nekoweb">action</a>...
+      although it stupidly couldn't deploy from a root because of a dependency so i had to move everything into a folder.
+    </p>
+    <p>
+      this was pretty good until i started making updates and realised...there's no updates on either platform!
+      well the redirect pages aren't changing so the site doesn't see that there's a change.
+      thus begins my descent into madness.
+    </p>
+    <p>
+      so i spent a few days bashing my head against a wall, learning bash, writing the code without a language server and pushing so many commits to see the action fail (you can't debug locally) until i finally ended up with a working setup:
+      <pre><code>
+        name: husk
+        on:
+          push:
+            branches:
+              - main
+        jobs:
+          husk:
+            runs-on: ubuntu-latest
+            steps:
+            - uses: actions/checkout@v6
+            - id: changed
+              uses: tj-actions/changed-files@v47.0.1
+              with:
+                files: '*.html'
+            - uses: actions/checkout@v6
+              with:
+                ref: husk
+            - run: |
+                changed="${{ steps.changed.outputs.all_changed_files }}"
+                if test -n "$changed"; then
+                  IFS=' ' read -a split &lt;&lt;&lt; "$changed"
+                  for file in "${split[@]}"; do
+                    echo "$file"
+                    moved="src/$file"
+                    echo "&lt;!DOCTYPE html&gt;" &gt; $moved
+                    echo "&lt;head&gt;" &gt;&gt; $moved
+                    echo "  &lt;meta http-equiv=\"refresh\" content=\"0; url=https://spuds.casa/${file##*/}\"&gt;" &gt;&gt; $moved
+                    echo "&lt;/head&gt;" &gt;&gt; $moved
+                    echo "&lt;/html&gt;" &gt;&gt; $moved
+                    echo "&lt;body&gt;" &gt;&gt; $moved
+                    echo "${{ github.sha }}" &gt;&gt; $moved
+                    echo "&lt;/body&gt;" &gt;&gt; $moved
+                  done
+                fi
+            - uses: EndBug/add-and-commit@v9.1.4
+          deploy:
+            needs: husk
+            runs-on: ubuntu-latest
+            steps:
+            - uses: actions/checkout@v6
+              with:
+                ref: husk
+            - uses: bcomnes/deploy-to-neocities@v3.0.2
+              with:
+                api_key: ${{ secrets.NEOCITIES }}
+                cleanup: true
+                dist_dir: src
+            - uses: indiefellas/deploy2nekoweb@v1.0.0
+              with:
+                nekoweb-api-key: ${{ secrets.NEKOWEB }}
+                nekoweb-domain: spuds.nekoweb.org
+                nekoweb-username: spuds
+                # for some reason you can't zip . with this action
+                directory: src
+      </pre></code>
+      essentially it gets the files which changed and writes the commit sha into the body of the file so it will change on the branch being deployed.
+      i won't get into all the headache i'm just glad it's done and you can see this thought publish.
+    </p>
+  </body>
+</html>
+

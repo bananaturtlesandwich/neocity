@@ -28,6 +28,11 @@ body {
   image-rendering: pixelated;
 }
 
+pre {
+  text-align: left;
+  overflow-x: scroll;
+}
+
 ul > hr, details > hr {
   margin: 0;
   border-color: black;
