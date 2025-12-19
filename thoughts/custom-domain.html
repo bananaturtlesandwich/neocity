@@ -24,7 +24,7 @@
       <br>
       <img src="custom domain/mojodojocasahouse.jpg" alt="smosh tweeting their og film set AKA house as the mojo dojo casa house" style="width: 50%">
       <br>
-      that said theoretically you could make a website at mojo.dojo.casa.house however <a href="https://casa.house">the domain</a> is currently being used...to sell multidimensional paintings from the museum of austin?
+      that said theoretically you could make a website at mojo.dojo.casa.house however <a href="https://casa.house" target="_blank">the domain</a> is currently being used...to sell multidimensional paintings from the museum of austin?
       <br>
       <img src="custom domain/casahouse.jpg" alt="casa.house home page" style="width: 75%">
       <br>
@@ -51,9 +51,9 @@
         )
         for /r %%g in (*.ico,*.png,*.jpg,*.jpeg,*.webp,*.gif,*.ase,*.css,*.js) do del "%%g"
       </pre></code>
-      and this worked very nicely with my current setup which uses bcomnes' wonderful <a href="https://github.com/bcomnes/deploy-to-neocities">github action</a> because i just needed to change the branch used
+      and this worked very nicely with my current setup which uses bcomnes' wonderful <a href="https://github.com/bcomnes/deploy-to-neocities" target="_blank">github action</a> because i just needed to change the branch used.
       i could also now easily join nekoweb in addition to neocities since i was now decoupled from both!
-      all i needed to add to my deployment was indiefellas' corresponding <a href="https://github.com/indiefellas/deploy2nekoweb">action</a>...
+      all i needed to add to my deployment was indiefellas' corresponding <a href="https://github.com/indiefellas/deploy2nekoweb" target="_blank">action</a>...
       although it stupidly couldn't deploy from a root because of a dependency so i had to move everything into a folder.
     </p>
     <p>
@@ -93,9 +93,7 @@
                     echo "  &lt;meta http-equiv=\"refresh\" content=\"0; url=https://spuds.casa/${file##*/}\"&gt;" &gt;&gt; $moved
                     echo "&lt;/head&gt;" &gt;&gt; $moved
                     echo "&lt;/html&gt;" &gt;&gt; $moved
-                    echo "&lt;body&gt;" &gt;&gt; $moved
-                    echo "${{ github.sha }}" &gt;&gt; $moved
-                    echo "&lt;/body&gt;" &gt;&gt; $moved
+                    echo "&lt;!-- ${{ github.sha }} --&gt;" &gt;&gt; $moved
                   done
                 fi
             - uses: EndBug/add-and-commit@v9.1.4
@@ -121,6 +119,8 @@
       </pre></code>
       essentially it gets the files which changed and writes the commit sha into the body of the file so it will change on the branch being deployed.
       i won't get into all the headache i'm just glad it's done and you can see this thought publish.
+      <br>
+      <img src="custom domain/inception.jpg" alt="the update working" style="width: 75%">
     </p>
   </body>
 </html>

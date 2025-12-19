@@ -12,6 +12,7 @@ jobs:
       uses: tj-actions/changed-files@v47.0.1
       with:
         files: '*.html'
+        diff_relative: 'false'
     - uses: actions/checkout@v6
       with:
         ref: husk
@@ -20,16 +21,18 @@ jobs:
         if test -n "$changed"; then
           IFS=' ' read -a split <<< "$changed"
           for file in "${split[@]}"; do
+            if ["${file##*.}" != "html"]; then
+              echo "$file"
+              continue
+            fi
             echo "$file"
             moved="src/$file"
             echo "<!DOCTYPE html>" > $moved
             echo "<head>" >> $moved
-            echo "  <meta http-equiv=\"refresh\" content=\"0; url=https://spuds.casa/${file##*/}\">" >> $moved
+            echo "  <meta http-equiv=\"refresh\" content=\"0; url=https://spuds.casa/$file\">" >> $moved
             echo "</head>" >> $moved
+            echo "<!-- ${{ github.sha }} -->" >> $moved
             echo "</html>" >> $moved
-            echo "<body>" >> $moved
-            echo "${{ github.sha }}" >> $moved
-            echo "</body>" >> $moved
           done
         fi
     - uses: EndBug/add-and-commit@v9.1.4
