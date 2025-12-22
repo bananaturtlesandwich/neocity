@@ -62,7 +62,7 @@ a:active {
 .scene {
   width: 100%;
   height: 70vw;
-  transform: scale(0.75) translateY(-12vw);
+  transform: scale(0.75) translateY(-11vw);
 }
 
 .object, .static {
@@ -96,7 +96,6 @@ a:active {
   font-size: 5vw;
   opacity: 0;
   position: absolute;
-  color: lightcyan;
   pointer-events: none;
   z-index: 1;
 }
