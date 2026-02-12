@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>game</title>
+    <link rel="icon" type="image/x-icon" href="game.ico">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="hey i'm kinda good at this">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../display.js"></script>
+  </head>
+  <body>
+    <a href="../coding.html" class="rotate">
+    	<img src="../back.png" alt="back" class="back">
+    </a>
+    <div class="sidebar">
+      files
+      <hr>
+      <a href="#" onclick="display('starting')">starting.txt</a>
+      <br>
+      <a href="#" onclick="display('concept')">concept.txt</a>
+      <br>
+      <a href="#" onclick="display('devlog')">devlog.txt</a>
+      <details>
+        <summary>movement</summary>
+        <a href="#" onclick="display('base')">base.txt</a>
+        <a href="#" onclick="display('stab')">stab.txt</a>
+        <a href="#" onclick="display('bubble')">bubble.txt</a>
+      </details>
+    </div>
+    <main id="display">
+      <h1>starting</h1>
+      <p>so uhhhh yeah i've been attempting to game a game for a bit :p</p>
+      <p>
+        this has been a pretty intimidating but exciting endeavour and i wanna get a bit more serious about it
+        so i thought it might be quite nice to make some little project updates
+      </p>
+      <p>
+        so i guess it started with modding, which you can read all about my love for over <a href="shrines/modding.html">here</a>.
+        modding got me into programming in c# and later rust which i got pretty good at.
+      </p>
+      <p>
+        after making <a href="coding/stove.html">stove</a> which needed graphics for interactive map editing,
+        i kind of thought "hey this stuff is fun, maybe games could be fun too!".
+        i'd made stove with a modular game framework called bevy so the jump in logic wasn't too far :D
+      </p>
+      <p>
+        the reason i stayed with bevy was probably because i have a bit of an obsession with optimisation.
+        honestly that might be why i like rust so much because it allows for that while staying with little productivity cost.
+        this could come from my history modding unreal games and noticing how games using later engine versions started to chug more and more.
+        i'd given unity a try before and it also felt pretty bloated.
+        i know godot is getting a lot of traction and that seems to be much better
+        (also a single medium-sized executable for an editor is awesome)
+        but i'm personally not too big a fan of their node system.
+      </p>
+      <p>
+        also i just like being closer to the core stack.
+        with bevy i can pick only the modules i want to use in the binary,
+        i can go right to source code from my own code
+        and no ui navigation is necessary to change the inner workings of the game.
+      </p>
+      <p>i'm definitely a coder first and artist/musician second</p>
+    </main>
+    <div id="starting" class="hidden">
+      <h1>starting</h1>
+      <p>so uhhhh yeah i've been attempting to game a game for a bit :p</p>
+      <p>
+        this has been a pretty intimidating but exciting endeavour and i wanna get a bit more serious about it
+        so i thought it might be quite nice to make some little project updates
+      </p>
+      <p>
+        so i guess it started with modding, which you can read all about my love for over <a href="shrines/modding.html">here</a>.
+        modding got me into programming in c# and later rust which i got pretty good at.
+      </p>
+      <p>
+        after making <a href="coding/stove.html">stove</a> which needed graphics for interactive map editing,
+        i kind of thought "hey this stuff is fun, maybe games could be fun too!".
+        i'd made stove with a modular game framework called bevy so the jump in logic wasn't too far :D
+      </p>
+      <p>
+        the reason i stayed with bevy was probably because i have a bit of an obsession with optimisation.
+        honestly that might be why i like rust so much because it allows for that while staying with little productivity cost.
+        this could come from my history modding unreal games and noticing how games using later engine versions started to chug more and more.
+        i'd given unity a try before and it also felt pretty bloated.
+        i know godot is getting a lot of traction and that seems to be much better
+        (also a single medium-sized executable for an editor is awesome)
+        but i'm personally not too big a fan of their node system.
+      </p>
+      <p>
+        also i just like being closer to the core stack.
+        with bevy i can pick only the modules i want to use in the binary,
+        i can go right to source code from my own code
+        and no ui navigation is necessary to change the inner workings of the game.
+      </p>
+      <p>i'm definitely a coder first and artist/musician second</p>
+    </div>
+    <div id="concept" class="hidden">
+      <h1>concept</h1>
+      <p>well i knew i wanted to make a game but what kind of game?</p>
+      <p>
+        it's kind of obvious if you look at my <a href="log.html">log</a>.
+        i'm a 3D platformer nut.
+      </p>
+      <p>
+        the culprit for this is probably super mario odyssey.
+        when i got my switch it was the only game i had and i got so into it.
+        i played some galaxy on the wii but odyssey just had incredible freedom of player expression with movement.
+        after that i started clamouring for more of the same and found little sparks of it in single mechanics:
+        blue fire's wallrun and spirits, hell pie's swing, psychonaut's levitation...
+      </p>
+      <p>and then i played rittz's games.</p>
+      <p>
+        i honestly can't remember how i found blazing dynamo but it just felt like mario odyssey again.
+        the options available were experimental and new and you can listen to me gush about it <a href="shrines/pseudoregalia.html">here</a>.
+        i start following him and eventually he made the 3D metroidvania masterpiece <a href="shrines/pseudoregalia.html">pseudoregalia</a>.
+      </p>
+      <p>
+        i'd played quite a couple metroidvanias before like hollow knight, yoku's island express and am a big fan of the nonlinear progression system.
+        metroidvanias have mostly been confined to the second dimension, i think because of the disaster that was castlevania 64.
+        metroid prime is 3D but as far as i can tell had less of a platforming focus.
+        blue fire definitely dabbled in some non-linear progression but i'd still hesitate to call it one.
+        pseudoregalia married the expressive 3D platformer with the genre perfectly.
+        every major upgrade except the weapon upgrades are additions to the moveset
+        which unlock more areas through greater player expression.
+        but yeah i'd love to make one of those i know pseudoregalia has inspired some more 3D metroidvanias too like aeromachina.
+      </p>
+      <p>
+        i don't know how ambitious i want to be with the world of my game.
+        first i just want to make a good character controller.
+        the moveset is where most of the fun comes from and i want to make it unique since there seems to be a lot of stagnation in the genre currently.
+      </p>
+    </div>
+    <div id="devlog" class="hidden">
+      <h1>devlog</h1>
+      <p>so i've had this project on the backburner for a while now which sucks because i love making it!</p>
+      <p>
+        i thought maybe writing a devlog would help me think about the next steps and realise i've actually done a fair bit.
+        let's have a little ramble shall we!
+      </p>
+      <p>
+        i think i start with a capsule player to get some movement and camera system but that quickly felt annoying
+      </p>
+      <p>
+        so i modelled a little guy which turned out to basically be my persona.
+        is that self-indulgent? idk i'm the dev and don't want to model and rig another player
+      </p>
+      <p>
+        i hated not having control of all the player physics so i stopped using the built in physics class and implemented it all with raycasts and shapecasts.
+        it's still not perfect: the collide and slide needs a lot of iterations to work for some reason and there's often spurious collisions at corners and edges but i feel in control.
+      </p>
+    <div id="base" class="hidden">
+      <h1>base</h1>
+      <p>
+        so next was getting the basic movement going.
+        i really want a sense of weight and momentum with my character because i'm not a huge fan of floaty characters.
+        before doing any implementation i did a little study of how a lot of games i've played have implemented basic movement and wrote about it <a href="thoughts/3D-platformer-feel.html">here</a>.
+        honestly momentum isn't as hard to do as you might think.
+        literally just make sure you're not directly setting/lerping/quickly snapping to any velocities unless it's to a stop.
+        cloudbuilt is an excellent example of this which i wishlisted and eventually played after watching <a href="https://www.youtube.com/watch?v=RBem9q6bFKQ" target="_blank">this excellent video</a>
+      </p>
+      <p>
+        my walking system is fairly straightfoward, just acceleration applied until a target speed is reached and a faster deceleration happens if the player wants to go slower or stop.
+        if you're going down a slope the target speed is higher and conversely it's lower going up one.
+        if going faster than the target speed deceleration is pretty slow so you actually have momentum.
+        turns become broader if you're travelling faster so you feel your weight pulling against you and if you suddenly try going the other direction you'll skid.
+        jumping while skidding will give a low jump which reverses current momentum (but slowed by skid).
+      </p>
+      <p>oh right jumping.</p>
+      <p>
+        i'm literally just adding to the y velocity and cutting to a lower one if the button is let go early.
+        the same acceleration stuff applies, just using different values.
+        when landing some of the vertical momentum is converted to horizontal momentum which i think feels good.
+        in the air there's also gravity duh but honestly that's about it.
+      </p>
+      <p>now for some fun!</p>
+    </div>
+    <div id="stab" class="hidden">
+      <h1>stab</h1>
+      <p>
+        first off if wanted to implement a wallslide which actually preserves momentum.
+        for this i translate horizontal momentum to momentum up the wall (i'm just gonna call this transposing from now)
+        and ensure that pushing off simply just adds a force perpendicular to the wall.
+        i make gravity weaker if travelling down due to wall friction and the faster downwards you're travelling the more resistance along the wall you'll get.
+        speed and acceleration along are increased because uhhhh...wall friction is less than floor friction?
+        this is when i realised normal wallrunning is boring.
+      </p>
+      <p>introducing the wallstab</p>
+      <p>
+        i've been thinking of a loose story about teleportation to an unexplored ecosystem (probably not as complex as rainworld's)
+        so i think it would be cool if all the abilities were little fellas.
+        since blades are more slippery than shoes, wall friction is indeed less!
+        but it still feels weightless if you pull back and immediately go the other way therefore the faster you're going, the less you'll be able to do that :D
+      </p>
+    </div>
+    <div id="bubble" class="hidden">
+      <h1>bubble</h1>
+      <p>there's one other ability that's been implemented which i've had quite a lot of trouble reining in: the bubble</p>
+      <p>
+        it was partially inspired by the pseudoregalia wallkick but instead of launching with a set path directly reflecting your momentum.
+        so i thought of a bouncy ball and bubble kind of came from that since i also saw something similar in the demon tides trailer.
+        there bubbling carries your momentum and quickly halts you in place which i did think mine should do but much slower.
+        however the trouble with slow halting mean that if you bubble at the start of a jump you get a ridiculous amount of height.
+        i initially tried to balance this by lerping (i know horrific) but this harmed the bouncing aspect so i added a boost when bouncing.
+        however this didn't feel very natural and quickly leads to ridiculous speed with close bounces so i went back to the drawing board.
+        i think i have a good solution now where it takes some time to inflate the bubble which allows gravity to still have some effect while not harming the bouncing.
+        however this feels weird if you jump next to a wall and bubble since there's no pushback from inflating i added that.
+        maybe the bubble should pop if going fast enough but i feel like it might be balanced enough now.
+      </p>
+    </div>
+  </body>
+</html>
